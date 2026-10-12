@@ -57,6 +57,20 @@
       "author": "karinms on Steam Community",
       "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=665189459",
       "note": "Dedicated ATE list with trigger conditions; bold entries are forced scenes."
+    },
+    "psnprofiles-treasure": {
+      "id": "psnprofiles-treasure",
+      "title": "Rank S Treasure Hunter Guide",
+      "author": "ARB1992 on PSNProfiles",
+      "url": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide",
+      "note": "Lists every pickup by the discs on which it can be collected. Used for revisit windows."
+    },
+    "ff-wiki": {
+      "id": "ff-wiki",
+      "title": "Chocograph",
+      "author": "Final Fantasy Wiki (Fandom)",
+      "url": "https://finalfantasy.fandom.com/wiki/Chocograph",
+      "note": "Chocograph list and Chocograph Piece requirements."
     }
   },
   "entries": [
@@ -192,10 +206,10 @@
       "name": "Zombie Card",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -212,6 +226,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -221,10 +239,10 @@
       "name": "Potion",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -241,6 +259,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -250,10 +272,10 @@
       "name": "Lizard Man Card",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -270,6 +292,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -279,10 +305,10 @@
       "name": "Sahagin Card",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -299,6 +325,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -308,10 +338,10 @@
       "name": "Potion",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -328,6 +358,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -337,10 +371,10 @@
       "name": "9 Gil",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -357,6 +391,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -366,10 +404,10 @@
       "name": "Potion",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -386,6 +424,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -395,10 +437,10 @@
       "name": "Fang Card",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -415,6 +457,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -424,10 +470,10 @@
       "name": "Potion",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -444,6 +490,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -453,10 +503,10 @@
       "name": "33 Gil",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -473,6 +523,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -482,10 +536,10 @@
       "name": "Goblin Card",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -502,6 +556,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -511,10 +569,10 @@
       "name": "Potion",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -531,6 +589,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -540,10 +602,10 @@
       "name": "Flan Card",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -560,6 +622,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -569,10 +635,10 @@
       "name": "27 Gil",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -589,6 +655,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -598,10 +668,10 @@
       "name": "38 Gil",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -618,6 +688,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -627,10 +701,10 @@
       "name": "Ether",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -647,6 +721,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -656,10 +734,10 @@
       "name": "Remedy",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "gamefaqs-bover",
@@ -679,10 +757,10 @@
       "name": "Phoenix Pinion",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -699,6 +777,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -708,10 +790,10 @@
       "name": "Eye Drops",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -728,6 +810,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -737,10 +823,10 @@
       "name": "3 Gil",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "gamefaqs-bover",
@@ -758,10 +844,10 @@
       "name": "Potion",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -778,6 +864,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -787,10 +877,10 @@
       "name": "Tent",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -807,6 +897,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -816,10 +910,10 @@
       "name": "Hippaul's cards (Ironite, Goblin, Fang)",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
-      "missableKind": "pickup",
-      "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "missability": "temporary",
+      "missableKind": null,
+      "priority": null,
+      "lastOpportunity": "Available again on a later visit",
       "evidence": [
         {
           "source": "jegged",
@@ -836,10 +930,14 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": [
-        "On a later visit the same bell rope drops a different set of cards (Vinheim lists five, including two new ones), so these three can’t be collected again in the same way."
+        "If you miss them now, the same rope still gives these three cards on a later visit, plus two more (PSNProfiles lists them as obtainable up to Disc 3; Vinheim lists the five-card chest)."
       ]
     },
     {
@@ -847,10 +945,10 @@
       "name": "Find Mittens — Bomb Card",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "opportunity",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -867,6 +965,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -896,6 +998,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -925,6 +1031,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": [
@@ -936,10 +1046,10 @@
       "name": "29 Gil",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -956,6 +1066,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -965,10 +1079,10 @@
       "name": "92 Gil",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -985,6 +1099,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -994,10 +1112,10 @@
       "name": "63 Gil",
       "area": "alexandria-vivi",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before following Puck onto the rooftops",
+      "lastOpportunity": "Before following Puck onto the rooftops (Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -1014,6 +1132,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -1043,6 +1165,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": [
@@ -1074,6 +1200,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": [
@@ -1106,6 +1236,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -1135,6 +1269,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -1164,6 +1302,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -1193,6 +1335,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)"
         }
       ],
       "notes": []
@@ -2187,94 +2333,7 @@
       "id": "d1.ice-cavern.tent",
       "name": "Tent",
       "area": "ice-cavern",
-      "verification": "verified",
-      "missability": "permanent",
-      "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Before boarding the cargo ship in Dali",
-      "evidence": [
-        {
-          "source": "jegged",
-          "section": "https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/05-Ice-Cavern.html"
-        },
-        {
-          "source": "gamefaqs-bover",
-          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/ice-cavern"
-        },
-        {
-          "source": "gamefaqs-vinheim",
-          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Area 05: Ice Cavern)"
-        },
-        {
-          "source": "steam-guide",
-          "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Ice Cavern)"
-        }
-      ],
-      "notes": []
-    },
-    {
-      "id": "d1.ice-cavern.ether",
-      "name": "Ether",
-      "area": "ice-cavern",
-      "verification": "verified",
-      "missability": "permanent",
-      "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Before boarding the cargo ship in Dali",
-      "evidence": [
-        {
-          "source": "jegged",
-          "section": "https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/05-Ice-Cavern.html"
-        },
-        {
-          "source": "gamefaqs-bover",
-          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/ice-cavern"
-        },
-        {
-          "source": "gamefaqs-vinheim",
-          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Area 05: Ice Cavern)"
-        },
-        {
-          "source": "steam-guide",
-          "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Ice Cavern)"
-        }
-      ],
-      "notes": []
-    },
-    {
-      "id": "d1.ice-cavern.potion-ice-path",
-      "name": "Potion",
-      "area": "ice-cavern",
-      "verification": "verified",
-      "missability": "permanent",
-      "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Before boarding the cargo ship in Dali",
-      "evidence": [
-        {
-          "source": "jegged",
-          "section": "https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/05-Ice-Cavern.html"
-        },
-        {
-          "source": "gamefaqs-bover",
-          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/ice-cavern"
-        },
-        {
-          "source": "gamefaqs-vinheim",
-          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Area 05: Ice Cavern)"
-        },
-        {
-          "source": "steam-guide",
-          "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Ice Cavern)"
-        }
-      ],
-      "notes": []
-    },
-    {
-      "id": "d1.ice-cavern.potion-icicle-field",
-      "name": "Potion",
-      "area": "ice-cavern",
-      "verification": "verified",
+      "verification": "conflicting",
       "missability": "permanent",
       "missableKind": "pickup",
       "priority": null,
@@ -2298,14 +2357,108 @@
         }
       ],
       "notes": [
-        "The Steam guide suggests grabbing this one before using the icicle field icon."
+        "GameFAQs says the cave interior can never be re-entered after you leave Dali. The PSNProfiles treasure guide lists these chests for Discs 1 and 2. Treated as closing when you leave Dali to be safe."
+      ]
+    },
+    {
+      "id": "d1.ice-cavern.ether",
+      "name": "Ether",
+      "area": "ice-cavern",
+      "verification": "conflicting",
+      "missability": "permanent",
+      "missableKind": "pickup",
+      "priority": null,
+      "lastOpportunity": "Before boarding the cargo ship in Dali",
+      "evidence": [
+        {
+          "source": "jegged",
+          "section": "https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/05-Ice-Cavern.html"
+        },
+        {
+          "source": "gamefaqs-bover",
+          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/ice-cavern"
+        },
+        {
+          "source": "gamefaqs-vinheim",
+          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Area 05: Ice Cavern)"
+        },
+        {
+          "source": "steam-guide",
+          "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Ice Cavern)"
+        }
+      ],
+      "notes": [
+        "GameFAQs says the cave interior can never be re-entered after you leave Dali. The PSNProfiles treasure guide lists these chests for Discs 1 and 2. Treated as closing when you leave Dali to be safe."
+      ]
+    },
+    {
+      "id": "d1.ice-cavern.potion-ice-path",
+      "name": "Potion",
+      "area": "ice-cavern",
+      "verification": "conflicting",
+      "missability": "permanent",
+      "missableKind": "pickup",
+      "priority": null,
+      "lastOpportunity": "Before boarding the cargo ship in Dali",
+      "evidence": [
+        {
+          "source": "jegged",
+          "section": "https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/05-Ice-Cavern.html"
+        },
+        {
+          "source": "gamefaqs-bover",
+          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/ice-cavern"
+        },
+        {
+          "source": "gamefaqs-vinheim",
+          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Area 05: Ice Cavern)"
+        },
+        {
+          "source": "steam-guide",
+          "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Ice Cavern)"
+        }
+      ],
+      "notes": [
+        "GameFAQs says the cave interior can never be re-entered after you leave Dali. The PSNProfiles treasure guide lists these chests for Discs 1 and 2. Treated as closing when you leave Dali to be safe."
+      ]
+    },
+    {
+      "id": "d1.ice-cavern.potion-icicle-field",
+      "name": "Potion",
+      "area": "ice-cavern",
+      "verification": "conflicting",
+      "missability": "permanent",
+      "missableKind": "pickup",
+      "priority": null,
+      "lastOpportunity": "Before boarding the cargo ship in Dali",
+      "evidence": [
+        {
+          "source": "jegged",
+          "section": "https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/05-Ice-Cavern.html"
+        },
+        {
+          "source": "gamefaqs-bover",
+          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/ice-cavern"
+        },
+        {
+          "source": "gamefaqs-vinheim",
+          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Area 05: Ice Cavern)"
+        },
+        {
+          "source": "steam-guide",
+          "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Ice Cavern)"
+        }
+      ],
+      "notes": [
+        "The Steam guide suggests grabbing this one before using the icicle field icon.",
+        "GameFAQs says the cave interior can never be re-entered after you leave Dali. The PSNProfiles treasure guide lists these chests for Discs 1 and 2. Treated as closing when you leave Dali to be safe."
       ]
     },
     {
       "id": "d1.ice-cavern.mage-masher",
       "name": "Mage Masher",
       "area": "ice-cavern",
-      "verification": "verified",
+      "verification": "conflicting",
       "missability": "permanent",
       "missableKind": "pickup",
       "priority": null,
@@ -2328,13 +2481,15 @@
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Ice Cavern)"
         }
       ],
-      "notes": []
+      "notes": [
+        "GameFAQs says the cave interior can never be re-entered after you leave Dali. The PSNProfiles treasure guide lists these chests for Discs 1 and 2. Treated as closing when you leave Dali to be safe."
+      ]
     },
     {
       "id": "d1.ice-cavern.elixir",
       "name": "Elixir",
       "area": "ice-cavern",
-      "verification": "verified",
+      "verification": "conflicting",
       "missability": "permanent",
       "missableKind": "pickup",
       "priority": null,
@@ -2357,13 +2512,15 @@
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Ice Cavern)"
         }
       ],
-      "notes": []
+      "notes": [
+        "GameFAQs says the cave interior can never be re-entered after you leave Dali. The PSNProfiles treasure guide lists these chests for Discs 1 and 2. Treated as closing when you leave Dali to be safe."
+      ]
     },
     {
       "id": "d1.ice-cavern.phoenix-down",
       "name": "Phoenix Down",
       "area": "ice-cavern",
-      "verification": "verified",
+      "verification": "conflicting",
       "missability": "permanent",
       "missableKind": "pickup",
       "priority": null,
@@ -2386,13 +2543,15 @@
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Ice Cavern)"
         }
       ],
-      "notes": []
+      "notes": [
+        "GameFAQs says the cave interior can never be re-entered after you leave Dali. The PSNProfiles treasure guide lists these chests for Discs 1 and 2. Treated as closing when you leave Dali to be safe."
+      ]
     },
     {
       "id": "d1.ice-cavern.leather-wrist",
       "name": "Leather Wrist",
       "area": "ice-cavern",
-      "verification": "verified",
+      "verification": "conflicting",
       "missability": "permanent",
       "missableKind": "pickup",
       "priority": null,
@@ -2415,7 +2574,9 @@
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Ice Cavern)"
         }
       ],
-      "notes": []
+      "notes": [
+        "GameFAQs says the cave interior can never be re-entered after you leave Dali. The PSNProfiles treasure guide lists these chests for Discs 1 and 2. Treated as closing when you leave Dali to be safe."
+      ]
     },
     {
       "id": "d1.ice-cavern.ate-mogster-lesson-2",
@@ -2766,10 +2927,10 @@
       "name": "Potion",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
-      "missableKind": "pickup",
+      "missability": "none",
+      "missableKind": null,
       "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "lastOpportunity": null,
       "evidence": [
         {
           "source": "jegged",
@@ -2786,6 +2947,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -2795,10 +2960,10 @@
       "name": "Antidote",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
-      "missableKind": "pickup",
+      "missability": "none",
+      "missableKind": null,
       "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "lastOpportunity": null,
       "evidence": [
         {
           "source": "jegged",
@@ -2815,6 +2980,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -2824,10 +2993,10 @@
       "name": "Mognet: deliver Mois's letter to Gumo",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "opportunity",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -2844,6 +3013,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -2873,6 +3046,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": [
@@ -2884,10 +3061,10 @@
       "name": "120 Gil",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
-      "missableKind": "pickup",
+      "missability": "none",
+      "missableKind": null,
       "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "lastOpportunity": null,
       "evidence": [
         {
           "source": "jegged",
@@ -2904,6 +3081,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -2913,10 +3094,10 @@
       "name": "Aries (Stellazzio coin)",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
-      "missableKind": "pickup",
+      "missability": "none",
+      "missableKind": null,
       "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "lastOpportunity": null,
       "evidence": [
         {
           "source": "jegged",
@@ -2933,6 +3114,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": [
@@ -2944,10 +3129,10 @@
       "name": "156 Gil",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -2964,6 +3149,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -2973,10 +3162,10 @@
       "name": "Potion",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -2993,6 +3182,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3002,10 +3195,10 @@
       "name": "Eye Drops",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -3022,6 +3215,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3031,10 +3228,10 @@
       "name": "Mognet: take Kumop's letter to Mogki",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "opportunity",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -3051,6 +3248,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3060,10 +3261,10 @@
       "name": "Ether",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -3080,6 +3281,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3089,10 +3294,10 @@
       "name": "Potion",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -3109,6 +3314,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3118,10 +3327,10 @@
       "name": "Iron Helm",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -3138,6 +3347,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3147,10 +3360,10 @@
       "name": "Leather Wrist",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -3167,6 +3380,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3176,10 +3393,10 @@
       "name": "95 Gil",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -3196,6 +3413,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3205,10 +3426,10 @@
       "name": "Phoenix Down",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -3225,6 +3446,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3234,10 +3459,10 @@
       "name": "Potion",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -3254,6 +3479,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3263,10 +3492,10 @@
       "name": "Phoenix Pinion",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before boarding the cargo ship (Dali Underground is Disc 1 only)",
       "evidence": [
         {
           "source": "jegged",
@@ -3283,6 +3512,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3292,10 +3525,10 @@
       "name": "Hi-Potion",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
-      "missableKind": "pickup",
+      "missability": "none",
+      "missableKind": null,
       "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "lastOpportunity": null,
       "evidence": [
         {
           "source": "jegged",
@@ -3312,6 +3545,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3321,10 +3558,10 @@
       "name": "135 Gil",
       "area": "dali",
       "verification": "verified",
-      "missability": "unconfirmed",
-      "missableKind": "pickup",
+      "missability": "none",
+      "missableKind": null,
       "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "lastOpportunity": null,
       "evidence": [
         {
           "source": "jegged",
@@ -3341,6 +3578,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Village of Dali)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)"
         }
       ],
       "notes": []
@@ -3494,10 +3735,10 @@
       "name": "Glass Armlet",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -3514,6 +3755,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3523,10 +3768,10 @@
       "name": "Ether",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -3543,6 +3788,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3572,6 +3821,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3601,6 +3854,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3661,6 +3918,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3670,10 +3931,10 @@
       "name": "163 Gil",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -3690,6 +3951,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3734,10 +3999,10 @@
       "name": "Hi-Potion",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -3754,6 +4019,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3763,10 +4032,10 @@
       "name": "Echo Screen",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -3783,6 +4052,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3792,10 +4065,10 @@
       "name": "Tent",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -3812,6 +4085,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3821,10 +4098,10 @@
       "name": "Leather Plate",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -3841,6 +4118,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3850,10 +4131,10 @@
       "name": "Silver Gloves",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -3870,6 +4151,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3899,6 +4184,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3908,10 +4197,10 @@
       "name": "Leather Wrist",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -3928,6 +4217,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3937,10 +4230,10 @@
       "name": "Bronze Vest",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -3957,6 +4250,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3966,10 +4263,10 @@
       "name": "Mimic Card",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -3986,6 +4283,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -3995,10 +4296,10 @@
       "name": "Steepled Hat",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -4015,6 +4316,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -4059,10 +4364,10 @@
       "name": "127 Gil",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -4079,6 +4384,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -4088,10 +4397,10 @@
       "name": "Ore",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -4108,6 +4417,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -4137,6 +4450,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": [
@@ -4168,6 +4485,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -4197,6 +4518,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -4206,10 +4531,10 @@
       "name": "282 Gil",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -4226,6 +4551,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -4235,10 +4564,10 @@
       "name": "68 Gil",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -4255,6 +4584,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -4264,10 +4597,10 @@
       "name": "97 Gil",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -4284,6 +4617,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -4293,10 +4630,10 @@
       "name": "Mini-Burmecia (key item)",
       "area": "lindblum",
       "verification": "verified",
-      "missability": "unconfirmed",
+      "missability": "permanent",
       "missableKind": "pickup",
-      "priority": null,
-      "lastOpportunity": "Collect on this visit (later availability not documented)",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (you can walk back to Lindblum until then)",
       "evidence": [
         {
           "source": "jegged",
@@ -4313,6 +4650,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -4563,10 +4904,10 @@
       "name": "Wyerd Card",
       "area": "festival-of-the-hunt",
       "verification": "verified",
-      "missability": "none",
-      "missableKind": null,
-      "priority": null,
-      "lastOpportunity": null,
+      "missability": "permanent",
+      "missableKind": "pickup",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (Disc 1 only per PSNProfiles)",
       "evidence": [
         {
           "source": "jegged",
@@ -4579,6 +4920,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum Castle / Festival)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -4613,10 +4958,10 @@
       "name": "Tent",
       "area": "festival-of-the-hunt",
       "verification": "verified",
-      "missability": "none",
-      "missableKind": null,
-      "priority": null,
-      "lastOpportunity": null,
+      "missability": "permanent",
+      "missableKind": "pickup",
+      "priority": "optional",
+      "lastOpportunity": "Before the end of Disc 1 (Disc 1 only per PSNProfiles)",
       "evidence": [
         {
           "source": "jegged",
@@ -4629,6 +4974,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum Castle / Festival)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))"
         }
       ],
       "notes": []
@@ -5007,7 +5356,8 @@
         }
       ],
       "notes": [
-        "Its treasure can’t be reached until later in the game. See the Chocograph log on the Progress screen."
+        "Its treasure can’t be reached until Disc 3 (airship, or the Mountain ability). The Chocograph log on the Progress screen has the details.",
+        "Jegged’s Chocograph page says this one can’t be “obtained” before Disc 3. In context that refers to the treasure; Fishy071, Red Scarlet, GameFAQs and the Final Fantasy Wiki all list the Chocograph itself as diggable in Chocobo’s Forest from the start."
       ]
     },
     {
@@ -5174,9 +5524,9 @@
     },
     {
       "id": "d1.lindblum-kingdom.chocograph-piece-1",
-      "name": "Dig up a Chocograph Piece",
+      "name": "Dig up Chocograph Piece 1",
       "area": "lindblum-kingdom",
-      "verification": "conflicting",
+      "verification": "verified",
       "missability": "none",
       "missableKind": null,
       "priority": null,
@@ -5193,10 +5543,14 @@
         {
           "source": "gamefaqs-bover",
           "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/exploring-lindblum-kingdom"
+        },
+        {
+          "source": "ff-wiki",
+          "section": "https://finalfantasy.fandom.com/wiki/Chocograph (Chocograph Pieces)"
         }
       ],
       "notes": [
-        "Fishy071 and Red Scarlet list one piece (the upper-left) in Chocobo’s Forest on Disc 1. GameFAQs (bover_87) says the first two pieces can be found in the Forest at any time. Keep digging until Mene says there’s nothing left.",
+        "A second piece becomes diggable here once Choco has Reef (see Daines-horse Basin).",
         "The completed set isn’t usable until much later in the game."
       ]
     },
@@ -5725,6 +6079,30 @@
       ]
     },
     {
+      "id": "d1.daines-horse-basin.chocograph-piece-2",
+      "name": "Dig up Chocograph Piece 2 (needs Reef)",
+      "area": "daines-horse-basin",
+      "verification": "verified",
+      "missability": "none",
+      "missableKind": null,
+      "priority": null,
+      "lastOpportunity": null,
+      "evidence": [
+        {
+          "source": "ff-wiki",
+          "section": "https://finalfantasy.fandom.com/wiki/Chocograph (Chocograph Pieces)"
+        },
+        {
+          "source": "gamefaqs-bover",
+          "section": "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/journey-to-burmecia (Daines-horse Basin)"
+        }
+      ],
+      "notes": [
+        "The Final Fantasy Wiki lists Piece 2 as available after Reef, and GameFAQs (bover_87) says the first two pieces are found in the Forest. GameFAQs board players report two pieces from the Forest on Disc 1.",
+        "Fishy071’s and Red Scarlet’s guides show only one piece from the Forest on Disc 1, but their route digs everything before getting Reef. They then find the next piece in Chocobo’s Lagoon, which pieces can also come from."
+      ]
+    },
+    {
       "id": "d1.daines-horse-basin.blu-night",
       "name": "Blue Magic: Night (eat Nymph)",
       "area": "daines-horse-basin",
@@ -5753,7 +6131,7 @@
       "missability": "unconfirmed",
       "missableKind": "unique",
       "priority": "important",
-      "lastOpportunity": "Collect now. GameFAQs says it stays available, Jegged implies it does not",
+      "lastOpportunity": "Collect now (GameFAQs and PSNProfiles: available later; Jegged: one-time)",
       "evidence": [
         {
           "source": "jegged",
@@ -5770,11 +6148,15 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Burmecia)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Burmecia (Discs 1, 2, 3, and 4))"
         }
       ],
       "notes": [
         "Each Stellazzio coin has exactly one location, so there is no other way to get Cancer.",
-        "GameFAQs’ Stellazzio list states none of the 13 coins are missable, even on Disc 4. Jegged lists Burmecia as a one-time area."
+        "GameFAQs’ Stellazzio list says none of the 13 coins are missable, even on Disc 4. The PSNProfiles treasure guide lists Cancer under Burmecia for Discs 1–4. Jegged lists Burmecia as a one-time area. The evidence favours “not missable”, but it hasn’t been confirmed in-game."
       ]
     },
     {
@@ -5782,10 +6164,10 @@
       "name": "Soft",
       "area": "burmecia",
       "verification": "conflicting",
-      "missability": "permanent",
+      "missability": "unconfirmed",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before the final Disc 1 battle (revisit status disputed)",
+      "lastOpportunity": "Collect now (PSNProfiles: available later; Jegged: one-time)",
       "evidence": [
         {
           "source": "jegged",
@@ -5802,10 +6184,14 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Burmecia)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Burmecia (Discs 1, 2, 3, and 4))"
         }
       ],
       "notes": [
-        "Sources disagree on revisiting Burmecia. Jegged calls it a one-time area whose treasure is gone for good; GameFAQs says the Cancer coin is never missable and lists Disc 4 Mognet mail to Atla here, which implies you can return. Collect everything now to be safe."
+        "Sources disagree. The PSNProfiles treasure guide lists this chest as collectable on Discs 1–4, and GameFAQs implies the city can be revisited. Jegged calls Burmecia a one-time area whose treasure is gone for good. No source says how you get back into the city later. Collect it now to be safe."
       ]
     },
     {
@@ -5833,11 +6219,15 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Burmecia)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Burmecia (Discs 1, 2, 3, and 4))"
         }
       ],
       "notes": [
-        "Only this chest is lost. Germinas Boots also come from the Streamside Chocograph treasure.",
-        "Sources disagree on revisiting Burmecia. Jegged calls it a one-time area whose treasure is gone for good; GameFAQs says the Cancer coin is never missable and lists Disc 4 Mognet mail to Atla here, which implies you can return. Collect everything now to be safe."
+        "Only this chest is lost if the floor falls. Germinas Boots also come from the Streamside Chocograph treasure.",
+        "Sources disagree. The PSNProfiles treasure guide lists this chest as collectable on Discs 1–4, and GameFAQs implies the city can be revisited. Jegged calls Burmecia a one-time area whose treasure is gone for good. No source says how you get back into the city later. Collect it now to be safe."
       ]
     },
     {
@@ -5845,10 +6235,10 @@
       "name": "Potion",
       "area": "burmecia",
       "verification": "conflicting",
-      "missability": "permanent",
+      "missability": "unconfirmed",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before the final Disc 1 battle (revisit status disputed)",
+      "lastOpportunity": "Collect now (PSNProfiles: available later; Jegged: one-time)",
       "evidence": [
         {
           "source": "jegged",
@@ -5865,10 +6255,14 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Burmecia)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Burmecia (Discs 1, 2, 3, and 4))"
         }
       ],
       "notes": [
-        "Sources disagree on revisiting Burmecia. Jegged calls it a one-time area whose treasure is gone for good; GameFAQs says the Cancer coin is never missable and lists Disc 4 Mognet mail to Atla here, which implies you can return. Collect everything now to be safe."
+        "Sources disagree. The PSNProfiles treasure guide lists this chest as collectable on Discs 1–4, and GameFAQs implies the city can be revisited. Jegged calls Burmecia a one-time area whose treasure is gone for good. No source says how you get back into the city later. Collect it now to be safe."
       ]
     },
     {
@@ -5876,10 +6270,10 @@
       "name": "Soft",
       "area": "burmecia",
       "verification": "conflicting",
-      "missability": "permanent",
+      "missability": "unconfirmed",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before the final Disc 1 battle (revisit status disputed)",
+      "lastOpportunity": "Collect now (PSNProfiles: available later; Jegged: one-time)",
       "evidence": [
         {
           "source": "jegged",
@@ -5896,10 +6290,14 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Burmecia)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Burmecia (Discs 1, 2, 3, and 4))"
         }
       ],
       "notes": [
-        "Sources disagree on revisiting Burmecia. Jegged calls it a one-time area whose treasure is gone for good; GameFAQs says the Cancer coin is never missable and lists Disc 4 Mognet mail to Atla here, which implies you can return. Collect everything now to be safe."
+        "Sources disagree. The PSNProfiles treasure guide lists this chest as collectable on Discs 1–4, and GameFAQs implies the city can be revisited. Jegged calls Burmecia a one-time area whose treasure is gone for good. No source says how you get back into the city later. Collect it now to be safe."
       ]
     },
     {
@@ -5927,6 +6325,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Burmecia)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Burmecia (Discs 1, 2, 3, and 4))"
         }
       ],
       "notes": []
@@ -5936,10 +6338,10 @@
       "name": "Ether",
       "area": "burmecia",
       "verification": "conflicting",
-      "missability": "permanent",
+      "missability": "unconfirmed",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before the final Disc 1 battle (revisit status disputed)",
+      "lastOpportunity": "Collect now (PSNProfiles: available later; Jegged: one-time)",
       "evidence": [
         {
           "source": "jegged",
@@ -5956,10 +6358,14 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Burmecia)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Burmecia (Discs 1, 2, 3, and 4))"
         }
       ],
       "notes": [
-        "Sources disagree on revisiting Burmecia. Jegged calls it a one-time area whose treasure is gone for good; GameFAQs says the Cancer coin is never missable and lists Disc 4 Mognet mail to Atla here, which implies you can return. Collect everything now to be safe."
+        "Sources disagree. The PSNProfiles treasure guide lists this chest as collectable on Discs 1–4, and GameFAQs implies the city can be revisited. Jegged calls Burmecia a one-time area whose treasure is gone for good. No source says how you get back into the city later. Collect it now to be safe."
       ]
     },
     {
@@ -5990,10 +6396,10 @@
       "name": "Tent",
       "area": "burmecia",
       "verification": "conflicting",
-      "missability": "permanent",
+      "missability": "unconfirmed",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before the final Disc 1 battle (revisit status disputed)",
+      "lastOpportunity": "Collect now (PSNProfiles: available later; Jegged: one-time)",
       "evidence": [
         {
           "source": "jegged",
@@ -6010,10 +6416,14 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Burmecia)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Burmecia (Discs 1, 2, 3, and 4))"
         }
       ],
       "notes": [
-        "Sources disagree on revisiting Burmecia. Jegged calls it a one-time area whose treasure is gone for good; GameFAQs says the Cancer coin is never missable and lists Disc 4 Mognet mail to Atla here, which implies you can return. Collect everything now to be safe."
+        "Sources disagree. The PSNProfiles treasure guide lists this chest as collectable on Discs 1–4, and GameFAQs implies the city can be revisited. Jegged calls Burmecia a one-time area whose treasure is gone for good. No source says how you get back into the city later. Collect it now to be safe."
       ]
     },
     {
@@ -6021,10 +6431,10 @@
       "name": "Phoenix Down",
       "area": "burmecia",
       "verification": "conflicting",
-      "missability": "permanent",
+      "missability": "unconfirmed",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before the final Disc 1 battle (revisit status disputed)",
+      "lastOpportunity": "Collect now (PSNProfiles: available later; Jegged: one-time)",
       "evidence": [
         {
           "source": "jegged",
@@ -6041,10 +6451,14 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Burmecia)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Burmecia (Discs 1, 2, 3, and 4))"
         }
       ],
       "notes": [
-        "Sources disagree on revisiting Burmecia. Jegged calls it a one-time area whose treasure is gone for good; GameFAQs says the Cancer coin is never missable and lists Disc 4 Mognet mail to Atla here, which implies you can return. Collect everything now to be safe."
+        "Sources disagree. The PSNProfiles treasure guide lists this chest as collectable on Discs 1–4, and GameFAQs implies the city can be revisited. Jegged calls Burmecia a one-time area whose treasure is gone for good. No source says how you get back into the city later. Collect it now to be safe."
       ]
     },
     {
@@ -6072,6 +6486,10 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Burmecia)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Burmecia (Discs 1, 2, 3, and 4))"
         }
       ],
       "notes": []
@@ -6081,10 +6499,10 @@
       "name": "Lightning Staff",
       "area": "burmecia",
       "verification": "conflicting",
-      "missability": "permanent",
+      "missability": "unconfirmed",
       "missableKind": "pickup",
       "priority": "optional",
-      "lastOpportunity": "Before the final Disc 1 battle (revisit status disputed)",
+      "lastOpportunity": "Collect now (PSNProfiles: available later; Jegged: one-time)",
       "evidence": [
         {
           "source": "jegged",
@@ -6101,10 +6519,14 @@
         {
           "source": "steam-guide",
           "section": "https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Burmecia)"
+        },
+        {
+          "source": "psnprofiles-treasure",
+          "section": "https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Burmecia (Discs 1, 2, 3, and 4))"
         }
       ],
       "notes": [
-        "Sources disagree on revisiting Burmecia. Jegged calls it a one-time area whose treasure is gone for good; GameFAQs says the Cancer coin is never missable and lists Disc 4 Mognet mail to Atla here, which implies you can return. Collect everything now to be safe."
+        "Sources disagree. The PSNProfiles treasure guide lists this chest as collectable on Discs 1–4, and GameFAQs implies the city can be revisited. Jegged calls Burmecia a one-time area whose treasure is gone for good. No source says how you get back into the city later. Collect it now to be safe."
       ]
     },
     {
@@ -6368,8 +6790,9 @@
       "treasureId": "d3.chocographs-disc3.uncultivated-land-treasure",
       "treasureFromDisc": 3,
       "treasureAbility": "Field",
-      "treasureLocation": "Zamo Basin, by a river north of Treno (GameFAQs: Gunitas Basin near the Evil Forest)",
-      "treasureNote": "Its Chocobo tracks can only be reached with an airship or the Mountain ability.",
+      "treasureLocation": "Marshy patch on the east bank of the river north of Treno, just east of the Evil Forest (Zamo Basin)",
+      "treasureTracks": "Tracks in Zamo Basin beside the marsh, reachable only by airship; with the Mountain ability, tracks on King Ed Plains or Edgecry Coast work too",
+      "treasureNote": "Needs an airship (Disc 3) or the Mountain ability. No special ability is needed to dig.",
       "reward": "10 Antidote, Jade Armlet, 3 Wing Edge, Cargo Ship Card"
     },
     {
@@ -6437,14 +6860,32 @@
     },
     {
       "number": "piece",
-      "name": "Chocograph Piece",
+      "name": "Chocograph Piece 1",
       "digId": "d1.lindblum-kingdom.chocograph-piece-1",
+      "treasureFromDisc": 3,
+      "treasureAbility": "Sea",
+      "treasureLocation": "Assembled with the other five into the Mist Ocean Chocograph",
+      "reward": "One of six pieces of the Mist Ocean Chocograph"
+    },
+    {
+      "number": "piece",
+      "name": "Chocograph Piece 2",
+      "digId": "d1.daines-horse-basin.chocograph-piece-2",
+      "digNeeds": "Reef",
+      "treasureFromDisc": 3,
+      "treasureAbility": "Sea",
+      "treasureLocation": "Assembled with the other five into the Mist Ocean Chocograph",
+      "reward": "One of six pieces of the Mist Ocean Chocograph"
+    },
+    {
+      "number": "set",
+      "name": "Mist Ocean (all six pieces)",
       "treasureId": "d3.chocographs-disc3.mist-ocean-treasure",
       "treasureFromDisc": 3,
       "treasureAbility": "Sea",
-      "treasureLocation": "All six pieces form the Mist Ocean Chocograph",
-      "treasureNote": "The remaining pieces only turn up later in the game.",
-      "reward": "Completing the set leads to a further Choco upgrade"
+      "treasureLocation": "Small islands off the north-east Mist Continent",
+      "treasureNote": "The last pieces need the Mountain and Sea abilities and a late-game airship.",
+      "reward": "A further Choco upgrade"
     }
   ],
   "images": [

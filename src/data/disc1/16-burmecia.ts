@@ -6,7 +6,7 @@ const WALKTHROUGHS: SourceId[] = ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim'
 
 /** Shared note for ordinary pickups: the sources disagree about revisiting. */
 const REVISIT_CONFLICT =
-  'Sources disagree on revisiting Burmecia. Jegged calls it a one-time area whose treasure is gone for good; GameFAQs says the Cancer coin is never missable and lists Disc 4 Mognet mail to Atla here, which implies you can return. Collect everything now to be safe.';
+  'Sources disagree. The PSNProfiles treasure guide lists this chest as collectable on Discs 1–4, and GameFAQs implies the city can be revisited. Jegged calls Burmecia a one-time area whose treasure is gone for good. No source says how you get back into the city later. Collect it now to be safe.';
 
 export default defineArea(
   {
@@ -19,11 +19,12 @@ export default defineArea(
     summary:
       'A rain-soaked city of balconies and broken floors. It has a Stellazzio coin, a chest you must walk (not run) to, a scene that unlocks a much later ATE, Stiltzkin’s first shop, and the final Disc 1 boss.',
     party: 'Zidane, Vivi, Freya (+ recruit)',
-    partyIds: ['zidane', 'vivi', 'freya', 'quina'],
+    partyIds: ['zidane', 'vivi', 'freya'],
+    partyOptionalIds: ['quina'],
     departure: {
       trigger: 'Climbing the palace steps to the final Disc 1 battle',
       consequence:
-        "Disc 1 ends after the battle and its scenes. Stiltzkin's 333-Gil deal, the boss steals and the chance to deliver Atla's Kupo Nut end with it. Sources disagree on whether the city's ordinary chests can be collected on a later visit.",
+        "Disc 1 ends after the battle and its scenes. Stiltzkin's 333-Gil deal, the boss steals and the chance to deliver Atla's Kupo Nut end with it. The city's ordinary chests and the Cancer coin are listed as available on later discs by two sources (one source disagrees).",
     },
     tips: [
       'Several chests here are Mimics, which are optional fights. A Mimic can summon a Magic Vice, which Quina can eat for Magic Hammer.',
@@ -35,10 +36,10 @@ export default defineArea(
     ],
   },
   {
-    missability: 'permanent',
+    missability: 'unconfirmed',
     missableKind: 'pickup',
-    lastOpportunity: 'Before the final Disc 1 battle (revisit status disputed)',
-    sources: WALKTHROUGHS,
+    lastOpportunity: 'Collect now (PSNProfiles: available later; Jegged: one-time)',
+    sources: [...WALKTHROUGHS, 'psnprofiles-treasure'],
   },
   [
     // ---- Suburb
@@ -52,11 +53,11 @@ export default defineArea(
       missableKind: 'unique',
       rewardUniqueness: 'unique',
       priority: 'important',
-      lastOpportunity: 'Collect now. GameFAQs says it stays available, Jegged implies it does not',
+      lastOpportunity: 'Collect now (GameFAQs and PSNProfiles: available later; Jegged: one-time)',
       verification: 'conflicting',
       caveats: [
         'Each Stellazzio coin has exactly one location, so there is no other way to get Cancer.',
-        'GameFAQs’ Stellazzio list states none of the 13 coins are missable, even on Disc 4. Jegged lists Burmecia as a one-time area.',
+        'GameFAQs’ Stellazzio list says none of the 13 coins are missable, even on Disc 4. The PSNProfiles treasure guide lists Cancer under Burmecia for Discs 1–4. Jegged lists Burmecia as a one-time area. The evidence favours “not missable”, but it hasn’t been confirmed in-game.',
       ],
     },
     {
@@ -84,7 +85,7 @@ export default defineArea(
       priority: 'optional',
       lastOpportunity: 'Before the floor collapses (it collapses if you run)',
       caveats: [
-        'Only this chest is lost. Germinas Boots also come from the Streamside Chocograph treasure.',
+        'Only this chest is lost if the floor falls. Germinas Boots also come from the Streamside Chocograph treasure.',
         REVISIT_CONFLICT,
       ],
       verification: 'conflicting',

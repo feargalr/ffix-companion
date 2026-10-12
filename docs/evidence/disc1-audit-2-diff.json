@@ -1,0 +1,1334 @@
+{
+ "changes": [
+  {
+   "id": "d1.alexandria-vivi.zombie-card",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.potion-statue",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.lizard-man-card",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.sahagin-card",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.potion-awning",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-9",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.potion-house",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.fang-card-dresser",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.potion-barrels",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-33",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.goblin-card-grass",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.potion-pub",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.flan-card",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-27",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-38",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.ether-synth",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.remedy",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.phoenix-pinion",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.eye-drops",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-3",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.potion-steeple",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.tent-steeple",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.hippaul-cards",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "temporary"
+    ],
+    "missableKind": [
+     "pickup",
+     null
+    ],
+    "priority": [
+     "optional",
+     null
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Available again on a later visit"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.mittens-bomb-card",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-29",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-92",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-63",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "lastOpportunity": [
+     "Before following Puck onto the rooftops",
+     "Before following Puck onto the rooftops (Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.ice-cavern.tent",
+   "diff": {
+    "verification": [
+     "verified",
+     "conflicting"
+    ]
+   }
+  },
+  {
+   "id": "d1.ice-cavern.ether",
+   "diff": {
+    "verification": [
+     "verified",
+     "conflicting"
+    ]
+   }
+  },
+  {
+   "id": "d1.ice-cavern.potion-ice-path",
+   "diff": {
+    "verification": [
+     "verified",
+     "conflicting"
+    ]
+   }
+  },
+  {
+   "id": "d1.ice-cavern.potion-icicle-field",
+   "diff": {
+    "verification": [
+     "verified",
+     "conflicting"
+    ]
+   }
+  },
+  {
+   "id": "d1.ice-cavern.mage-masher",
+   "diff": {
+    "verification": [
+     "verified",
+     "conflicting"
+    ]
+   }
+  },
+  {
+   "id": "d1.ice-cavern.elixir",
+   "diff": {
+    "verification": [
+     "verified",
+     "conflicting"
+    ]
+   }
+  },
+  {
+   "id": "d1.ice-cavern.phoenix-down",
+   "diff": {
+    "verification": [
+     "verified",
+     "conflicting"
+    ]
+   }
+  },
+  {
+   "id": "d1.ice-cavern.leather-wrist",
+   "diff": {
+    "verification": [
+     "verified",
+     "conflicting"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.inn-potion",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "none"
+    ],
+    "missableKind": [
+     "pickup",
+     null
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     null
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.inn-antidote",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "none"
+    ],
+    "missableKind": [
+     "pickup",
+     null
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     null
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.gumo-letter",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.gil-120",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "none"
+    ],
+    "missableKind": [
+     "pickup",
+     null
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     null
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.aries-stellazzio",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "none"
+    ],
+    "missableKind": [
+     "pickup",
+     null
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     null
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-gil-156",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-potion-hut",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-eye-drops",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.kumop-letter",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-ether",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-potion-crank",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-iron-helm",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-leather-wrist",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-gil-95",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-door-phoenix-down",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-door-potion",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-door-phoenix-pinion",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before boarding the cargo ship (Dali Underground is Disc 1 only)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.obs-hi-potion",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "none"
+    ],
+    "missableKind": [
+     "pickup",
+     null
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     null
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.obs-gil-135",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "none"
+    ],
+    "missableKind": [
+     "pickup",
+     null
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     null
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.glass-armlet",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.castle-ether",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.gil-163",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.hi-potion",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.echo-screen",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.tent-church-street",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.leather-plate",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.silver-gloves",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.leather-wrist",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.bronze-vest",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.mimic-card",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.steepled-hat",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.gil-127",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.ore",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.hideout-gil-282",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.hideout-gil-68",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.hideout-gil-97",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.mini-burmecia",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Collect on this visit (later availability not documented)",
+     "Before the end of Disc 1 (you can walk back to Lindblum until then)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.festival-of-the-hunt.wyerd-card",
+   "diff": {
+    "missability": [
+     "none",
+     "permanent"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     null,
+     "Before the end of Disc 1 (Disc 1 only per PSNProfiles)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.festival-of-the-hunt.dragons-gate-tent",
+   "diff": {
+    "missability": [
+     "none",
+     "permanent"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     null,
+     "Before the end of Disc 1 (Disc 1 only per PSNProfiles)"
+    ],
+    "closesWithArea": [
+     null,
+     "burmecia"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum-kingdom.chocograph-piece-1",
+   "diff": {
+    "name": [
+     "Dig up a Chocograph Piece",
+     "Dig up Chocograph Piece 1"
+    ],
+    "verification": [
+     "conflicting",
+     "verified"
+    ]
+   }
+  },
+  {
+   "id": "d1.daines-horse-basin.chocograph-piece-2",
+   "added": true,
+   "name": "Dig up Chocograph Piece 2 (needs Reef)"
+  },
+  {
+   "id": "d1.burmecia.cancer-stellazzio",
+   "diff": {
+    "lastOpportunity": [
+     "Collect now. GameFAQs says it stays available, Jegged implies it does not",
+     "Collect now (GameFAQs and PSNProfiles: available later; Jegged: one-time)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.soft-right-house",
+   "diff": {
+    "missability": [
+     "permanent",
+     "unconfirmed"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle (revisit status disputed)",
+     "Collect now (PSNProfiles: available later; Jegged: one-time)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.potion-left-house",
+   "diff": {
+    "missability": [
+     "permanent",
+     "unconfirmed"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle (revisit status disputed)",
+     "Collect now (PSNProfiles: available later; Jegged: one-time)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.soft-left-house",
+   "diff": {
+    "missability": [
+     "permanent",
+     "unconfirmed"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle (revisit status disputed)",
+     "Collect now (PSNProfiles: available later; Jegged: one-time)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.ether-bedroom",
+   "diff": {
+    "missability": [
+     "permanent",
+     "unconfirmed"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle (revisit status disputed)",
+     "Collect now (PSNProfiles: available later; Jegged: one-time)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.uptown-tent",
+   "diff": {
+    "missability": [
+     "permanent",
+     "unconfirmed"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle (revisit status disputed)",
+     "Collect now (PSNProfiles: available later; Jegged: one-time)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.uptown-phoenix-down",
+   "diff": {
+    "missability": [
+     "permanent",
+     "unconfirmed"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle (revisit status disputed)",
+     "Collect now (PSNProfiles: available later; Jegged: one-time)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.lightning-staff",
+   "diff": {
+    "missability": [
+     "permanent",
+     "unconfirmed"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle (revisit status disputed)",
+     "Collect now (PSNProfiles: available later; Jegged: one-time)"
+    ]
+   }
+  }
+ ],
+ "oldTotals": {
+  "entries": 229,
+  "missability": {
+   "permanent": 81,
+   "unconfirmed": 69,
+   "none": 62,
+   "temporary": 5,
+   "conditional": 12
+  },
+  "verification": {
+   "verified": 216,
+   "conflicting": 11,
+   "single-source": 2
+  }
+ },
+ "newTotals": {
+  "entries": 230,
+  "missability": {
+   "permanent": 133,
+   "temporary": 6,
+   "none": 67,
+   "conditional": 12,
+   "unconfirmed": 12
+  },
+  "verification": {
+   "verified": 210,
+   "conflicting": 18,
+   "single-source": 2
+  }
+ }
+}

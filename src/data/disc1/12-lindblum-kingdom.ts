@@ -15,7 +15,8 @@ export default defineArea(
     summary:
       'Free roaming around Lindblum before heading north. You can recruit a fourth party member, catch your first Chocobo, dig for Chocographs, and pick up a couple of world-map treasures.',
     party: 'Zidane, Vivi, Freya (+ one recruit)',
-    partyIds: ['zidane', 'vivi', 'freya', 'quina'],
+    partyIds: ['zidane', 'vivi', 'freya'],
+    partyOptionalIds: ['quina'],
     tips: [
       "Qu's Marsh is roughly due north of Dragon's Gate, on the way to Gizamaluke's Grotto.",
       'Frog catching: leave one male and one female (and any Golden Frog) in the pond so it refills faster.',
@@ -197,7 +198,10 @@ export default defineArea(
       spot: "Chocobo's Forest — Hot & Cold",
       description: 'Can be dug up now. Mene hints you should leave its treasure alone for a while.',
       requires: ['d1.lindblum-kingdom.chocograph-1'],
-      caveats: ['Its treasure can’t be reached until later in the game. See the Chocograph log on the Progress screen.'],
+      caveats: [
+        'Its treasure can’t be reached until Disc 3 (airship, or the Mountain ability). The Chocograph log on the Progress screen has the details.',
+        'Jegged’s Chocograph page says this one can’t be “obtained” before Disc 3. In context that refers to the treasure; Fishy071, Red Scarlet, GameFAQs and the Final Fantasy Wiki all list the Chocograph itself as diggable in Chocobo’s Forest from the start.',
+      ],
       sources: SRC,
     },
     {
@@ -274,19 +278,18 @@ export default defineArea(
     },
     {
       slug: 'chocograph-piece-1',
-      name: 'Dig up a Chocograph Piece',
+      name: 'Dig up Chocograph Piece 1',
       category: 'chocograph',
       chocograph: { number: 'piece', role: 'dig' },
       spot: "Chocobo's Forest — Hot & Cold",
       description:
-        'One of six pieces that eventually form a final Chocograph. At most one Chocograph and one piece can turn up per game.',
+        'The first of six pieces that eventually form the Mist Ocean Chocograph. Needs no special ability. At most one Chocograph and one piece can turn up per game.',
       requires: ['d1.lindblum-kingdom.chocograph-1'],
       caveats: [
-        'Fishy071 and Red Scarlet list one piece (the upper-left) in Chocobo’s Forest on Disc 1. GameFAQs (bover_87) says the first two pieces can be found in the Forest at any time. Keep digging until Mene says there’s nothing left.',
+        'A second piece becomes diggable here once Choco has Reef (see Daines-horse Basin).',
         'The completed set isn’t usable until much later in the game.',
       ],
-      verification: 'conflicting',
-      sources: SRC,
+      sources: [...SRC, 'ff-wiki']
     },
     // ---- Chocograph treasures reachable on Disc 1 without new abilities.
     {

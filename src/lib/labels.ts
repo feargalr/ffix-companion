@@ -84,4 +84,6 @@ export const SOURCE_SHORT: Record<SourceId, string> = {
   'gamefaqs-chocograph-redscarlet': 'GameFAQs (Red Scarlet)',
   'steam-guide': 'Steam guide',
   'steam-ate-guide': 'Steam ATE guide',
+  'psnprofiles-treasure': 'PSNProfiles treasure guide',
+  'ff-wiki': 'Final Fantasy Wiki',
 };

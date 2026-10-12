@@ -14,6 +14,13 @@ export default defineArea(
       'The wrecked Prima Vista, the first Active Time Events, and the run out of the forest. Everything here is lost once you escape.',
     party: 'Zidane, Steiner, Vivi (Blank briefly)',
     partyIds: ['zidane', 'steiner', 'vivi'],
+    ateGuide: [
+      { kind: 'auto', text: 'Crash site: “The Forest Keeper”.' },
+      { kind: 'select', text: 'Inside the wreck: “Time to Escape” and “Girl Who Was Left Behind”, changing screens between them.' },
+      { kind: 'select', text: '“My Little Baby” (only after Time to Escape; change screens and come back).' },
+      { kind: 'select', text: 'On the forest trail with Vivi and Steiner: “Orchestra in the Forest”.' },
+      { kind: 'auto', text: 'At the spring: “Do As I Say, Not As I Do”.' },
+    ],
     image: { imageId: 'evil-forest-crash-site', alt: 'Official screenshot: the wrecked Prima Vista in the Evil Forest during an Active Time Event' },
     departure: {
       trigger: 'Escaping the forest after the Plant Brain and Plant Spider chase',

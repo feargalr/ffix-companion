@@ -1,6 +1,13 @@
 # Disc 1 content audit
 
-_Audit date: 12 October 2026 · Branch: `disc1-audit` · Target: Nintendo Switch (played on Switch 2)_
+_First audit: 12 October 2026 (`disc1-audit`) · Second review: 12 October 2026 (`disc1-audit-2`, see the end of this file) · Target: Nintendo Switch (played on Switch 2)_
+
+> **Current totals after the second review:**
+> - **230** entries: 210 verified, 2 single-source, 18 conflicting.
+> - Missability: 133 permanent, 12 conditional, 6 temporary, 12 unconfirmed, 67 not missable.
+> - **24** entries remain uncertain, down from 81.
+>
+> The figures in the first-audit sections below describe the state after the first audit only.
 
 This audit started from an independent review of the Disc 1 dataset. It implements the confirmed findings and re-checks every entry against a wider set of sources. Where the evidence disagrees or is missing, the entry says so in the app.
 
@@ -264,17 +271,20 @@ The four requested dimensions map onto the model like this:
 
 ## Unresolved, needs in-game confirmation
 
-1. **Burmecia revisit:** can Burmecia be re-entered later, and do unopened chests and the Cancer coin remain? (Jegged vs GameFAQs.)
-2. **Alexandria (27), Dali (19), Lindblum (18) pickups:** do unopened chests persist on later visits? No source confirms either way.
-3. **Lindblum ATE cut-offs:** exactly when do Small-Town Knight, Steam Engine and Baku and His Crew stop being offered?
-4. **Autograph / Moogle Suit deadline:** stated only by GameFAQs.
-5. **Chocograph Pieces on Disc 1:** one or two?
-6. **Mosco’s letter:** does it depend on the “Girl Who Was Left Behind” ATE?
-7. **Moogle name in Gizamaluke’s Grotto:** Moguta (Jegged, Vinheim) or Mogmi (GameFAQs)?
-8. **Uncultivated Land treasure location:** Zamo Basin or Gunitas Basin?
-9. **Friendly Mu location:** plains vs forest vs South Gate approach.
-10. **Exact on-screen ATE title** for the synthesis tutorial (punctuation and capitalisation).
-11. **Switch specifics:** no Disc 1 differences are reported by any source. Not checked on hardware.
+_Updated after the second review. Resolved items are struck through, with the evidence in the second-review section._
+
+1. **Burmecia revisit:** PSNProfiles and GameFAQs say the chests and the Cancer coin remain available on later discs; Jegged says the area is one-time. *Still conflicting.* Also unknown: how the city is re-entered later.
+2. ~~Alexandria, Dali, Lindblum pickups~~: resolved by the PSNProfiles treasure guide (Alexandria town and Lindblum Disc 1 only; Dali village all discs; Dali Underground Disc 1 only; Observatory Mountain Discs 1–3). This is a single source for the windows, not yet confirmed in-game.
+3. **Ice Cavern:** closes when you leave Dali (GameFAQs) or stays open on Disc 2 (PSNProfiles)? *New conflict.*
+4. **Lindblum ATE cut-offs:** still undocumented.
+5. **Autograph / Moogle Suit deadline:** GameFAQs only. PSNProfiles agrees they are Disc 1 only but gives no exact point.
+6. ~~Chocograph Pieces on Disc 1~~: resolved, two (the second needs Reef).
+7. **Mosco’s letter:** does it depend on the “Girl Who Was Left Behind” ATE?
+8. **Moogle name in Gizamaluke’s Grotto:** Moguta or Mogmi?
+9. ~~Uncultivated Land location~~: resolved. It was a naming difference plus a treasure-vs-tracks confusion.
+10. **Friendly Mu location:** plains vs forest vs South Gate approach.
+11. **Exact on-screen ATE title** for the synthesis tutorial.
+12. **Switch specifics:** not checked on hardware.
 
 ## Quality assurance
 
@@ -288,3 +298,100 @@ See the commit for exact command output. Run on this branch:
 Also checked:
 - **Mobile layout:** checked at 375 px in the browser, with no horizontal overflow on Area or Progress pages.
 - **Shipped IDs:** the fixture grew from 218 to 229 IDs, append-only.
+
+
+---
+
+## Second review (October 2026)
+
+A further independent review raised seven points. What was checked and what changed for each:
+
+**Totals:**
+
+| | Before | After |
+|---|---:|---:|
+| Entries | 229 | 230 |
+| Verified / single-source / conflicting | 216 / 2 / 11 | 210 / 2 / 18 |
+| Missability: permanent / conditional / temporary / unconfirmed / none | 81 / 12 / 5 / 69 / 62 | 133 / 12 / 6 / 12 / 67 |
+| Uncertain (not verified, or unconfirmed) | 81 | 24 |
+
+83 entries changed and one was added; none were removed, and all 229 earlier IDs are kept. The full diff against the deployed version is in [`evidence/disc1-audit-2-diff.json`](evidence/disc1-audit-2-diff.json).
+
+New sources:
+- **PSNProfiles — [Rank S Treasure Hunter Guide](https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide)** (ARB1992). It lists every pickup by the discs on which it can be collected.
+- **[Final Fantasy Wiki — Chocograph](https://finalfantasy.fandom.com/wiki/Chocograph)**.
+- **[GameFAQs board topic 66230325](https://gamefaqs.gamespot.com/boards/197338-final-fantasy-ix/66230325)**: corroboration only. It is not cited as a source in entries.
+- **[Jegged — Chocographs](https://jegged.com/Games/Final-Fantasy-IX/Side-Quests/Chocographs.html)**.
+
+### 1. Second Chocograph Piece: confirmed and added
+
+| Evidence | Says |
+|---|---|
+| Final Fantasy Wiki | Piece 1: no special requirements. **Piece 2: after unlocking Reef.** Pieces are not tied to a dig site and show their hints in a fixed order |
+| GameFAQs (bover_87, *Chocobo Hot & Cold*) | “The first two are available anytime, and can only be found in the Forest” |
+| GameFAQs board 66230325 | Two players report two pieces from Chocobo’s Forest on Disc 1 |
+| Fishy071 / Red Scarlet | One piece from the Forest on Disc 1, then the next from Chocobo’s Lagoon. Their route digs everything before obtaining Reef, so they don’t contradict the above |
+
+Added `d1.daines-horse-basin.chocograph-piece-2` (verified: wiki and bover_87). It requires Piece 1 and the Healing Shore treasure (Reef). It sits in Daines-horse Basin because that is where Reef is obtained; the dig happens back in Chocobo’s Forest. `d1.lindblum-kingdom.chocograph-piece-1` is no longer *conflicting*.
+
+The Chocograph log now has rows for Piece 1, Piece 2 (dig tick only) and the **Mist Ocean** set (treasure tick only). The reserved ID `d3.chocographs-disc3.mist-ocean-treasure` moved to the Mist Ocean row unchanged, so any existing tick survives.
+
+### 2. Uncultivated Land: discrepancy resolved
+
+| Question | Answer | Evidence |
+|---|---|---|
+| Treasure location | Marshy patch on the east bank of the river north of Treno, just east of the Evil Forest (Zamo Basin) | Fishy071, Red Scarlet, Jegged (“east side of the continent near the river”) |
+| Chocobo tracks | Zamo Basin beside the marsh (airship only), or King Ed Plains / Edgecry Coast with the Mountain ability | Fishy071 |
+| Ability to dig the treasure | None (Field) | bover_87, Jegged, Fishy071 |
+| Transport | Airship, or the Mountain ability | Fishy071, Jegged |
+| Earliest point | Disc 3 | Fishy071, Jegged |
+
+bover_87’s “Gunitas Basin, near Evil Forest” describes the same marsh beside the Evil Forest under a different region name. It is not a second location, so the conflict note was removed.
+
+Jegged’s line “you cannot obtain this Chocograph until after you have obtained the Blue Narciss” refers to the treasure. Four sources list the Chocograph itself as diggable in Chocobo’s Forest from the start, and the entry now says so.
+
+### 3. Before You Leave: safe vs complete
+
+The panel now shows two separate readings:
+- **Safe to progress**: no Critical or Important entries left.
+- **Area checklist**: % complete and the number of entries still to go.
+
+The text distinguishes “Nothing critical or important is left; N ordinary entries are still unticked” from “Every entry in this area is ticked”. Ordinary items were not upgraded.
+
+### 4. ATE viewing order
+
+Added a collapsible **ATE viewing order** to the Evil Forest, Dali and Lindblum. Each step is labelled **Select** (chosen from the ATE prompt) or **Automatic** (plays by itself). The steps use only documented triggers. Where the evidence is incomplete, they say so instead of inventing a condition: Dagger Tries Harder’s several routes, and Lindblum’s undocumented cut-offs. The guides don’t mention later plot. Dali’s old one-line tip was replaced.
+
+### 5. Character portraits
+
+Each area’s portraits were checked against the walkthrough party listings:
+- Vinheim’s per-area party tables were used for Lindblum: Zidane, Dagger, Vivi and Steiner.
+- **Quina** joins optionally in Qu’s Marsh, so in Lindblum Kingdom, Gizamaluke’s Grotto, Daines-horse Basin and Burmecia the portrait is now **dimmed, outlined and labelled “Quina (if recruited)”**, through a new `partyOptionalIds` field.
+- No other portrait implied a character who hadn’t joined.
+
+### 6. Revisit windows (Burmecia and other towns)
+
+The PSNProfiles guide groups every pickup by the discs it can be collected on. City access is separate from individual treasure availability:
+
+| Location | PSNProfiles window | Change |
+|---|---|---|
+| Alexandria town | **Disc 1 only** (except Hippaul’s bell-rope cards: obtainable up to Disc 3; jump rope: any disc) | 26 entries → `permanent` (25 one-time pickups plus the Mittens card), priority optional. Hippaul’s cards → `temporary` |
+| Dali village (Inn chests, Aries, 120 Gil) | Discs 1–4 | → `none` |
+| Dali Underground | **Disc 1 only** | → `permanent`, closes when you leave Dali |
+| Observatory Mountain | Discs 1–3 | → `none` |
+| Lindblum (incl. Serpent’s and Dragon’s Gate) | **Disc 1 only** | 20 pickups → `permanent`, but they close **at the end of Disc 1** (`closesWithArea: burmecia`), because you can walk back until then. They now also appear in Burmecia’s lower-priority list |
+| Burmecia | **Discs 1–4**, including Cancer and the Germinas Boots chest (if the floor hasn’t collapsed) | Ordinary chests → `unconfirmed`, priority optional, still **conflicting**. Two sources (PSNProfiles, GameFAQs) say they stay available; Jegged says one-time. Cancer keeps its existing Important priority; it was **not** raised. How the city is re-entered later isn’t documented |
+| Ice Cavern | Discs 1 and 2 | **New conflict** with GameFAQs (“never return to the interior” after Dali). Kept closing with Dali to be safe, marked *conflicting* |
+
+Window evidence for Alexandria, Lindblum and the Dali Underground comes from one source (PSNProfiles), which is consistent with the other guides’ silence. Every affected entry names PSNProfiles in its sources.
+
+### 7. Progress preserved
+
+- All 229 earlier IDs are present.
+- The single new ID was appended to `src/test/fixtures/shipped-ids.json`.
+- The reserved Mist Ocean ID is unchanged.
+
+### QA (second review)
+
+- `npm run validate`, `npm run lint`, `npm test` (**97 tests**), `npm run build` and `npm run check`: all pass.
+- At 375 px, Burmecia and Dali (with the ATE guide open) have no horizontal overflow.

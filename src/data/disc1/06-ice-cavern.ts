@@ -30,6 +30,10 @@ export default defineArea(
     missableKind: 'pickup',
     lastOpportunity: 'Before boarding the cargo ship in Dali',
     closesWithArea: 'dali',
+    verification: 'conflicting',
+    caveats: [
+      'GameFAQs says the cave interior can never be re-entered after you leave Dali. The PSNProfiles treasure guide lists these chests for Discs 1 and 2. Treated as closing when you leave Dali to be safe.',
+    ],
     sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'],
   },
   [
@@ -109,6 +113,9 @@ export default defineArea(
       description: 'After thawing Mois, pick Mognet to receive a letter for Gumo in Dali.',
       missableKind: 'opportunity',
       priority: 'important',
+      missability: 'permanent',
+      lastOpportunity: 'Before boarding the cargo ship in Dali',
+      closesWithArea: 'dali',
     },
     {
       slug: 'steal-bw1-remedy',

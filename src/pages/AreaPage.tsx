@@ -11,6 +11,7 @@ import { BeforeYouLeave } from '../components/BeforeYouLeave';
 import { ChecklistSection } from '../components/ChecklistSection';
 import { ProgressBar } from '../components/ui';
 import { SplitNotice } from '../components/ChocographLog';
+import { AteGuide } from '../components/AteGuide';
 import { OfficialImg, PartyPortraits } from '../components/OfficialImage';
 
 export function AreaPage({ areaId, entryId }: { areaId: string; entryId?: string }) {
@@ -95,7 +96,7 @@ export function AreaPage({ areaId, entryId }: { areaId: string; entryId?: string
                   <span className="font-semibold">Party:</span> {area.party}
                 </p>
               )}
-              {area.partyIds && <PartyPortraits ids={area.partyIds} />}
+              {area.partyIds && <PartyPortraits ids={area.partyIds} optional={area.partyOptionalIds} />}
             </div>
             {area.image && (
               <OfficialImg imageId={area.image.imageId} alt={area.image.alt} className="w-28 shrink-0 self-start rounded-md sm:w-36" />
@@ -145,6 +146,8 @@ export function AreaPage({ areaId, entryId }: { areaId: string; entryId?: string
               )}
             </div>
           )}
+
+          {area.ateGuide && <AteGuide steps={area.ateGuide} />}
 
           {area.entries.some((e) => e.chocograph) && (
             <div className="ff-window-quiet">

@@ -57,6 +57,20 @@ export const SOURCES: Record<SourceId, Source> = {
     url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=665189459',
     note: 'Dedicated ATE list with trigger conditions; bold entries are forced scenes.',
   },
+  'psnprofiles-treasure': {
+    id: 'psnprofiles-treasure',
+    title: 'Rank S Treasure Hunter Guide',
+    author: 'ARB1992 on PSNProfiles',
+    url: 'https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide',
+    note: 'Lists every pickup by the discs on which it can be collected. Used for revisit windows.',
+  },
+  'ff-wiki': {
+    id: 'ff-wiki',
+    title: 'Chocograph',
+    author: 'Final Fantasy Wiki (Fandom)',
+    url: 'https://finalfantasy.fandom.com/wiki/Chocograph',
+    note: 'Chocograph list and Chocograph Piece requirements.',
+  },
 };
 
 /**
@@ -72,6 +86,7 @@ export const AREA_SECTIONS: Record<string, Partial<Record<SourceId, string>>> = 
     'steam-guide': 'https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Alexandria)',
   },
   'alexandria-vivi': {
+    'psnprofiles-treasure': 'https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Alexandria Town Area, Disc 1 Only / Disc 3)',
     jegged: 'https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/02-Alexandria.html',
     'gamefaqs-bover': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/alexandria',
     'gamefaqs-vinheim': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Area 02: Alexandria; Area 31 for the later revisit)',
@@ -98,6 +113,7 @@ export const AREA_SECTIONS: Record<string, Partial<Record<SourceId, string>>> = 
     'steam-ate-guide': 'https://steamcommunity.com/sharedfiles/filedetails/?id=665189459 (Teach Me, Mogster! Lesson 1)',
   },
   'ice-cavern': {
+    'psnprofiles-treasure': 'https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Ice Cavern (Disc 1 and 2 Only))',
     jegged: 'https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/05-Ice-Cavern.html',
     'gamefaqs-bover': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/ice-cavern',
     'gamefaqs-vinheim': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Area 05: Ice Cavern)',
@@ -109,6 +125,7 @@ export const AREA_SECTIONS: Record<string, Partial<Record<SourceId, string>>> = 
     'gamefaqs-vinheim': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Friendly Monster Mu note)',
   },
   dali: {
+    'psnprofiles-treasure': 'https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (The Village of Dali; Dali Underground (Disc 1 Only); Observatory Mountain)',
     jegged: 'https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/06-The-Village-of-Dali.html',
     'gamefaqs-bover': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/village-of-dali',
     'gamefaqs-vinheim': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Area 06: Village of Dali)',
@@ -121,6 +138,7 @@ export const AREA_SECTIONS: Record<string, Partial<Record<SourceId, string>>> = 
     'gamefaqs-vinheim': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Area 07: Cargo Ship)',
   },
   lindblum: {
+    'psnprofiles-treasure': 'https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))',
     jegged: 'https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/08-Lindblum.html',
     'gamefaqs-bover': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/lindblum',
     'gamefaqs-vinheim': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Area 08: Lindblum)',
@@ -128,6 +146,7 @@ export const AREA_SECTIONS: Record<string, Partial<Record<SourceId, string>>> = 
     'steam-ate-guide': 'https://steamcommunity.com/sharedfiles/filedetails/?id=665189459 (Lindblum 5)',
   },
   'festival-of-the-hunt': {
+    'psnprofiles-treasure': 'https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Lindblum (Disc 1 Only))',
     jegged: 'https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/08-Lindblum.html (Festival of the Hunt)',
     'jegged-missables': 'https://jegged.com/Games/Final-Fantasy-IX/Tips-and-Tricks/Missable-Items-and-Events.html (Festival of the Hunt)',
     'gamefaqs-bover': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/storyline-mini-games (Festival of the Hunt)',
@@ -135,6 +154,7 @@ export const AREA_SECTIONS: Record<string, Partial<Record<SourceId, string>>> = 
     'steam-guide': 'https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Lindblum Castle / Festival)',
   },
   'lindblum-kingdom': {
+    'ff-wiki': 'https://finalfantasy.fandom.com/wiki/Chocograph (Chocograph Pieces)',
     jegged: 'https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/09-Gizamalukes-Grotto.html',
     'gamefaqs-bover': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/exploring-lindblum-kingdom',
     'gamefaqs-vinheim': "https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Areas 09-10: Qu's Marsh, Chocobo's Forest)",
@@ -155,6 +175,7 @@ export const AREA_SECTIONS: Record<string, Partial<Record<SourceId, string>>> = 
     'steam-guide': 'https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Bohden Gate)',
   },
   'daines-horse-basin': {
+    'ff-wiki': 'https://finalfantasy.fandom.com/wiki/Chocograph (Chocograph Pieces)',
     jegged: 'https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/09-Gizamalukes-Grotto.html (Daines-horse Basin)',
     'gamefaqs-bover': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/journey-to-burmecia (Daines-horse Basin)',
     'gamefaqs-vinheim': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/67953 (Area 12: Burmecia Arch)',
@@ -163,6 +184,7 @@ export const AREA_SECTIONS: Record<string, Partial<Record<SourceId, string>>> = 
     'steam-guide': 'https://steamcommunity.com/sharedfiles/filedetails/?id=665159772 (Burmecia Arch)',
   },
   burmecia: {
+    'psnprofiles-treasure': 'https://psnprofiles.com/guide/8130-final-fantasy-ix-rank-s-treasure-hunter-guide (Burmecia (Discs 1, 2, 3, and 4))',
     jegged: 'https://jegged.com/Games/Final-Fantasy-IX/Walkthrough/Disc-1/10-Burmecia.html',
     'jegged-missables': 'https://jegged.com/Games/Final-Fantasy-IX/Tips-and-Tricks/Missable-Items-and-Events.html (One-Time Areas; Stiltzkin)',
     'gamefaqs-bover': 'https://gamefaqs.gamespot.com/ps/197338-final-fantasy-ix/faqs/71891/burmecia (+ stellazzio, kupo-nuts, stiltzkin-shopping, mognet)',

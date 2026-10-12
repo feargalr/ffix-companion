@@ -1,7 +1,7 @@
 import { defineArea, ref } from '../define';
 
 const A = 'dali';
-const ALL = ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'] as const;
+const ALL = ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide', 'psnprofiles-treasure'] as const;
 
 export default defineArea(
   {
@@ -16,25 +16,37 @@ export default defineArea(
     party: 'Zidane, Dagger, then Steiner alone, then the full party',
     partyIds: ['zidane', 'garnet', 'vivi', 'steiner'],
     image: { imageId: 'dali-field', alt: 'Official screenshot: Vivi in the fields around Dali at night' },
+    ateGuide: [
+      { kind: 'select', text: 'Inn, on waking: pick “Vivi, Confused” or “Dagger Tries”. Change screens, then pick the other.' },
+      { kind: 'select', text: 'Step outside the inn: “Cat’s Eye”.' },
+      { kind: 'note', text: 'Talk to Vivi by the windmill.' },
+      { kind: 'select', text: '“Cat’s Eye 2” (needs Cat’s Eye; not offered in the inn reception area).' },
+      {
+        kind: 'select',
+        text: '“Dagger Tries Harder” (needs Dagger Tries). It appears after a few more screen changes; sources describe several routes, so keep walking between screens until it’s offered.',
+      },
+      { kind: 'note', text: 'Only now enter the Weapon Shop to find Dagger.' },
+      { kind: 'auto', text: 'Back at the inn, “Queen Brahne’s Steiner” plays by itself — but only if the steps above were done.' },
+    ],
     departure: {
       trigger: 'Boarding the cargo ship docked in the farmer’s field',
       consequence:
         'Dali ATEs and the Black Waltz 2 steals are gone. The Ice Cavern interior is sealed for good too.',
     },
     tips: [
-      'A viewing order that catches all six ATEs: at the inn, watch “Vivi, Confused” and “Dagger Tries” (change screens between them). Step outside for “Cat’s Eye”. Talk to Vivi by the windmill, then watch “Cat’s Eye 2” and “Dagger Tries Harder” as they’re offered. Only then go into the Weapon Shop to find Dagger. The last ATE plays by itself at the inn.',
       'You usually need to change screens after one ATE before the next is offered. Save outside the village first if you want to be safe.',
       'The Weapon Shop sells the Feather Hat. After Black Waltz 2, many players buy Wrists here for the Cotton Robe synthesis money trick in Lindblum.',
       'Dali Underground door: opening it starts Ghost/Vice random battles but gives access to three more chests. Keeping it shut keeps the area encounter-free.',
       'Black Waltz 2 never targets Dagger. If she is the only one left standing, it puts her to sleep and the game is over, so keep the others alive.',
       'After Black Waltz 2, pick "Rest at the inn" to get another chance to explore Dali before boarding.',
-      'Revisits: the village is visited again later (the Steam ATE guide and Vinheim both return here), and some buildings gain new items then. No source confirms whether unopened Disc 1 chests in the village, the Underground or Observatory Mountain are still there, and none lists them as missable. They are marked “Collect now”.',
+      'Revisits (PSNProfiles treasure guide): the village pickups stay available on every disc and Observatory Mountain’s until Disc 3. The Underground’s chests are Disc 1 only.',
     ],
   },
   {
-    missability: 'unconfirmed',
+    missability: 'permanent',
     missableKind: 'pickup',
-    lastOpportunity: 'Collect on this visit (later availability not documented)',
+    priority: 'optional',
+    lastOpportunity: 'Before boarding the cargo ship (Dali Underground is Disc 1 only)',
     sources: [...ALL],
   },
   [
@@ -133,6 +145,7 @@ export default defineArea(
       category: 'treasure',
       spot: 'Inn bedroom',
       description: 'Chest in the lower-left of the bedroom, partly hidden by the plant.',
+      missability: 'none',
     },
     {
       slug: 'inn-antidote',
@@ -140,6 +153,7 @@ export default defineArea(
       category: 'treasure',
       spot: 'Inn bedroom',
       description: 'Chest in the lower-right corner of the bedroom.',
+      missability: 'none',
     },
     {
       slug: 'gumo-letter',
@@ -165,6 +179,7 @@ export default defineArea(
       category: 'hidden-item',
       spot: 'Village road',
       description: 'By the north-east corner of the building across the street, near the cart wheel and the Weapon Shop door.',
+      missability: 'none',
     },
     {
       slug: 'aries-stellazzio',
@@ -174,6 +189,7 @@ export default defineArea(
       description: 'Field icon behind the central crankshaft/pillar.',
       reward: 'Stellazzio coin (redeemable much later)',
       caveats: ['Stellazzio coins are part of a long-running sidequest. Trading them in comes much later.'],
+      missability: 'none',
     },
     // ---- Underground
     {
@@ -271,6 +287,7 @@ export default defineArea(
       category: 'treasure',
       spot: 'Observatory Mountain — base (as Steiner)',
       description: 'Chest partly hidden by a barrel/cart in the foreground at the bottom of the path.',
+      missability: 'none',
     },
     {
       slug: 'obs-gil-135',
@@ -278,6 +295,7 @@ export default defineArea(
       category: 'hidden-item',
       spot: 'Observatory Mountain — base (as Steiner)',
       description: 'By the fence/rock in the north-east (back-right) corner.',
+      missability: 'none',
     },
     {
       slug: 'steal-bw2-steepled-hat',

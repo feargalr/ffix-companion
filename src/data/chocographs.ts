@@ -12,15 +12,21 @@ import type { DiscNumber } from '../types/game';
  * exactly this ID so the tick carries over.
  */
 export interface ChocographInfo {
-  number: number | 'piece';
+  number: number | 'piece' | 'set';
   name: string;
-  digId: string;
-  treasureId: string;
+  /** Hot & Cold dig entry. Absent for the Mist Ocean row, which is assembled from pieces. */
+  digId?: string;
+  /** Treasure entry or reserved ID. Absent for pieces, whose reward is the assembled set. */
+  treasureId?: string;
+  /** What digging it up needs, when more than Choco and a game of Hot & Cold. */
+  digNeeds?: 'Reef';
   /** Earliest disc on which the treasure can realistically be reached. */
   treasureFromDisc: DiscNumber;
   /** Choco ability needed to reach the treasure ('Field' = none). */
   treasureAbility: 'Field' | 'Reef' | 'Mountain' | 'Sea' | 'Sky';
   treasureLocation: string;
+  /** Chocobo tracks to start from, when they differ from the treasure spot. */
+  treasureTracks?: string;
   /** What else is needed beyond the ability (story, vehicle). */
   treasureNote?: string;
   reward: string;
@@ -54,8 +60,10 @@ export const CHOCOGRAPHS: ChocographInfo[] = [
     treasureId: 'd3.chocographs-disc3.uncultivated-land-treasure',
     treasureFromDisc: 3,
     treasureAbility: 'Field',
-    treasureLocation: 'Zamo Basin, by a river north of Treno (GameFAQs: Gunitas Basin near the Evil Forest)',
-    treasureNote: 'Its Chocobo tracks can only be reached with an airship or the Mountain ability.',
+    treasureLocation: 'Marshy patch on the east bank of the river north of Treno, just east of the Evil Forest (Zamo Basin)',
+    treasureTracks:
+      'Tracks in Zamo Basin beside the marsh, reachable only by airship; with the Mountain ability, tracks on King Ed Plains or Edgecry Coast work too',
+    treasureNote: 'Needs an airship (Disc 3) or the Mountain ability. No special ability is needed to dig.',
     reward: '10 Antidote, Jade Armlet, 3 Wing Edge, Cargo Ship Card',
   },
   {
@@ -123,13 +131,32 @@ export const CHOCOGRAPHS: ChocographInfo[] = [
   },
   {
     number: 'piece',
-    name: 'Chocograph Piece',
+    name: 'Chocograph Piece 1',
     digId: 'd1.lindblum-kingdom.chocograph-piece-1',
+    treasureFromDisc: 3,
+    treasureAbility: 'Sea',
+    treasureLocation: 'Assembled with the other five into the Mist Ocean Chocograph',
+    reward: 'One of six pieces of the Mist Ocean Chocograph',
+  },
+  {
+    number: 'piece',
+    name: 'Chocograph Piece 2',
+    digId: 'd1.daines-horse-basin.chocograph-piece-2',
+    digNeeds: 'Reef',
+    treasureFromDisc: 3,
+    treasureAbility: 'Sea',
+    treasureLocation: 'Assembled with the other five into the Mist Ocean Chocograph',
+    reward: 'One of six pieces of the Mist Ocean Chocograph',
+  },
+  {
+    number: 'set',
+    name: 'Mist Ocean (all six pieces)',
+    // Reserved ID kept from the first audit, when it hung off the single piece row.
     treasureId: 'd3.chocographs-disc3.mist-ocean-treasure',
     treasureFromDisc: 3,
     treasureAbility: 'Sea',
-    treasureLocation: 'All six pieces form the Mist Ocean Chocograph',
-    treasureNote: 'The remaining pieces only turn up later in the game.',
-    reward: 'Completing the set leads to a further Choco upgrade',
+    treasureLocation: 'Small islands off the north-east Mist Continent',
+    treasureNote: 'The last pieces need the Mountain and Sea abilities and a late-game airship.',
+    reward: 'A further Choco upgrade',
   },
 ];

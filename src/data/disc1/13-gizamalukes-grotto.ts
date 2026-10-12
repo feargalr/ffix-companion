@@ -11,7 +11,8 @@ export default defineArea(
     summary:
       'A cave of bell-locked doors guarding the road to Burmecia. Each Gizamaluke Bell opens one door, and the order you use them in decides which treasures you can reach.',
     party: 'Zidane, Vivi, Freya (+ recruit)',
-    partyIds: ['zidane', 'vivi', 'freya', 'quina'],
+    partyIds: ['zidane', 'vivi', 'freya'],
+    partyOptionalIds: ['quina'],
     departure: {
       trigger: 'Defeating Gizamaluke',
       consequence: 'The boss steals are gone. The cave itself can be revisited.',

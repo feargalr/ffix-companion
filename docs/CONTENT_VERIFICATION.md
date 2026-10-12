@@ -11,6 +11,8 @@ Related files:
 ## Sources
 
 Four independent walkthroughs (Jegged; bover_87 and vinheim on GameFAQs; lylat & ponkberry on Steam), plus these dedicated guides:
+- the PSNProfiles Rank S treasure guide (per-disc availability);
+- the Final Fantasy Wiki’s Chocograph page;
 - Jegged’s missables page;
 - karinms’ ATE guide;
 - Fishy071’s and Red Scarlet’s Chocograph guides;
@@ -38,14 +40,15 @@ Agreement between guides is not treated as proof on its own. Every conflict foun
 ## Open questions
 
 These are kept in sync with the audit’s “Unresolved” list:
-- whether unopened chests persist on later visits to Alexandria, Dali, Lindblum and Burmecia;
+- whether Burmecia’s chests and Cancer coin survive later visits (two sources say yes, one says no);
+- whether the Ice Cavern can be re-entered on Disc 2;
 - the exact cut-offs of three Lindblum ATEs;
 - the Autograph/Moogle Suit deadline (single source);
-- one or two Chocograph Pieces on Disc 1;
 - Mosco’s letter dependency;
 - the Grotto Moogle’s name;
-- the Uncultivated Land treasure location;
 - the Friendly Mu location;
 - the exact on-screen title of the synthesis tutorial ATE.
+
+Revisit windows for Alexandria, Dali and Lindblum now come from the PSNProfiles treasure guide (see the audit’s second review).
 
 None of these can be settled from published guides alone. They need in-game checks.

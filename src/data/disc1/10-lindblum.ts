@@ -1,7 +1,7 @@
 import { defineArea, ref } from '../define';
 
 const A = 'lindblum';
-const ALL = ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'] as const;
+const ALL = ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide', 'psnprofiles-treasure'] as const;
 
 export default defineArea(
   {
@@ -15,9 +15,21 @@ export default defineArea(
       'A huge city in three districts linked by air cab. It has lots of pickups, six ATEs, and two key items that vanish once you visit the Tantalus hideout.',
     party: 'Zidane, Vivi (Steiner and Dagger for some scenes)',
     partyIds: ['zidane', 'vivi', 'steiner', 'garnet'],
+    ateGuide: [
+      { kind: 'auto', text: 'Inn, on waking: the Synthesis tutorial plays.' },
+      { kind: 'select', text: 'Step out of the inn: “Small-Town Knight in a Big City”.' },
+      { kind: 'auto', text: 'Entering the air-cab station: “Vivi’s Shopping”.' },
+      { kind: 'select', text: 'Arriving in the Theater District: “Steam Engine”.' },
+      { kind: 'auto', text: 'Entering the Tantalus hideout: “What Can I Do?”.' },
+      { kind: 'select', text: 'Leaving the hideout: “Baku and His Crew”.' },
+      {
+        kind: 'note',
+        text: 'No source documents when the three selectable ones stop being offered, so watch each one as soon as it appears.',
+      },
+    ],
     departure: {
       trigger: 'Entering the Tantalus hideout (Theater District)',
-      consequence: 'The Autograph and Moogle Suit key items are gone for good. Everything else in Lindblum stays available.',
+      consequence: 'The Autograph and Moogle Suit key items are gone for good. Other Disc 1 pickups here can still be collected until the end of Disc 1.',
     },
     tips: [
       'Lindblum is revisited later, so the ordinary pickups here are not flagged as missable.',
@@ -27,9 +39,11 @@ export default defineArea(
     ],
   },
   {
-    missability: 'unconfirmed',
+    missability: 'permanent',
     missableKind: 'pickup',
-    lastOpportunity: 'Collect on this visit (later availability not documented)',
+    priority: 'optional',
+    lastOpportunity: 'Before the end of Disc 1 (you can walk back to Lindblum until then)',
+    closesWithArea: 'burmecia',
     sources: [...ALL],
   },
   [

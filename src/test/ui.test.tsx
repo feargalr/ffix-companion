@@ -72,7 +72,10 @@ describe('app', () => {
     const panel = screen.getByRole('region', { name: 'Before You Leave' });
     expect(within(panel).getByText('1 missable opportunity remaining')).toBeInTheDocument();
     await user.click(screen.getByRole('checkbox', { name: 'Mythril Dagger (steal)' }));
-    expect(within(panel).getByText(/clear to move on/)).toBeInTheDocument();
+    expect(within(panel).getByText('Yes')).toBeInTheDocument();
+    // Safe to progress is not the same as 100%: ordinary pickups remain.
+    expect(within(panel).getByText(/ordinary entries are still unticked/)).toBeInTheDocument();
+    expect(within(panel).queryByText('100% complete')).not.toBeInTheDocument();
     // Ordinary pickups are still there, just folded away.
     expect(within(panel).getByRole('button', { name: /lower-priority item/ })).toBeInTheDocument();
   });
@@ -85,7 +88,34 @@ describe('app', () => {
     await user.click(dug);
     expect(dug).toBeChecked();
     expect(screen.getByRole('checkbox', { name: '#11 Small Beach: treasure found' })).not.toBeChecked();
-    expect(screen.getByText(/Needs Reef/)).toBeInTheDocument();
+    expect(screen.getByText(/Needs Reef \(Healing Shore treasure\)/)).toBeInTheDocument();
+  });
+
+  it('marks optional recruits in the party portraits', async () => {
+    render(<App />);
+    await go('#/area/burmecia');
+    expect(screen.getByRole('img', { name: 'Quina (if recruited)' })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'Freya' })).toBeInTheDocument();
+  });
+
+  it('shows a spoiler-free ATE viewing order with select vs automatic steps', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await go('#/area/dali');
+    await user.click(screen.getByRole('button', { name: /ATE viewing order/ }));
+    expect(screen.getAllByText('Select').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Automatic').length).toBeGreaterThan(0);
+  });
+
+  it('reports 100% only when every entry is ticked', async () => {
+    render(<App />);
+    await go('#/area/cargo-ship');
+    const panel = screen.getByRole('region', { name: 'Before You Leave' });
+    expect(within(panel).getByText('Yes')).toBeInTheDocument();
+    for (const id of ['steal-steepled-hat', 'steal-linen-cuirass', 'steal-silver-gloves']) {
+      await act(async () => progressStore.setDone(`d1.cargo-ship.${id}`, true));
+    }
+    expect(within(panel).getByText('100% complete')).toBeInTheDocument();
   });
 
   it('shows party portraits and the Square Enix notice', async () => {

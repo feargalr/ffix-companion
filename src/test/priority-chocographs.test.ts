@@ -42,9 +42,37 @@ describe('Chocographs', () => {
     expect(issues).toEqual([]);
   });
 
-  it('covers all nine Disc 1 Chocographs plus a piece', () => {
+  it('covers all nine Disc 1 Chocographs, two pieces and the Mist Ocean set', () => {
     const numbers = CHOCOGRAPHS.map((c) => c.number);
-    expect(numbers).toEqual([1, 2, 3, 4, 5, 6, 8, 10, 11, 'piece']);
+    expect(numbers).toEqual([1, 2, 3, 4, 5, 6, 8, 10, 11, 'piece', 'piece', 'set']);
+  });
+
+  it('requires Reef for the second Chocograph Piece only', () => {
+    const p1 = CHOCOGRAPHS.find((c) => c.name === 'Chocograph Piece 1')!;
+    const p2 = CHOCOGRAPHS.find((c) => c.name === 'Chocograph Piece 2')!;
+    expect(chocographStatus(p1, {})).toEqual({ kind: 'not-dug', needs: undefined });
+    expect(chocographStatus(p2, {})).toEqual({ kind: 'not-dug', needs: 'Reef' });
+    expect(chocographStatus(p2, { 'd1.daines-horse-basin.chocograph-healing-shore-treasure': 1 })).toEqual({
+      kind: 'not-dug',
+      needs: undefined,
+    });
+    expect(chocographStatus(p2, { [p2.digId!]: 1 }).kind).toBe('piece-dug');
+    expect(entry('d1.daines-horse-basin.chocograph-piece-2').requires).toContain(
+      'd1.daines-horse-basin.chocograph-healing-shore-treasure',
+    );
+  });
+
+  it('keeps the reserved Mist Ocean ID on its own row', () => {
+    const set = CHOCOGRAPHS.find((c) => c.number === 'set')!;
+    expect(set.treasureId).toBe('d3.chocographs-disc3.mist-ocean-treasure');
+    expect(set.digId).toBeUndefined();
+  });
+
+  it('separates the Uncultivated Land treasure spot from its Chocobo tracks', () => {
+    const c = CHOCOGRAPHS.find((x) => x.number === 3)!;
+    expect(c.treasureLocation).toMatch(/north of Treno/);
+    expect(c.treasureTracks).toMatch(/airship/);
+    expect(entry(c.digId!).verification).toBe('verified');
   });
 
   it('keeps the original IDs for the first five Chocographs as "dug up"', () => {
@@ -76,9 +104,9 @@ describe('Chocographs', () => {
     const small = CHOCOGRAPHS.find((c) => c.number === 11)!;
     const cold = CHOCOGRAPHS.find((c) => c.number === 6)!;
     expect(chocographStatus(small, {}).kind).toBe('not-dug');
-    expect(chocographStatus(small, { [small.digId]: 1 }).kind).toBe('needs-ability');
-    expect(chocographStatus(small, { [small.digId]: 1, 'd1.daines-horse-basin.chocograph-healing-shore-treasure': 1 }).kind).toBe('reachable');
-    expect(chocographStatus(cold, { [cold.digId]: 1 })).toEqual({ kind: 'later-disc', disc: 3 });
+    expect(chocographStatus(small, { [small.digId!]: 1 }).kind).toBe('needs-ability');
+    expect(chocographStatus(small, { [small.digId!]: 1, 'd1.daines-horse-basin.chocograph-healing-shore-treasure': 1 }).kind).toBe('reachable');
+    expect(chocographStatus(cold, { [cold.digId!]: 1 })).toEqual({ kind: 'later-disc', disc: 3 });
   });
 
   it('migrates conservatively: an old tick means "dug up" and the treasure starts unticked', () => {
@@ -135,5 +163,32 @@ describe('official images', () => {
       '© 2000, 2019 SQUARE ENIX CO., LTD. All Rights Reserved.',
       'LOGO ILLUSTRATION:© 2000 YOSHITAKA AMANO',
     ]);
+  });
+});
+
+describe('revisit windows (PSNProfiles treasure guide)', () => {
+  it('treats Alexandria town pickups as Disc 1 only, but not Hippaul’s cards or jump rope', () => {
+    expect(entry('d1.alexandria-vivi.zombie-card').missability).toBe('permanent');
+    expect(warningPriority(entry('d1.alexandria-vivi.zombie-card'))).toBe('optional');
+    expect(entry('d1.alexandria-vivi.hippaul-cards').missability).toBe('temporary');
+    expect(entry('d1.alexandria-vivi.jump-rope-100').missability).toBe('temporary');
+  });
+
+  it('keeps Dali village pickups available but closes the Underground', () => {
+    expect(entry('d1.dali.inn-potion').missability).toBe('none');
+    expect(entry('d1.dali.obs-hi-potion').missability).toBe('none');
+    expect(entry('d1.dali.ug-ether').missability).toBe('permanent');
+  });
+
+  it('closes Lindblum’s Disc 1 pickups at the end of the disc, not on leaving town', () => {
+    expect(entry('d1.lindblum.glass-armlet').closesWithArea).toBe('burmecia');
+    expect(entry('d1.festival-of-the-hunt.wyerd-card').closesWithArea).toBe('burmecia');
+  });
+
+  it('never makes Burmecia’s disputed chests a headline warning', () => {
+    for (const id of ['d1.burmecia.potion-left-house', 'd1.burmecia.soft-right-house', 'd1.burmecia.lightning-staff']) {
+      expect(entry(id).verification).toBe('conflicting');
+      expect(warningPriority(entry(id))).toBe('optional');
+    }
   });
 });

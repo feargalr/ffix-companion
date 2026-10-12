@@ -20,24 +20,40 @@ export function OfficialImg({ imageId, alt, className = '' }: { imageId: string;
   );
 }
 
-/** Small row of official character renders for the party in this area. */
-export function PartyPortraits({ ids }: { ids: CharacterId[] }) {
+/**
+ * Small row of official character renders for the party in this area.
+ * Optional recruits are dimmed and labelled so the row never implies they
+ * have definitely joined.
+ */
+export function PartyPortraits({ ids, optional = [] }: { ids: CharacterId[]; optional?: CharacterId[] }) {
   return (
     <ul className="flex items-end gap-1" aria-label="Party">
-      {ids.map((id) => {
+      {[...ids, ...optional].map((id) => {
         const img = CHARACTER_IMAGES[id];
+        const isOptional = optional.includes(id);
+        const name = isOptional ? `${CHARACTER_NAMES[id]} (if recruited)` : CHARACTER_NAMES[id];
         return (
-          <li key={id} className="grid h-12 w-10 place-items-end overflow-hidden rounded-md bg-night/40 ring-1 ring-silver/25">
+          <li
+            key={id}
+            className={`relative grid h-12 w-10 place-items-end overflow-hidden rounded-md bg-night/40 ${
+              isOptional ? 'opacity-60 outline-1 outline-dashed outline-silver/60' : 'ring-1 ring-silver/25'
+            }`}
+          >
             <img
               src={url(img)}
               width={img.width}
               height={img.height}
-              alt={CHARACTER_NAMES[id]}
-              title={CHARACTER_NAMES[id]}
+              alt={name}
+              title={name}
               loading="lazy"
               decoding="async"
               className="h-11 w-auto max-w-none object-contain object-bottom"
             />
+            {isOptional && (
+              <span aria-hidden="true" className="absolute top-0 right-0 rounded-bl bg-night/80 px-0.5 text-[9px] leading-tight text-ink-2">
+                ?
+              </span>
+            )}
           </li>
         );
       })}

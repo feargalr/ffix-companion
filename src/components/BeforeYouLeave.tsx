@@ -5,12 +5,14 @@ import { ALL_ENTRIES, AREA_BY_ID } from '../data';
 import { beforeYouLeave, isUncertain } from '../lib/missables';
 import { missableBadge } from '../lib/labels';
 import { href } from '../lib/router';
-import type { Completed } from '../lib/stats';
+import { areaProgress, type Completed } from '../lib/stats';
 
 export function BeforeYouLeave({ area, completed }: { area: Area; completed: Completed }) {
   const w = beforeYouLeave(area, ALL_ENTRIES, completed);
   const [showLower, setShowLower] = useState(false);
   const clear = w.count === 0;
+  const p = areaProgress(area, completed);
+  const left = p.total - p.done;
 
   return (
     <section id="before-you-leave" aria-labelledby="byl-title" className={`${clear ? 'ff-window-quiet' : 'ff-window-warn'} p-4`}>
@@ -27,11 +29,26 @@ export function BeforeYouLeave({ area, completed }: { area: Area; completed: Com
 
       {area.departure && <p className="mt-2 text-[13px] leading-relaxed text-ink-2">{area.departure.consequence}</p>}
 
+      <dl className="mt-3 grid grid-cols-2 gap-2 text-[12px]">
+        <div className={`rounded-lg px-3 py-2 ring-1 ${clear ? 'bg-jade/10 ring-jade/40' : 'bg-crimson/10 ring-crimson/40'}`}>
+          <dt className="font-semibold tracking-wide text-ink-3 uppercase">Safe to progress</dt>
+          <dd className={`text-[14px] font-semibold ${clear ? 'text-jade' : 'text-[#ffb3ba]'}`}>
+            {clear ? 'Yes' : `Not yet — ${w.count} left`}
+          </dd>
+        </div>
+        <div className={`rounded-lg px-3 py-2 ring-1 ${left === 0 ? 'bg-gold/10 ring-gold/40' : 'bg-night/40 ring-silver/25'}`}>
+          <dt className="font-semibold tracking-wide text-ink-3 uppercase">Area checklist</dt>
+          <dd className={`tabular text-[14px] font-semibold ${left === 0 ? 'text-gold-2' : 'text-ink'}`}>
+            {left === 0 ? '100% complete' : `${p.pct}% · ${left} to go`}
+          </dd>
+        </div>
+      </dl>
+
       {clear ? (
-        <p className="mt-2 text-[14px] text-ink">
-          {area.departure
-            ? 'Nothing critical or important is left here. You’re clear to move on.'
-            : 'Nothing critical or important to miss in this area.'}
+        <p className="mt-2 text-[13px] text-ink-2">
+          {left === 0
+            ? 'Every entry in this area is ticked.'
+            : `Nothing critical or important is left. ${left} ordinary ${left === 1 ? 'entry is' : 'entries are'} still unticked; none will cost you anything significant.`}
         </p>
       ) : (
         <>

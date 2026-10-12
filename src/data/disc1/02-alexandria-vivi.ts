@@ -1,6 +1,6 @@
 import { defineArea } from '../define';
 
-const ALL = ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'] as const;
+const ALL = ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide', 'psnprofiles-treasure'] as const;
 
 export default defineArea(
   {
@@ -21,16 +21,16 @@ export default defineArea(
     },
     tips: [
       "You can't leave town in this segment, so take your time.",
-      'Hippaul (by the wagon in the Square) hints that he has hidden cards — they are at the top of the Steeple ladder.',
+      'Hippaul (by the wagon in the Square) hints that he has hidden cards. They are at the top of the Steeple ladder.',
       'Tetra Master cards are optional for Disc 1 completion, but they do count as pickups.',
-      'Revisits: you return to this town much later. No source lists these pickups as missable, and none confirms they are still there later. Some spots get new contents on the revisit. They are marked “Collect now”.',
+      'Revisits: the PSNProfiles treasure guide lists these town pickups as Disc 1 only. Later visits have different items. Hippaul’s bell-rope cards and the jump-rope rewards are the exceptions and stay available later.',
       'Stiltzkin is in town too, but he has nothing to sell yet. Talking to him doesn’t affect his sidequest.',
     ],
   },
   {
-    missability: 'unconfirmed',
+    missability: 'permanent',
     missableKind: 'pickup',
-    lastOpportunity: 'Before following Puck onto the rooftops',
+    lastOpportunity: 'Before following Puck onto the rooftops (Disc 1 only)',
     sources: [...ALL],
     priority: 'optional',
   },
@@ -204,10 +204,12 @@ export default defineArea(
       spot: 'Steeple — top of the ladder',
       description: 'Climb the ladder and choose to pull the bell rope. Three cards drop out.',
       caveats: [
-        'On a later visit the same bell rope drops a different set of cards (Vinheim lists five, including two new ones), so these three can’t be collected again in the same way.',
+        'If you miss them now, the same rope still gives these three cards on a later visit, plus two more (PSNProfiles lists them as obtainable up to Disc 3; Vinheim lists the five-card chest).',
       ],
       spoilerLevel: 1,
       rewardUniqueness: 'replaceable',
+      missability: 'temporary',
+      lastOpportunity: 'Available again on a later visit',
     },
     {
       slug: 'mittens-bomb-card',

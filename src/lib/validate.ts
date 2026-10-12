@@ -181,7 +181,7 @@ export function summarise(areas: Area[]): ContentSummary {
 
 /** Cross-checks for the Chocograph log (see src/data/chocographs.ts). */
 export function validateChocographs(
-  chocographs: { digId: string; treasureId: string; treasureFromDisc: number; name: string }[],
+  chocographs: { digId?: string; treasureId?: string; treasureFromDisc: number; name: string }[],
   entryIds: Set<string>,
   availableDiscs: number[],
 ): ValidationIssue[] {
@@ -189,11 +189,14 @@ export function validateChocographs(
   const seen = new Set<string>();
   for (const c of chocographs) {
     const where = `chocograph ${c.name}`;
+    if (!c.digId && !c.treasureId) issues.push({ level: 'error', where, message: 'Needs a dig ID, a treasure ID, or both.' });
     for (const id of [c.digId, c.treasureId]) {
+      if (!id) continue;
       if (seen.has(id)) issues.push({ level: 'error', where, message: `ID ${id} used twice.` });
       seen.add(id);
     }
-    if (!entryIds.has(c.digId)) issues.push({ level: 'error', where, message: `Dig entry ${c.digId} does not exist.` });
+    if (c.digId && !entryIds.has(c.digId)) issues.push({ level: 'error', where, message: `Dig entry ${c.digId} does not exist.` });
+    if (!c.treasureId) continue;
     const treasureDisc = Number(c.treasureId.match(/^d(\d)\./)?.[1]);
     if (treasureDisc !== c.treasureFromDisc) {
       issues.push({ level: 'error', where, message: `Treasure ID disc prefix must match treasureFromDisc (${c.treasureFromDisc}).` });

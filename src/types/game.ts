@@ -57,7 +57,9 @@ export type SourceId =
   | 'gamefaqs-chocobo-fishy'
   | 'gamefaqs-chocograph-redscarlet'
   | 'steam-guide'
-  | 'steam-ate-guide';
+  | 'steam-ate-guide'
+  | 'psnprofiles-treasure'
+  | 'ff-wiki';
 
 /**
  * How loud a Before You Leave warning should be. Derived from missability and
@@ -167,6 +169,10 @@ export interface Area {
   party?: string;
   /** Characters whose official portraits are shown next to the party line. */
   partyIds?: CharacterId[];
+  /** Party members who may not have joined yet (optional recruits); shown dimmed. */
+  partyOptionalIds?: CharacterId[];
+  /** Spoiler-free recommended ATE viewing order for areas with several ATEs. */
+  ateGuide?: { kind: 'select' | 'auto' | 'note'; text: string }[];
   /** Optional small location thumbnail. */
   image?: EntryImage;
   /** Optional areas can be skipped entirely. */

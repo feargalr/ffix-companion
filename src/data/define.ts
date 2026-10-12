@@ -33,6 +33,10 @@ export interface AreaDefaults {
   closesWithArea?: string;
   /** Warning priority for entries that inherit the default missability. */
   priority?: WarningPriority;
+  /** Applied to entries that inherit the default missability. */
+  verification?: Verification;
+  /** Appended to the caveats of entries that inherit the default missability. */
+  caveats?: string[];
   sources?: SourceId[];
 }
 
@@ -60,7 +64,9 @@ export function defineArea(
         closesWithArea:
           e.closesWithArea ?? (inheritsMissable && missability !== 'none' ? defaults.closesWithArea : undefined),
         priority: e.priority ?? (inheritsMissable ? defaults.priority : undefined),
-        verification: e.verification ?? 'verified',
+        caveats:
+          inheritsMissable && defaults.caveats ? [...(e.caveats ?? []), ...defaults.caveats] : e.caveats,
+        verification: e.verification ?? (inheritsMissable ? defaults.verification : undefined) ?? 'verified',
         sources: e.sources ?? defaults.sources ?? BOTH,
       } satisfies ChecklistEntry;
     }),

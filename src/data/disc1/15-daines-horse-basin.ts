@@ -15,7 +15,8 @@ export default defineArea(
     summary:
       'The rainy plain beyond the Grotto. There is a second Burmecian Arch with two chests, a Chocograph that upgrades your Chocobo, and more Chocograph treasure once Choco can cross shallow water.',
     party: 'Zidane, Vivi, Freya (+ recruit)',
-    partyIds: ['zidane', 'vivi', 'freya', 'quina'],
+    partyIds: ['zidane', 'vivi', 'freya'],
+    partyOptionalIds: ['quina'],
     tips: [
       'Chocobo tracks are on the beach west of the nearby desert.',
       'Healing Shore teaches Choco Reef, so he can cross shallow water. That opens the Bird’s-Eye Lagoon and Small Beach treasures back in Lindblum territory.',
@@ -88,6 +89,21 @@ export default defineArea(
       ],
       caveats: ['Only the treasure needs Reef. The Chocograph itself can be dug up any time in Chocobo’s Forest.'],
       sources: CHOCO,
+    },
+    {
+      slug: 'chocograph-piece-2',
+      name: 'Dig up Chocograph Piece 2 (needs Reef)',
+      category: 'chocograph',
+      chocograph: { number: 'piece', role: 'dig' },
+      spot: "Back in Chocobo's Forest — Hot & Cold",
+      description:
+        'Once Choco has Reef from the Healing Shore treasure, a second Chocograph Piece can turn up in Chocobo’s Forest. Keep playing Hot & Cold until Mene says there is nothing left to find.',
+      requires: ['d1.lindblum-kingdom.chocograph-piece-1', 'd1.daines-horse-basin.chocograph-healing-shore-treasure'],
+      caveats: [
+        'The Final Fantasy Wiki lists Piece 2 as available after Reef, and GameFAQs (bover_87) says the first two pieces are found in the Forest. GameFAQs board players report two pieces from the Forest on Disc 1.',
+        'Fishy071’s and Red Scarlet’s guides show only one piece from the Forest on Disc 1, but their route digs everything before getting Reef. They then find the next piece in Chocobo’s Lagoon, which pieces can also come from.',
+      ],
+      sources: ['ff-wiki', 'gamefaqs-bover'],
     },
     {
       slug: 'blu-night',

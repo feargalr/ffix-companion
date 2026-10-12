@@ -1,0 +1,135 @@
+import { defineArea } from '../define';
+
+export default defineArea(
+  {
+    id: 'alexandria-castle-play',
+    disc: 1,
+    order: 3,
+    location: 'Alexandria Castle & Prima Vista',
+    visit: 'I Want to Be Your Canary',
+    chapter: 'The Kidnapping',
+    summary:
+      "The play, the sword-fight mini-game, Steiner's hunt for the Knights of Pluto, and the escape aboard the Prima Vista. The one-time Moonstone prize is here.",
+    party: 'Zidane & Blank, then Steiner, then Zidane, Garnet & Vivi',
+    departure: {
+      trigger: 'The Prima Vista escapes the castle and crashes in the Evil Forest',
+      consequence:
+        "The sword-fight prize, Steiner's Knights of Pluto search, the castle guardhouse pickup and all steals here are gone for good.",
+    },
+    tips: [
+      'Sword fight: correct inputs matter more than speed at first. You can ask for an encore and retry as many times as you like, but only your last attempt counts.',
+      'The Steam, PS4, mobile and modern console versions have looser input windows than the original PlayStation release.',
+      "The prize isn't handed over straight away. You collect it from Queen Brahne a little later, while playing as Steiner.",
+      'Equip the Mage Masher (if you stole it) before the escape fights.',
+    ],
+  },
+  {
+    missability: 'permanent',
+    missableKind: 'pickup',
+    lastOpportunity: 'Before the Prima Vista leaves the castle',
+    sources: ['jegged', 'gamefaqs-bover', 'steam-guide'],
+  },
+  [
+    {
+      slug: 'sword-fight-100',
+      name: 'Sword fight: impress all 100 nobles',
+      category: 'minigame',
+      spot: 'Prima Vista stage',
+      description:
+        "Follow Blank's on-screen button prompts during the duel. The prize depends on how many nobles you impress: 0–49 Ether, 50–79 Elixir, 80–99 Silk Shirt, 100 Moonstone.",
+      reward: 'Moonstone (100 nobles) plus a Gil bonus (10,000 Gil at 100, a random amount otherwise)',
+      missableKind: 'unique',
+      lastOpportunity: 'This performance only',
+      caveats: [
+        'Moonstones are strictly limited, and at least one is needed later in the game.',
+        'In the original Japanese PlayStation release the Gil bonus is random even at 100.',
+      ],
+    },
+    {
+      slug: 'brahne-prize',
+      name: 'Collect your sword-fight prize from Queen Brahne',
+      category: 'key-item',
+      spot: 'Royal seats (as Steiner)',
+      description:
+        'After the first Steiner scenes, go back to Queen Brahne and talk to her. She gives you the item your sword-fight score earned.',
+      reward: 'Ether / Elixir / Silk Shirt / Moonstone',
+      missableKind: 'unique',
+      lastOpportunity: 'Before Steiner climbs to the top of the West Tower',
+      requires: ['d1.alexandria-castle-play.sword-fight-100'],
+      caveats: ['If you skip her, the prize is lost even if you scored 100.'],
+    },
+    {
+      slug: 'mosh-jump-rope-letter',
+      name: "Mognet: Mosh's jump-rope letter",
+      category: 'mognet',
+      spot: 'Castle guardhouse — Mosh',
+      description: 'Check Mognet with the guardhouse Moogle to read a letter about your jump-rope skills.',
+      requires: ['d1.alexandria-vivi.jump-rope-50'],
+      missability: 'conditional',
+      missableKind: 'event',
+      lastOpportunity: 'Only if you reached 50 jumps as Vivi',
+      sources: ['jegged', 'gamefaqs-bover', 'steam-guide'],
+    },
+    {
+      slug: 'phoenix-down-guardhouse',
+      name: 'Phoenix Down',
+      category: 'hidden-item',
+      spot: 'Castle guardhouse',
+      description: 'Bottom-left corner of the guardhouse, at the foot of the bed.',
+    },
+    {
+      slug: 'knights-of-pluto',
+      name: 'Find all the Knights of Pluto',
+      category: 'optional-event',
+      spot: 'Alexandria Castle grounds',
+      description:
+        'As Steiner, track down the missing knights before going up the West Tower. Kohel and Blutzen are in the guardhouse. Dojebon runs around the grand staircase, so cut him off. Laudo is in the lower West Library (talk to him, leave, then search behind the shelves). Mullenkedheim is in the guest/dining room reached from the balcony. Haagen sits by the lake. Weimar is near the West Tower. Breireicht is on the West Tower spiral staircase.',
+      reward: 'Elixir (talk to Breireicht twice once everyone is found)',
+      missableKind: 'opportunity',
+      lastOpportunity: 'Before Steiner climbs the West Tower',
+      caveats: [
+        'There is a register on the guardhouse wall listing who is still missing.',
+        'Sources disagree on the exact room name for Mullenkedheim ("East Dining Room" vs "Guest Room").',
+      ],
+      spoilerLevel: 1,
+      spoilerText:
+        "Pay attention to what each knight is doing. Their habits are the answer to a pairing mini-game on a later disc.",
+    },
+    {
+      slug: 'engine-phoenix-down',
+      name: 'Phoenix Down',
+      category: 'treasure',
+      spot: 'Prima Vista engine room',
+      description: 'Turn the engine wheel to the left and a chest drops to the floor below.',
+    },
+    {
+      slug: 'engine-phoenix-pinion',
+      name: 'Phoenix Pinion',
+      category: 'treasure',
+      spot: 'Prima Vista engine room',
+      description: 'Turn the wheel to the right for a second chest. It lands behind the engine.',
+    },
+    {
+      slug: 'steal-leather-hat',
+      name: 'Leather Hat (steal)',
+      category: 'steal',
+      spot: 'Boss: Steiner (Prima Vista)',
+      description: "Steiner's common steal in the first fight aboard the ship.",
+      missableKind: 'steal',
+      lastOpportunity: 'Before this Steiner battle ends',
+      caveats: ['Leather Hats are also found in the Evil Forest and sold in Dali.'],
+      sources: ['jegged', 'gamefaqs-bover'],
+    },
+    {
+      slug: 'steal-silk-shirt',
+      name: 'Silk Shirt (steal)',
+      category: 'steal',
+      spot: 'Boss: Steiner (Prima Vista)',
+      description: 'Rarer steal. Silk Shirts teach Vivi Thunder and halve Thunder damage in the next boss fight.',
+      missableKind: 'steal',
+      lastOpportunity: 'Before this Steiner battle ends',
+      caveats: ['Also a steal from Black Waltz 1 and sold in Dali.'],
+      sources: ['jegged', 'gamefaqs-bover'],
+    },
+  ],
+);

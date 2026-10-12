@@ -2,7 +2,7 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { SOURCES } from '../data/sources';
 import { ALL_IMAGES, CONDITIONS_URL } from '../data/images';
 import { SquareEnixNotice } from '../components/OfficialImage';
-import { ALL_ENTRIES } from '../data';
+import { ALL_ENTRIES, DISCS } from '../data';
 import { href } from '../lib/router';
 import { SectionHeading } from '../components/ui';
 
@@ -63,8 +63,8 @@ export function AboutPage() {
         <SectionHeading>Accuracy</SectionHeading>
         <div className="ff-window-quiet space-y-2 p-4 text-[13px] leading-relaxed text-ink-2">
           <p>
-            Disc 1 has {ALL_ENTRIES.length} entries, audited in October 2026 against four walkthroughs plus dedicated ATE
-            and Chocograph guides. {single} rest on a single source (“1 source”), and on {conflicting} the sources
+            The app has {ALL_ENTRIES.length} entries across {DISCS.filter((d) => d.available).length} discs, checked against several
+            walkthroughs plus dedicated ATE, Chocograph and treasure guides. {single} rest on a single source (“1 source”), and on {conflicting} the sources
             disagree (“Sources disagree”, explained in the entry’s notes). {unconfirmed} entries are marked “Collect now”
             because no source says whether they can still be collected later.
           </p>

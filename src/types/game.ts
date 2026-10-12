@@ -80,7 +80,7 @@ export interface EntryImage {
   alt: string;
 }
 
-export type CharacterId = 'zidane' | 'vivi' | 'garnet' | 'steiner' | 'freya' | 'quina';
+export type CharacterId = 'zidane' | 'vivi' | 'garnet' | 'steiner' | 'freya' | 'quina' | 'eiko' | 'amarant';
 
 export interface ChecklistEntry {
   /** Stable, unique, never-reused identifier: d{disc}.{area-slug}.{entry-slug} */

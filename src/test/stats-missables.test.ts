@@ -77,9 +77,21 @@ describe('Before You Leave', () => {
   });
 
   it('keeps later-disc deadlines out of the area warning', () => {
-    const w = all(beforeYouLeave(festival, ALL_ENTRIES, {}));
+    const w = all(beforeYouLeave(getArea('conde-petie')!, ALL_ENTRIES, {}));
     expect(w.some((e) => e.closesOnLaterDisc)).toBe(false);
-    expect(laterDiscDeadlines(ALL_ENTRIES, {}).map((e) => e.id)).toContain('d1.festival-of-the-hunt.buy-javelin');
+    expect(laterDiscDeadlines(ALL_ENTRIES, {}).map((e) => e.id)).toContain('d2.conde-petie.diamond');
+  });
+
+  it('moves the Javelin deadline to the Disc 2 area before Cleyra', () => {
+    const before = all(beforeYouLeave(getArea('mist-continent-zidane')!, ALL_ENTRIES, {}));
+    expect(before.map((e) => e.id)).toContain('d1.festival-of-the-hunt.buy-javelin');
+    expect(all(beforeYouLeave(festival, ALL_ENTRIES, {})).some((e) => e.id === 'd1.festival-of-the-hunt.buy-javelin')).toBe(false);
+  });
+
+  it('warns about Cleyra’s one-time treasures on the settlement page', () => {
+    const w = beforeYouLeave(getArea('cleyra-settlement')!, ALL_ENTRIES, {});
+    expect(w.critical.map((e) => e.id)).toContain('d2.cleyra-settlement.emerald');
+    expect(all(w).map((e) => e.id)).toContain('d2.cleyra-trunk.elixir');
   });
 
   it('never warns about mandatory story entries or never-missable content', () => {

@@ -1,5 +1,6 @@
 import type { Area, ChecklistEntry, Disc } from '../types/game';
 import { disc1Areas } from './disc1';
+import { disc2Areas } from './disc2';
 
 /**
  * All discs. To add Disc 2, create src/data/disc2/ following the Disc 1
@@ -7,7 +8,7 @@ import { disc1Areas } from './disc1';
  */
 export const DISCS: Disc[] = [
   { number: 1, title: 'Disc 1', areas: disc1Areas, available: true },
-  { number: 2, title: 'Disc 2', areas: [], available: false },
+  { number: 2, title: 'Disc 2', areas: disc2Areas, available: true },
   { number: 3, title: 'Disc 3', areas: [], available: false },
   { number: 4, title: 'Disc 4', areas: [], available: false },
 ];

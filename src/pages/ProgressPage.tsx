@@ -1,6 +1,6 @@
 import { Download, Info, RotateCcw, Upload, ShieldAlert, Clock } from 'lucide-react';
 import { useRef, useState } from 'react';
-import { ALL_AREAS, ALL_ENTRIES, ENTRY_BY_ID, AREA_BY_ID } from '../data';
+import { ALL_ENTRIES, DISCS, ENTRY_BY_ID, AREA_BY_ID } from '../data';
 import { buildExport, exportFilename, parseImport } from '../lib/importExport';
 import { laterDiscDeadlines } from '../lib/missables';
 import { progressStore, useProgress, type ProgressState } from '../lib/progress';
@@ -23,10 +23,10 @@ export function ProgressPage() {
     <div className="space-y-6">
       <header className="pt-safe px-1 pt-4">
         <h1 className="ff-title text-[22px] font-semibold text-ink">Progress</h1>
-        <p className="text-[13px] text-ink-3">Disc 1 completion and settings.</p>
+        <p className="text-[13px] text-ink-3">Completion across every disc in the app, plus settings.</p>
       </header>
 
-      <section className="ff-window p-4" aria-label="Disc 1 overview">
+      <section className="ff-window p-4" aria-label="Overview">
         <div className="flex items-center gap-4">
           <ProgressRing pct={overall.pct} size={84} stroke={6} />
           <dl className="grid flex-1 grid-cols-3 gap-2 text-center">
@@ -43,6 +43,9 @@ export function ProgressPage() {
           <Row label="Chocographs" t={bySection.chocographs} />
           <Row label="Shopping" t={bySection.shopping} />
           <Row label="Missable opportunities done" t={missables} gold />
+          {DISCS.filter((d) => d.available).map((d) => (
+            <Row key={d.number} label={d.title} t={progressOf(d.areas.flatMap((a) => a.entries), completed)} />
+          ))}
         </div>
       </section>
 
@@ -75,28 +78,33 @@ export function ProgressPage() {
 
       <section aria-label="Progress by area">
         <SectionHeading>By area</SectionHeading>
-        <ul className="ff-window-quiet divide-y divide-silver/15">
-          {ALL_AREAS.map((a) => {
-            const p = areaProgress(a, completed);
-            return (
-              <li key={a.id}>
-                <a href={href({ name: 'area', areaId: a.id })} className="block px-4 py-2.5 hover:bg-panel-2/30">
-                  <span className="flex items-baseline justify-between gap-3">
-                    <span className="truncate text-[14px] text-ink">
-                      {a.order}. {a.location}
-                    </span>
-                    <span className="tabular shrink-0 text-[12px] text-ink-2">
-                      {p.done}/{p.total}
-                    </span>
-                  </span>
-                  <span className="mt-1.5 block">
-                    <ProgressBar pct={p.pct} tone={p.pct === 100 ? 'gold' : 'blue'} label={`${a.location} completion`} />
-                  </span>
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        {DISCS.filter((d) => d.available).map((d) => (
+          <div key={d.number} className="mb-3">
+            <p className="mb-1 px-1 text-[11px] font-semibold tracking-widest text-ink-3 uppercase">{d.title}</p>
+            <ul className="ff-window-quiet divide-y divide-silver/15">
+              {d.areas.map((a) => {
+                const p = areaProgress(a, completed);
+                return (
+                  <li key={a.id}>
+                    <a href={href({ name: 'area', areaId: a.id })} className="block px-4 py-2.5 hover:bg-panel-2/30">
+                      <span className="flex items-baseline justify-between gap-3">
+                        <span className="truncate text-[14px] text-ink">
+                          {a.order}. {a.location}
+                        </span>
+                        <span className="tabular shrink-0 text-[12px] text-ink-2">
+                          {p.done}/{p.total}
+                        </span>
+                      </span>
+                      <span className="mt-1.5 block">
+                        <ProgressBar pct={p.pct} tone={p.pct === 100 ? 'gold' : 'blue'} label={`${a.location} completion`} />
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        ))}
       </section>
 
       <Settings state={state} />

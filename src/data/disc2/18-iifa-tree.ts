@@ -1,0 +1,71 @@
+import { defineArea, ref } from '../define';
+import { PICKUP, STEAL, STORY } from './common';
+
+export default defineArea(
+  {
+    id: 'iifa-tree',
+    disc: 2,
+    order: 18,
+    location: 'Iifa Tree',
+    visit: 'Descent',
+    chapter: 'The Iifa Tree',
+    summary:
+      'A vast tree full of undead. Switches drop hidden chests, and a boss waits at the bottom. Everything below the elevator closes once the story moves on.',
+    party: 'Zidane, Vivi, Garnet, Eiko',
+    partyIds: ['zidane', 'vivi', 'garnet', 'eiko'],
+    spoilerLevel: 1,
+    departure: {
+      trigger: 'Defeating the boss at the bottom',
+      consequence: 'Everything past the elevator becomes permanently inaccessible (GameFAQs). PSNProfiles lists these chests as Disc 2 only.',
+    },
+    tips: [
+      'Undead here: curative magic hurts them, and a Phoenix Down or Life spell can finish them instantly. A Soft kills Stropers outright.',
+      'Before the boss, give everyone Body Temp. Check levels too: GameFAQs warns against having several characters on a level that is a multiple of 5.',
+      'Don’t use Fire on the boss, even though it’s weak to it. It answers with a devastating attack.',
+    ],
+  },
+  {
+    missability: 'permanent',
+    missableKind: 'pickup',
+    priority: 'optional',
+    lastOpportunity: 'Before the boss at the bottom (Disc 2 only)',
+    sources: [...PICKUP, 'jegged'],
+  },
+  [
+    { slug: 'ruby', name: 'Ruby', category: 'key-item', spot: 'Tree Roots (story)', description: 'Received during the opening scene.', mandatory: true, missability: 'none' },
+    {
+      slug: 'mocchi-letter',
+      name: "Mognet: deliver Mogryo's letter to Mocchi",
+      category: 'mognet',
+      spot: 'Tree Roots — Mocchi',
+      description: 'Hand over the letter from the Black Mage Village.',
+      requires: [ref(2, 'black-mage-village', 'mogryo-letter')],
+      missableKind: 'opportunity',
+      priority: 'important',
+      missability: 'unconfirmed',
+      lastOpportunity: 'This visit',
+      sources: STORY,
+    },
+    { slug: 'phoenix-down', name: 'Phoenix Down', category: 'treasure', spot: 'Inner Roots — first screen', description: 'Take the second offshoot and press the button at the field icon to drop a chest.' },
+    { slug: 'hi-potion', name: 'Hi-Potion', category: 'treasure', spot: 'Inner Roots — first screen', description: 'Further down the same screen.' },
+    { slug: 'healing-rod', name: 'Healing Rod', category: 'treasure', spot: 'Inner Roots — first screen (switch on the next)', description: 'Use the switch on a small offshoot near the left edge of the next screen. The chest drops back on the previous screen.' },
+    { slug: 'ether', name: 'Ether', category: 'hidden-item', spot: 'Inner Roots — second screen', description: 'In an alcove on the right, just past that switch.' },
+    { slug: 'lamias-flute', name: "Lamia's Flute", category: 'treasure', spot: 'Inner Roots — long left offshoot', description: 'Off a long offshoot to the left near the bottom of the roots.' },
+    { slug: 'remedy', name: 'Remedy', category: 'treasure', spot: 'Inner Roots — long left offshoot', description: 'Partly hidden on the same offshoot.' },
+    { slug: 'elixir', name: 'Elixir', category: 'treasure', spot: 'Bottom — lower stairs', description: 'Partly hidden at the bottom of the lower stairs.' },
+    { slug: 'brigandine', name: 'Brigandine', category: 'hidden-item', spot: 'Bottom — behind the central divider', description: 'On the lower level, behind the divider in the middle.' },
+    { slug: 'steal-soulcage-oak-staff', name: 'Oak Staff (steal)', category: 'steal', spot: 'Boss: Soulcage', description: 'Common steal.', missableKind: 'steal', lastOpportunity: 'Before the boss is defeated', sources: STEAL },
+    { slug: 'steal-soulcage-magician-cloak', name: 'Magician Cloak (steal)', category: 'steal', spot: 'Boss: Soulcage', description: 'Uncommon steal.', missableKind: 'steal', lastOpportunity: 'Before the boss is defeated', sources: STEAL },
+    {
+      slug: 'steal-soulcage-brigandine',
+      name: 'Brigandine (steal)',
+      category: 'steal',
+      spot: 'Boss: Soulcage',
+      description: 'Rare steal. It is undead: once you have what you want, a Life spell or a Phoenix Down followed by an attack finishes it.',
+      missableKind: 'steal',
+      lastOpportunity: 'Before the boss is defeated',
+      caveats: ['Another Brigandine is hidden at the bottom of the tree.'],
+      sources: STEAL,
+    },
+  ],
+);

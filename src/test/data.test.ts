@@ -30,8 +30,23 @@ describe('game data', () => {
 
   it('distinguishes separate visits to the same place', () => {
     const lindblum = ALL_AREAS.filter((a) => a.location === 'Lindblum');
-    expect(lindblum.length).toBe(2);
-    expect(new Set(lindblum.map((a) => a.visit)).size).toBe(2);
+    expect(lindblum.length).toBeGreaterThanOrEqual(2);
+    expect(new Set(lindblum.map((a) => a.visit)).size).toBe(lindblum.length);
+  });
+
+  it('lists Disc 2 from Summit Station to the return to the Iifa Tree', () => {
+    const d2 = DISCS[1];
+    expect(d2.available).toBe(true);
+    expect(d2.areas[0].id).toBe('summit-station');
+    expect(d2.areas.at(-1)!.id).toBe('iifa-tree-battle');
+    expect(d2.areas.map((a) => a.order)).toEqual(d2.areas.map((_, i) => i + 1));
+  });
+
+  it('defines the Disc 2 Chocograph treasure under the exact reserved ID', () => {
+    const e = ALL_ENTRIES.find((x) => x.id === 'd2.chocographs-disc2.abandoned-beach-treasure');
+    expect(e).toBeDefined();
+    expect(e!.chocograph).toEqual({ number: 5, role: 'treasure' });
+    expect(e!.requires).toContain('d1.lindblum-kingdom.chocograph-abandoned-beach');
   });
 
   it('covers the key Disc 1 locations', () => {

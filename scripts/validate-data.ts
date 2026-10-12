@@ -47,11 +47,11 @@ if (process.argv.includes('--report')) {
     '',
     '## Per area',
     '',
-    '| # | Area | Entries | Single-source | Conflicting | Revisit unconfirmed |',
+    '| Disc · # | Area | Entries | Single-source | Conflicting | Revisit unconfirmed |',
     '|---|------|--------:|--------------:|------------:|--------------------:|',
     ...ALL_AREAS.map(
       (a) =>
-        `| ${a.order} | ${a.location} — ${a.visit} | ${a.entries.length} | ${
+        `| ${a.disc} · ${a.order} | ${a.location} — ${a.visit} | ${a.entries.length} | ${
           a.entries.filter((e) => e.verification === 'single-source').length
         } | ${a.entries.filter((e) => e.verification === 'conflicting').length} | ${
           a.entries.filter((e) => e.missability === 'unconfirmed').length
@@ -79,31 +79,34 @@ if (process.argv.includes('--report')) {
   writeFileSync('docs/content-status.md', lines.join('\n'));
   console.log('Wrote docs/content-status.md');
 
-  // Machine-readable evidence: every entry with the sections actually read.
-  const evidence = {
-    generatedBy: 'npm run report',
-    auditDate: '2026-10-12',
-    sources: SOURCES,
-    entries: ALL_AREAS.flatMap((a) =>
-      a.entries.map((e) => ({
-        id: e.id,
-        name: e.name,
-        area: a.id,
-        verification: e.verification,
-        missability: e.missability,
-        missableKind: e.missableKind ?? null,
-        priority: e.priority ?? null,
-        lastOpportunity: e.lastOpportunity ?? null,
-        evidence: e.sources.map((s) => ({ source: s, section: AREA_SECTIONS[a.id]?.[s] ?? SOURCES[s].url })),
-        notes: e.caveats ?? [],
-      })),
-    ),
-    chocographs: CHOCOGRAPHS,
-    images: ALL_IMAGES,
-  };
+  // Machine-readable evidence, one file per disc: every entry with the sections actually read.
   mkdirSync('docs/evidence', { recursive: true });
-  writeFileSync('docs/evidence/disc1-evidence.json', JSON.stringify(evidence, null, 2) + '\n');
-  console.log('Wrote docs/evidence/disc1-evidence.json');
+  for (const disc of DISCS.filter((d) => d.available)) {
+    const evidence = {
+      generatedBy: 'npm run report',
+      disc: disc.number,
+      sources: SOURCES,
+      entries: disc.areas.flatMap((a) =>
+        a.entries.map((e) => ({
+          id: e.id,
+          name: e.name,
+          area: a.id,
+          verification: e.verification,
+          missability: e.missability,
+          missableKind: e.missableKind ?? null,
+          priority: e.priority ?? null,
+          lastOpportunity: e.lastOpportunity ?? null,
+          evidence: e.sources.map((s) => ({ source: s, section: AREA_SECTIONS[a.id]?.[s] ?? SOURCES[s].url })),
+          notes: e.caveats ?? [],
+        })),
+      ),
+      chocographs: CHOCOGRAPHS,
+      images: ALL_IMAGES,
+    };
+    const file = `docs/evidence/disc${disc.number}-evidence.json`;
+    writeFileSync(file, JSON.stringify(evidence, null, 2) + '\n');
+    console.log(`Wrote ${file}`);
+  }
 }
 
 if (errors.length) {

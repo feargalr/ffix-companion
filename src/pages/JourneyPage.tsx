@@ -1,4 +1,5 @@
 import { AlertTriangle, ChevronRight, Play } from 'lucide-react';
+import { useState } from 'react';
 import { ALL_AREAS, ALL_ENTRIES, AREA_INDEX, DISCS, getArea } from '../data';
 import { useProgress } from '../lib/progress';
 import { href } from '../lib/router';
@@ -10,9 +11,13 @@ import { Ornament, Pointer, ProgressBar, ProgressRing } from '../components/ui';
 export function JourneyPage() {
   const state = useProgress();
   const { completed } = state;
-  const disc = DISCS[0];
   const overall = progressOf(ALL_ENTRIES, completed);
   const current = getArea(state.lastAreaId);
+  // Show the disc you're on by default; the tabs let you look at another.
+  const [discNumber, setDiscNumber] = useState(current?.disc ?? 1);
+  const disc = DISCS.find((d) => d.number === discNumber && d.available) ?? DISCS[0];
+  const discEntries = disc.areas.flatMap((a) => a.entries);
+  const discProgress = progressOf(discEntries, completed);
   // Only count missables you have reached so far; future areas aren't "outstanding" yet.
   const reachedIdx = current ? AREA_INDEX.get(current.id)! : -1;
   const outstanding = outstandingWarnings(
@@ -69,18 +74,28 @@ export function JourneyPage() {
       </section>
 
       <nav aria-label="Discs" className="grid grid-cols-4 gap-2">
-        {DISCS.map((d) => (
-          <span
-            key={d.number}
-            aria-current={d.number === 1 ? 'true' : undefined}
-            className={`ff-chip min-h-9 justify-center text-[12px] ${
-              d.available ? 'bg-gold/20 text-gold-2 ring-1 ring-gold/60' : 'bg-night/50 text-ink-3 ring-1 ring-silver/20'
-            }`}
-          >
-            {d.title}
-            {!d.available && <span className="sr-only"> (coming later)</span>}
-          </span>
-        ))}
+        {DISCS.map((d) => {
+          const selected = d.number === disc.number;
+          return (
+            <button
+              key={d.number}
+              type="button"
+              disabled={!d.available}
+              aria-pressed={selected}
+              onClick={() => setDiscNumber(d.number)}
+              className={`ff-chip min-h-10 justify-center text-[12px] transition-colors ${
+                selected
+                  ? 'bg-gold/25 text-gold-2 ring-1 ring-gold/70'
+                  : d.available
+                    ? 'bg-panel/60 text-ink-2 ring-1 ring-silver/40 hover:text-ink'
+                    : 'cursor-not-allowed bg-night/50 text-ink-3 ring-1 ring-silver/20'
+              }`}
+            >
+              {d.title}
+              {!d.available && <span className="sr-only"> (coming later)</span>}
+            </button>
+          );
+        })}
       </nav>
 
       {chapters.map((ch) => (
@@ -137,12 +152,20 @@ export function JourneyPage() {
       ))}
 
       <div className="ff-window-quiet p-4">
-        <p className="text-[13px] font-semibold text-ink">Disc 1 overall</p>
+        <p className="flex justify-between text-[13px] font-semibold text-ink">
+          <span>{disc.title}</span>
+          <span className="tabular text-ink-2">
+            {discProgress.done}/{discProgress.total}
+          </span>
+        </p>
         <div className="mt-2">
-          <ProgressBar pct={overall.pct} label="Disc 1 completion" />
+          <ProgressBar pct={discProgress.pct} label={`${disc.title} completion`} />
         </div>
         <p className="mt-2 text-[12px] text-ink-3">
-          Discs 2–4 aren’t in the app yet. Your progress is saved on this device and will carry over when they’re added.
+          {DISCS.filter((d) => !d.available)
+            .map((d) => d.title)
+            .join(', ')}{' '}
+          aren’t in the app yet. Your progress is saved on this device and carries over when they’re added.
         </p>
       </div>
     </div>

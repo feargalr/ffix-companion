@@ -118,6 +118,16 @@ describe('app', () => {
     expect(within(panel).getByText('100% complete')).toBeInTheDocument();
   });
 
+  it('switches the Journey list between discs', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    expect(screen.getAllByText('Evil Forest').length).toBeGreaterThan(0);
+    await user.click(screen.getByRole('button', { name: 'Disc 2' }));
+    expect(screen.getByRole('button', { name: 'Disc 2' })).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getAllByText("Cleyra's Trunk").length).toBeGreaterThan(0);
+    expect(screen.getByRole('button', { name: /Disc 3/ })).toBeDisabled();
+  });
+
   it('shows party portraits and the Square Enix notice', async () => {
     render(<App />);
     await go('#/area/dali');

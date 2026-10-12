@@ -1,7 +1,7 @@
 import { MapPin, Search, X } from 'lucide-react';
 import { useDeferredValue, useMemo, useState } from 'react';
 import type { Missability } from '../types/game';
-import { ALL_AREAS, ALL_ENTRIES, AREA_INDEX } from '../data';
+import { ALL_AREAS, ALL_ENTRIES, AREA_INDEX, DISCS } from '../data';
 import { SECTIONS, type SectionId } from '../lib/labels';
 import { useProgress } from '../lib/progress';
 import { href } from '../lib/router';
@@ -55,7 +55,7 @@ export function SearchPage({ initialQuery = '' }: { initialQuery?: string }) {
     <div className="space-y-4">
       <header className="pt-safe px-1 pt-4">
         <h1 className="ff-title text-[22px] font-semibold text-ink">Search</h1>
-        <p className="text-[13px] text-ink-3">Search items, ATEs, sidequests and places across Disc 1. Works offline.</p>
+        <p className="text-[13px] text-ink-3">Search items, ATEs, sidequests and places on every disc in the app. Works offline.</p>
       </header>
 
       <div className="relative">
@@ -65,7 +65,7 @@ export function SearchPage({ initialQuery = '' }: { initialQuery?: string }) {
           inputMode="search"
           autoComplete="off"
           enterKeyHint="search"
-          aria-label="Search the Disc 1 checklist"
+          aria-label="Search the checklist"
           placeholder="Moonstone, jump rope, Stiltzkin…"
           className="ff-input pr-10 pl-10"
           value={q}
@@ -86,11 +86,15 @@ export function SearchPage({ initialQuery = '' }: { initialQuery?: string }) {
       <div className="grid grid-cols-2 gap-2">
         <Select label="Area" value={areaId} onChange={setAreaId}>
           <option value="">All areas</option>
-          {ALL_AREAS.map((a) => (
-            <option key={a.id} value={a.id}>
-              {a.order}. {a.location}
-              {isAreaRevealed(AREA_INDEX.get(a.id)!, state) ? ` — ${a.visit}` : ''}
-            </option>
+          {DISCS.filter((d) => d.available).map((d) => (
+            <optgroup key={d.number} label={d.title}>
+              {d.areas.map((a) => (
+                <option key={a.id} value={a.id}>
+                  {a.order}. {a.location}
+                  {isAreaRevealed(AREA_INDEX.get(a.id)!, state) ? ` — ${a.visit}` : ''}
+                </option>
+              ))}
+            </optgroup>
           ))}
         </Select>
         <Select label="Type" value={section} onChange={(v) => setSection(v as SectionId | '')}>

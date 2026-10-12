@@ -11,8 +11,10 @@ describe('search', () => {
     expect(normalise('Hi-Potion')).toBe('hi potion');
   });
 
-  it('finds the Moonstone sword-fight prize', () => {
-    expect(names('Moonstone')[0]).toMatch(/Sword fight/);
+  it('finds every Moonstone opportunity', () => {
+    const hits = names('Moonstone');
+    expect(hits.some((n) => /Sword fight/.test(n))).toBe(true);
+    expect(hits.some((n) => /four stones/.test(n))).toBe(true);
   });
 
   it('finds every jump rope milestone', () => {

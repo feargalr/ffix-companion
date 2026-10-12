@@ -4,7 +4,7 @@ A mobile-first, offline-capable completionist checklist for **Final Fantasy IX**
 
 > *"I'm here in the story. What can I collect or do, and what should I finish before I leave?"*
 
-Disc 1 is complete: 16 areas and 229 checklist entries covering treasure, hidden items, cards, key items, Active Time Events, boss steals, Mognet letters, sidequests, mini-games, Blue Magic and Chocographs. The content was audited in October 2026; see [docs/DISC1_AUDIT.md](docs/DISC1_AUDIT.md). The data model already supports Discs 2–4.
+**Discs 1 and 2 are complete:** 36 areas and 451 checklist entries covering treasure, hidden items, cards, key items, Active Time Events, boss steals, Mognet letters, Stiltzkin, sidequests, mini-games, Blue Magic and Chocographs. See [docs/DISC1_AUDIT.md](docs/DISC1_AUDIT.md) and [docs/DISC2_CONTENT.md](docs/DISC2_CONTENT.md). The data model is ready for Discs 3–4.
 
 Built with React, TypeScript, Vite and Tailwind CSS. It is installable as a PWA and hosted on GitHub Pages. There is no backend, no accounts and no tracking.
 
@@ -12,12 +12,12 @@ Built with React, TypeScript, Vite and Tailwind CSS. It is installable as a PWA 
 
 ## Features
 
-- **Journey**: Disc 1 in story order, grouped by chapter, with per-area completion rings and missable counts. *Continue Adventure* reopens your last area.
+- **Journey**: every available disc in story order, grouped by chapter, with per-area completion rings and missable counts. It opens on the disc you’re playing; tap a disc to switch. *Continue Adventure* reopens your last area.
 - **Area checklists**: every entry has its own large checkbox. Tap the name to see where it is, how to get it, prerequisites, the reward, its missable status, the last chance to get it, and notes.
 - **Before You Leave**: each area ends with outstanding missables ranked **Critical** / **Important**, plus the story action that closes them. Ordinary pickups are folded into a lower-priority list. It also catches things that close later, e.g. leftover Ice Cavern treasure is flagged in Dali, where the cave is actually sealed.
 - **Missable classification**: separate labels for *unique* items, *one-time pickups* of common items, *one-time steals*, *missable events*, *conditional* content and *returns later*. A chest disappearing is never treated as the item being gone forever.
 - **ATEs**: tracked inside each area, with prerequisite chains (*My Little Baby* requires *Time to Escape*) and links between them.
-- **Chocograph log**: separate *dug up* and *treasure found* ticks for all nine Disc 1 Chocographs and the first piece. It shows which ability or later disc each treasure needs.
+- **Chocograph log**: separate *dug up* and *treasure found* ticks for every Chocograph you can dig up so far. It shows which ability or later disc each treasure needs. Treasures on discs not yet in the app use reserved IDs, so ticks carry over.
 - **Mutually exclusive outcomes**: the Festival of the Hunt prizes count as a single unit. Picking one greys out the others.
 - **Spoiler protection** (on by default): areas well ahead of you show only their place name until you open them, and spoiler notes stay folded. Nothing is ever locked.
 - **Search**: offline search across all entries and areas, with filters for area, type, missable status and completion.
@@ -116,7 +116,7 @@ docs/                    Content verification report and generated status
 
 ## Adding content (Disc 2 and beyond)
 
-1. **Create a folder** `src/data/disc2/` and one file per area, numbered in story order (e.g. `01-summit-station.ts`).
+1. **Create a folder** `src/data/disc3/` and one file per area, numbered in story order. `src/data/disc2/` is a complete example, including shared source constants in `common.ts`.
 2. **Define each area** with `defineArea(meta, defaults, entries)`:
 
    ```ts
@@ -124,8 +124,8 @@ docs/                    Content verification report and generated status
 
    export default defineArea(
      {
-       id: 'summit-station',          // kebab-case, unique across ALL discs
-       disc: 2,
+       id: 'some-area',               // kebab-case, unique across ALL discs
+       disc: 3,
        order: 1,                      // 1-based, contiguous within the disc
        location: 'Summit Station',
        visit: 'First Visit',          // distinguishes repeat visits to a place
@@ -138,7 +138,7 @@ docs/                    Content verification report and generated status
      { missability: 'unconfirmed', missableKind: 'pickup', lastOpportunity: 'Before …' },
      [
        {
-         slug: 'phoenix-down',        // becomes d2.summit-station.phoenix-down
+         slug: 'phoenix-down',        // becomes d3.some-area.phoenix-down
          name: 'Phoenix Down',
          category: 'treasure',
          spot: 'Platform',
@@ -148,7 +148,8 @@ docs/                    Content verification report and generated status
      ],
    );
    ```
-3. **Register the disc** in `src/data/disc2/index.ts`, import it in `src/data/index.ts`, and set `available: true`.
+3. **Register the disc** in `src/data/disc3/index.ts`, import it in `src/data/index.ts`, and set `available: true`.
+   **Reserved IDs:** if `src/data/chocographs.ts` reserves a treasure ID on that disc (e.g. `d3.chocographs-disc3.cold-field-treasure`), you must create an area with exactly that area id and an entry with exactly that slug. `npm run validate` fails until you do.
 4. Run `npm run report`, fix any validation errors, then append the new IDs to the shipped-ID fixture:
 
    ```bash

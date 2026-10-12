@@ -1,6 +1,6 @@
 import { Info, X } from 'lucide-react';
 import { CHOCOGRAPHS } from '../data/chocographs';
-import { ENTRY_BY_ID } from '../data';
+import { ENTRY_BY_ID, getArea } from '../data';
 import { CHOCOGRAPH_SPLIT_NOTICE, chocographStatus, needsSplitNotice } from '../lib/chocographs';
 import { progressStore, type ProgressState } from '../lib/progress';
 import { href } from '../lib/router';
@@ -13,6 +13,7 @@ import { CheckBox } from './ui';
  */
 export function ChocographLog({ state }: { state: ProgressState }) {
   const { completed } = state;
+  const currentDisc = getArea(state.lastAreaId)?.disc ?? 1;
   const spoilersOff = state.settings.spoilers === 'all';
   const diggable = CHOCOGRAPHS.filter((c) => c.digId);
   const findable = CHOCOGRAPHS.filter((c) => c.treasureId);
@@ -33,8 +34,8 @@ export function ChocographLog({ state }: { state: ProgressState }) {
       </div>
       <ul className="divide-y divide-silver/10 px-2 pb-2">
         {CHOCOGRAPHS.map((c) => {
-          const status = chocographStatus(c, completed);
-          const later = c.treasureFromDisc > 1;
+          const status = chocographStatus(c, completed, currentDisc);
+          const later = c.treasureFromDisc > currentDisc;
           const label = typeof c.number === 'number' ? `#${c.number} ${c.name}` : c.name;
           const treasureEntry = c.treasureId ? ENTRY_BY_ID.get(c.treasureId) : undefined;
           const digEntry = c.digId ? ENTRY_BY_ID.get(c.digId) : undefined;

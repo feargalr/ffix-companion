@@ -1,6 +1,6 @@
 {
   "generatedBy": "npm run report",
-  "auditDate": "2026-10-12",
+  "disc": 1,
   "sources": {
     "jegged": {
       "id": "jegged",
@@ -4886,7 +4886,7 @@
       "missability": "permanent",
       "missableKind": "opportunity",
       "priority": null,
-      "lastOpportunity": "Before Cleyra on Disc 2",
+      "lastOpportunity": "Before entering Cleyra on Disc 2",
       "evidence": [
         {
           "source": "gamefaqs-bover",
@@ -6934,6 +6934,22 @@
       "width": 276,
       "height": 240,
       "sourceUrl": "https://www.jp.square-enix.com/ff9/characters/images/quina_cg.png",
+      "sourcePage": "https://www.jp.square-enix.com/ff9/characters/",
+      "modification": "Transparent margins trimmed, scaled to 240 px tall, converted to WebP. No other changes."
+    },
+    {
+      "file": "images/official/char-eiko.webp",
+      "width": 193,
+      "height": 240,
+      "sourceUrl": "https://www.jp.square-enix.com/ff9/characters/images/eiko_cg.png",
+      "sourcePage": "https://www.jp.square-enix.com/ff9/characters/",
+      "modification": "Transparent margins trimmed, scaled to 240 px tall, converted to WebP. No other changes."
+    },
+    {
+      "file": "images/official/char-amarant.webp",
+      "width": 190,
+      "height": 240,
+      "sourceUrl": "https://www.jp.square-enix.com/ff9/characters/images/salamander_cg.png",
       "sourcePage": "https://www.jp.square-enix.com/ff9/characters/",
       "modification": "Transparent margins trimmed, scaled to 240 px tall, converted to WebP. No other changes."
     },

@@ -37,6 +37,13 @@ describe('warning priority', () => {
 describe('Chocographs', () => {
   const discs = DISCS.filter((d) => d.available).map((d) => d.number);
 
+  it('fails validation if a reserved treasure ID on an available disc has no entry', () => {
+    const ids = new Set(ENTRY_BY_ID.keys());
+    ids.delete('d2.chocographs-disc2.abandoned-beach-treasure');
+    const errors = validateChocographs(CHOCOGRAPHS, ids, [1, 2]).filter((i) => i.level === 'error');
+    expect(errors.map((e) => e.message).join()).toMatch(/abandoned-beach-treasure should exist/);
+  });
+
   it('registry is consistent with the dataset', () => {
     const issues = validateChocographs(CHOCOGRAPHS, new Set(ENTRY_BY_ID.keys()), discs).filter((i) => i.level === 'error');
     expect(issues).toEqual([]);
@@ -190,5 +197,27 @@ describe('revisit windows (PSNProfiles treasure guide)', () => {
       expect(entry(id).verification).toBe('conflicting');
       expect(warningPriority(entry(id))).toBe('optional');
     }
+  });
+});
+
+describe('Disc 2 Kupo Nut chain', () => {
+  it('orders the deliveries so you never hold two nuts', () => {
+    expect(entry('d2.mist-continent-zidane.kupo-nut-delivery-nazna').requires).toContain('d2.summit-station.nazna-letter');
+    expect(entry('d2.mist-continent-departure.kupo-nut-delivery-monev').requires).toContain('d2.cleyra-trunk.monev-letter');
+    expect(entry('d2.mist-continent-departure.kupo-nut-delivery-moonte').requires).toContain('d2.mist-continent-departure.moonte-letter');
+    expect(entry('d2.summit-station.nazna-letter').requires).toContain('d1.south-gate.grimo-letter');
+  });
+
+  it('treats every Stiltzkin stop as an important one-time purchase', () => {
+    for (const id of ['d1.burmecia.stiltzkin-333', 'd2.cleyra-settlement.stiltzkin-444', 'd2.fossil-roo.stiltzkin-555', 'd2.conde-petie-mountain-path.stiltzkin-666']) {
+      expect(entry(id).missableKind).toBe('opportunity');
+      expect(warningPriority(entry(id))).toBe('important');
+    }
+  });
+
+  it('reports the Abandoned Beach treasure as reachable once you are on Disc 2', () => {
+    const c = CHOCOGRAPHS.find((x) => x.number === 5)!;
+    expect(chocographStatus(c, { [c.digId!]: 1 }, 1)).toEqual({ kind: 'later-disc', disc: 2 });
+    expect(chocographStatus(c, { [c.digId!]: 1 }, 2).kind).toBe('reachable');
   });
 });

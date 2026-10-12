@@ -55,6 +55,8 @@ export const CHARACTER_IMAGES: Record<CharacterId, OfficialImage> = {
   steiner: CHAR('steiner', 'steiner', 209, 240),
   freya: CHAR('freya', 'freija', 218, 240),
   quina: CHAR('quina', 'quina', 276, 240),
+  eiko: CHAR('eiko', 'eiko', 193, 240),
+  amarant: CHAR('amarant', 'salamander', 190, 240),
 };
 
 export const CHARACTER_NAMES: Record<CharacterId, string> = {
@@ -64,6 +66,8 @@ export const CHARACTER_NAMES: Record<CharacterId, string> = {
   steiner: 'Steiner',
   freya: 'Freya',
   quina: 'Quina',
+  eiko: 'Eiko',
+  amarant: 'Amarant',
 };
 
 export const LOCATION_IMAGES: Record<string, OfficialImage> = {

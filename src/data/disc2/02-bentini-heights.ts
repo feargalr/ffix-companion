@@ -1,0 +1,81 @@
+import { defineArea } from '../define';
+import { PICKUP } from './common';
+
+export default defineArea(
+  {
+    id: 'bentini-heights',
+    disc: 2,
+    order: 2,
+    location: 'Bentini Heights, Quan’s Dwelling & Dali',
+    visit: 'Side Trips near Treno',
+    chapter: 'The Road to Treno',
+    optional: true,
+    summary:
+      'Optional detours around Treno: a cliffside cave with three Ethers and a Stellazzio coin, a friendly monster, and a one-time Elixir back in Dali.',
+    party: 'Dagger, Steiner, Marcus',
+    partyIds: ['garnet', 'steiner'],
+    spoilerLevel: 1,
+    tips: [
+      'From South Gate, the left fork leads back to Nolrich Heights and Dali; the right fork leads to Treno.',
+      'Dali’s Weapon Shop still sells Wrists, which you can stock up on for the Cotton Robe money trick.',
+      'The spring at the bottom of Quan’s Dwelling restores HP and MP.',
+    ],
+  },
+  { missability: 'none', sources: PICKUP },
+  [
+    {
+      slug: 'dali-field-elixir',
+      name: 'Elixir',
+      category: 'treasure',
+      spot: 'Dali — farm field',
+      description: 'The woman who works the field is on a break, so the chest she was blocking on Disc 1 can be opened.',
+      locationDetails: 'Use Dali’s north-west exit to reach the field.',
+      missability: 'permanent',
+      missableKind: 'pickup',
+      priority: 'optional',
+      lastOpportunity: 'Disc 2 only',
+      sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'psnprofiles-treasure'],
+      caveats: ['GameFAQs and PSNProfiles both say this chest can only be opened during Disc 2.'],
+    },
+    {
+      slug: 'quan-ether-1',
+      name: 'Ether',
+      category: 'treasure',
+      spot: 'Quan’s Dwelling — first room',
+      description: 'Chest in the cave on the far side of Bentini Heights from South Gate.',
+    },
+    {
+      slug: 'quan-ether-2',
+      name: 'Ether',
+      category: 'treasure',
+      spot: 'Quan’s Dwelling — below the rope',
+      description: 'Slide down the rope for a second Ether.',
+    },
+    {
+      slug: 'scorpio-stellazzio',
+      name: 'Scorpio (Stellazzio coin)',
+      category: 'key-item',
+      spot: 'Quan’s Dwelling — bottom, by the spring',
+      description: 'Search around the rim of the bottom area, near the hot spring.',
+      rewardUniqueness: 'unique',
+    },
+    {
+      slug: 'quan-ether-3',
+      name: 'Ether',
+      category: 'treasure',
+      spot: 'Quan’s Dwelling — living quarters',
+      description: 'Follow the path to the dwelling and climb the ladder.',
+    },
+    {
+      slug: 'friendly-ghost',
+      name: 'Friendly Monster: Ghost',
+      category: 'sidequest',
+      spot: 'Bentini Heights — dark areas',
+      description: 'A friendly Ghost appears in random battles, but only in the dark parts of the plain. Give it an Ore.',
+      reward: 'Hi-Potion + 10 AP',
+      requirements: ['1 Ore'],
+      caveats: ['Friendly Monsters are not missable.'],
+      sources: ['jegged-missables', 'gamefaqs-bover'],
+    },
+  ],
+);

@@ -1,0 +1,106 @@
+import type { SourceId } from '../../types/game';
+import { defineArea } from '../define';
+import { PICKUP, STORY } from './common';
+
+const SRC: SourceId[] = [...PICKUP, 'jegged'];
+const BEFORE_SAND = 'Before you put your hand in the hole that changes the sandfall';
+
+export default defineArea(
+  {
+    id: 'cleyra-trunk',
+    disc: 2,
+    order: 6,
+    location: "Cleyra's Trunk",
+    visit: 'The Climb',
+    chapter: 'Cleyra',
+    summary:
+      'A long climb up the giant tree inside the sandstorm, full of chests, quicksand and three new Blue Magic spells. Once you reach the top, the trunk stays accessible until the story moves on in the settlement.',
+    party: 'Zidane, Vivi, Freya',
+    partyIds: ['zidane', 'vivi', 'freya'],
+    partyOptionalIds: ['quina'],
+    spoilerLevel: 1,
+    departure: {
+      trigger: 'Reaching the settlement at the top',
+      consequence:
+        'You can walk back down the trunk until the story moves on in the settlement. Its chests are listed in Cleyra Settlement’s Before You Leave, because that is where they finally close. Cleyra is a one-time area.',
+    },
+    tips: [
+      'Putting your hand in the hole near the top of the first section changes the sandfall and blocks the way back out, so grab the early chests first.',
+      'Sand pits: if you fall in, press confirm repeatedly to jump out, or you fight a Sand Scorpion and are dropped back a screen.',
+      'Sand Golem: target the gem on its head with magic to end the fight quickly.',
+    ],
+  },
+  {
+    missability: 'permanent',
+    missableKind: 'pickup',
+    priority: 'optional',
+    lastOpportunity: 'Before the story moves on in Cleyra (one-time area)',
+    closesWithArea: 'cleyra-settlement',
+    sources: SRC,
+  },
+  [
+    { slug: 'phoenix-down', name: 'Phoenix Down', category: 'treasure', spot: 'Trunk bottom', description: 'Use the lever at the top of the stairs to open the door, then open the chest in the next room.' },
+    {
+      slug: 'magician-shoes',
+      name: 'Magician Shoes',
+      category: 'treasure',
+      spot: 'Sand base — chest at the bottom of the screen',
+      description: 'Partly hidden near the bottom of the room with the sand pool.',
+      missability: 'conditional',
+      missableKind: 'pickup',
+      lastOpportunity: BEFORE_SAND,
+      caveats: ['The condition comes from PSNProfiles only. Grab it before using the hole to be safe.'],
+    },
+    {
+      slug: 'ice-staff',
+      name: 'Ice Staff',
+      category: 'treasure',
+      spot: 'Sand base — behind the tree',
+      description: 'Behind the tree branches on the back wall of the same room. The camera angle makes it easy to miss.',
+      missability: 'conditional',
+      missableKind: 'pickup',
+      lastOpportunity: BEFORE_SAND,
+      caveats: ['The condition comes from PSNProfiles only. Grab it before using the hole to be safe.'],
+    },
+    { slug: 'ether', name: 'Ether', category: 'treasure', spot: 'Room with the hole', description: 'Chest in the small room up the slope. The hole for the sandfall is here too.' },
+    { slug: 'needle-fork', name: 'Needle Fork', category: 'treasure', spot: 'Sandfall — lower level', description: 'Chest on the lower level of the sandfall room.' },
+    { slug: 'tent', name: 'Tent', category: 'treasure', spot: 'Sandfall — upper level', description: 'Chest above, near the Moogle.' },
+    {
+      slug: 'monev-letter',
+      name: "Mognet: deliver Atla's letter to Monev",
+      category: 'mognet',
+      spot: 'Sandfall — Monev',
+      description: 'Hand over the letter from Burmecia. You can’t deliver the Kupo Nut you receive until you’re out of Cleyra.',
+      reward: 'Kupo Nut',
+      requires: ['d1.burmecia.atla-letter'],
+      missableKind: 'opportunity',
+      priority: 'important',
+      caveats: ['If you are still carrying Nazna’s Kupo Nut, you won’t be given this one.'],
+      sources: STORY,
+    },
+    { slug: 'flame-staff', name: 'Flame Staff', category: 'treasure', spot: 'Path to Cleyra — side path', description: 'Ignore the sign pointing to Cleyra and take the other path first.' },
+    { slug: 'remedy', name: 'Remedy', category: 'treasure', spot: 'Sand Fork — east edge', description: 'Chest on the eastern edge, past the big bridge.' },
+    { slug: 'desert-boots', name: 'Desert Boots', category: 'hidden-item', spot: 'Sand Fork — behind a root', description: 'Behind a root in the middle of the area.' },
+    { slug: 'mythril-vest', name: 'Mythril Vest', category: 'hidden-item', spot: 'Sand Fork — north-west tunnel', description: 'Go into the tunnel near the Desert Boots and look around the back for a field icon.' },
+    { slug: 'mythril-gloves', name: 'Mythril Gloves', category: 'treasure', spot: 'Sand Paths', description: 'You come out next to this chest after leaving through the background.' },
+    { slug: 'potion', name: 'Potion', category: 'treasure', spot: 'Sand Paths — north-west exit', description: 'After pulling the lever, leave to the north-west.' },
+    { slug: 'elixir', name: 'Elixir', category: 'treasure', spot: 'Sand Paths — up the slope', description: 'Run up the slope heading north-east.' },
+    { slug: 'gil-900', name: '900 Gil', category: 'treasure', spot: 'Quicksand Pits', description: 'Awkward to reach between the sand pits. If you can’t manage it on the way up, the quicksand is gone later when you come back down.' },
+    { slug: 'hi-potion', name: 'Hi-Potion', category: 'treasure', spot: 'Quicksand Pits', description: 'Second chest among the sand pits.' },
+    { slug: 'gysahl-greens', name: 'Gysahl Greens', category: 'treasure', spot: 'Upper Outer Climb — behind the ladder', description: 'Behind the ladder up to the settlement.' },
+    { slug: 'blu-auto-life', name: 'Blue Magic: Auto-Life (eat Carrion Worm)', category: 'blue-magic', spot: 'Trunk', description: 'Carrion Worms have little HP. Eat one once it is low.', requires: ['d1.lindblum-kingdom.recruit-quina'], missability: 'none', spoilerLevel: 1, sources: ['jegged', 'gamefaqs-bover'] },
+    { slug: 'blu-matra-magic', name: 'Blue Magic: Matra Magic (eat Dragonfly)', category: 'blue-magic', spot: 'Trunk', description: 'Reduces an enemy’s HP to 1 when it hits, which makes eating easier.', requires: ['d1.lindblum-kingdom.recruit-quina'], missability: 'none', spoilerLevel: 1, sources: ['jegged', 'gamefaqs-bover'] },
+    {
+      slug: 'blu-white-wind',
+      name: 'Blue Magic: White Wind (eat Zuu)',
+      category: 'blue-magic',
+      spot: 'Trunk — Upper Outer Climb',
+      description: 'A party-wide heal. Zuu has a lot of HP.',
+      requires: ['d1.lindblum-kingdom.recruit-quina'],
+      missability: 'none',
+      caveats: ['A second chance comes from Griffins in Fossil Roo.'],
+      spoilerLevel: 1,
+      sources: ['jegged', 'gamefaqs-bover'],
+    },
+  ],
+);

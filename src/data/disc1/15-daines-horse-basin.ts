@@ -1,4 +1,7 @@
+import type { SourceId } from '../../types/game';
 import { defineArea } from '../define';
+
+const CHOCO: SourceId[] = ['gamefaqs-chocobo-fishy', 'gamefaqs-chocograph-redscarlet', 'gamefaqs-bover'];
 
 export default defineArea(
   {
@@ -12,9 +15,11 @@ export default defineArea(
     summary:
       'The rainy plain beyond the Grotto. There is a second Burmecian Arch with two chests, a Chocograph that upgrades your Chocobo, and more Chocograph treasure once Choco can cross shallow water.',
     party: 'Zidane, Vivi, Freya (+ recruit)',
+    partyIds: ['zidane', 'vivi', 'freya', 'quina'],
     tips: [
       'Chocobo tracks are on the beach west of the nearby desert.',
-      'After Healing Shore, Choco can cross reefs, which opens the Bird’s-Eye Lagoon and Small Beach treasures back in Lindblum territory.',
+      'Healing Shore teaches Choco Reef, so he can cross shallow water. That opens the Bird’s-Eye Lagoon and Small Beach treasures back in Lindblum territory.',
+      'The treasures are grouped here because this is where you get Reef, even though two of them are back in Lindblum territory.',
       "Many players do these Chocographs after Atla gives them a Kupo Nut in Burmecia. Then one trip covers the Kupo Nut delivery, frog catching and the Chocographs.",
     ],
   },
@@ -26,7 +31,7 @@ export default defineArea(
       category: 'treasure',
       spot: 'Burmecian Arch (North Gate, east edge)',
       description: 'Chest at the "other" Burmecian arch on the eastern edge of the basin.',
-      sources: ['jegged', 'gamefaqs-bover', 'steam-guide'],
+      sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'],
     },
     {
       slug: 'arch-tent',
@@ -36,37 +41,53 @@ export default defineArea(
       description: 'Second chest at the same arch.',
       sources: ['jegged', 'gamefaqs-bover', 'steam-guide'],
     },
+    // Chocograph treasures. The Chocographs themselves are dug up in
+    // Chocobo's Forest (see Lindblum Kingdom).
     {
-      slug: 'chocograph-healing-shore',
-      name: 'Chocograph: Healing Shore',
+      slug: 'chocograph-healing-shore-treasure',
+      name: 'Healing Shore treasure (Reef ability)',
       category: 'chocograph',
-      spot: 'Chocobo tracks in this basin',
-      description: 'Dig it up, then find the treasure on the shore. It gives Choco the Reef ability, so he can walk through shallow water.',
+      chocograph: { number: 4, role: 'treasure' },
+      spot: 'Beach west of Burmecia and Cleyra',
+      description:
+        'Use the Chocobo tracks on this side of the continent, then dig on the beach shown in the Chocograph. Choco learns Reef, so he can walk through shallow water.',
       reward: 'Reef ability',
-      requires: ['d1.lindblum-kingdom.catch-choco'],
-      caveats: ['Jegged lists this as "Healing Water"; GameFAQs says "Healing Shore".'],
+      requires: ['d1.daines-horse-basin.chocograph-healing-shore'],
+      caveats: [
+        'Sources name the beach differently ("Metalark Shores" in GameFAQs, "Esistern Coast" in Fishy071’s guide). All three place it on the coast west of Burmecia.',
+      ],
+      sources: CHOCO,
     },
     {
-      slug: 'chocograph-birds-eye-lagoon',
-      name: "Chocograph: Bird's-Eye Lagoon",
+      slug: 'chocograph-birds-eye-lagoon-treasure',
+      name: "Bird's-Eye Lagoon treasure",
       category: 'chocograph',
-      spot: 'Lindblum territory (needs Reef)',
-      description: 'Treasure lies back in Lindblum territory and needs Reef.',
+      chocograph: { number: 10, role: 'treasure' },
+      spot: "Lindblum territory — island west of Qu's Marsh",
+      description:
+        'Needs Reef. Leave the beach west of Qu’s Marsh (Tuhanda Shores) and ride through the shallows to the larger island.',
       reward: '8 Potion, 4 Phoenix Down, 3 Ether, Magician Robe',
-      requires: ['d1.daines-horse-basin.chocograph-healing-shore'],
-      verification: 'single-source',
-      sources: ['gamefaqs-bover'],
+      requires: [
+        'd1.daines-horse-basin.chocograph-birds-eye-lagoon',
+        'd1.daines-horse-basin.chocograph-healing-shore-treasure',
+      ],
+      caveats: ['Only the treasure needs Reef. The Chocograph itself can be dug up any time in Chocobo’s Forest.'],
+      sources: CHOCO,
     },
     {
-      slug: 'chocograph-small-beach',
-      name: 'Chocograph: Small Beach',
+      slug: 'chocograph-small-beach-treasure',
+      name: 'Small Beach treasure',
       category: 'chocograph',
-      spot: 'Lindblum territory (needs Reef)',
-      description: 'Another Reef treasure in Lindblum territory. The Oak Staff is an outstanding early staff.',
-      reward: 'Remedy, 2 Elixir, 8 Rising Sun, Oak Staff',
-      requires: ['d1.daines-horse-basin.chocograph-healing-shore'],
-      verification: 'single-source',
-      sources: ['gamefaqs-bover'],
+      chocograph: { number: 11, role: 'treasure' },
+      spot: 'Lindblum territory — Lanshake Island',
+      description: 'Needs Reef. The small island with a beach in the bay east of Lindblum. Reach it from the shore below Lindblum Plateau.',
+      reward: '4 Remedy, 2 Elixir, 8 Rising Sun, Oak Staff',
+      requires: [
+        'd1.daines-horse-basin.chocograph-small-beach',
+        'd1.daines-horse-basin.chocograph-healing-shore-treasure',
+      ],
+      caveats: ['Only the treasure needs Reef. The Chocograph itself can be dug up any time in Chocobo’s Forest.'],
+      sources: CHOCO,
     },
     {
       slug: 'blu-night',

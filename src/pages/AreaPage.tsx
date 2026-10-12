@@ -10,6 +10,8 @@ import { areaProgress } from '../lib/stats';
 import { BeforeYouLeave } from '../components/BeforeYouLeave';
 import { ChecklistSection } from '../components/ChecklistSection';
 import { ProgressBar } from '../components/ui';
+import { SplitNotice } from '../components/ChocographLog';
+import { OfficialImg, PartyPortraits } from '../components/OfficialImage';
 
 export function AreaPage({ areaId, entryId }: { areaId: string; entryId?: string }) {
   const state = useProgress();
@@ -85,12 +87,20 @@ export function AreaPage({ areaId, entryId }: { areaId: string; entryId?: string
         </div>
       ) : (
         <>
-          <p className="px-1 text-[14px] leading-relaxed text-ink-2">{area.summary}</p>
-          {area.party && (
-            <p className="-mt-2 px-1 text-[12px] text-ink-3">
-              <span className="font-semibold">Party:</span> {area.party}
-            </p>
-          )}
+          <div className="flex gap-3 px-1">
+            <div className="min-w-0 flex-1 space-y-2">
+              <p className="text-[14px] leading-relaxed text-ink-2">{area.summary}</p>
+              {area.party && (
+                <p className="text-[12px] text-ink-3">
+                  <span className="font-semibold">Party:</span> {area.party}
+                </p>
+              )}
+              {area.partyIds && <PartyPortraits ids={area.partyIds} />}
+            </div>
+            {area.image && (
+              <OfficialImg imageId={area.image.imageId} alt={area.image.alt} className="w-28 shrink-0 self-start rounded-md sm:w-36" />
+            )}
+          </div>
 
           <div className="flex flex-wrap items-center gap-2">
             <button
@@ -133,6 +143,19 @@ export function AreaPage({ areaId, entryId }: { areaId: string; entryId?: string
                   ))}
                 </ul>
               )}
+            </div>
+          )}
+
+          {area.entries.some((e) => e.chocograph) && (
+            <div className="ff-window-quiet">
+              <SplitNotice state={state} />
+              <p className="px-4 py-3 text-[13px] text-ink-2">
+                Digging up a Chocograph and finding its treasure are ticked separately. The{' '}
+                <a className="text-gold-2 underline" href={href({ name: 'progress' })}>
+                  Chocograph log
+                </a>{' '}
+                shows every Chocograph you can dig up on Disc 1, including treasures you can’t reach yet.
+              </p>
             </div>
           )}
 

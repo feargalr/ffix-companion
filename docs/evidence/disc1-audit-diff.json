@@ -1,0 +1,1750 @@
+{
+ "changes": [
+  {
+   "id": "d1.alexandria-vivi.zombie-card",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.potion-statue",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.lizard-man-card",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.sahagin-card",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.potion-awning",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-9",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.potion-house",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.fang-card-dresser",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.potion-barrels",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-33",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.goblin-card-grass",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.potion-pub",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.flan-card",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-27",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-38",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.ether-synth",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.remedy",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.phoenix-pinion",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.eye-drops",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-3",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.potion-steeple",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.tent-steeple",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.hippaul-cards",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.mittens-bomb-card",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.kupo-letter",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-29",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-92",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.gil-63",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-vivi.jump-rope-50",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-castle-play.brahne-prize",
+   "diff": {
+    "priority": [
+     null,
+     "critical"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-castle-play.mosh-jump-rope-letter",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.alexandria-castle-play.knights-of-pluto",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ]
+   }
+  },
+  {
+   "id": "d1.evil-forest.ate-forest-keeper",
+   "diff": {
+    "ateTrigger": [
+     null,
+     "automatic"
+    ]
+   }
+  },
+  {
+   "id": "d1.evil-forest.ate-time-to-escape",
+   "diff": {
+    "ateTrigger": [
+     null,
+     "selectable"
+    ]
+   }
+  },
+  {
+   "id": "d1.evil-forest.ate-girl-left-behind",
+   "diff": {
+    "ateTrigger": [
+     null,
+     "selectable"
+    ]
+   }
+  },
+  {
+   "id": "d1.evil-forest.ate-my-little-baby",
+   "diff": {
+    "ateTrigger": [
+     null,
+     "selectable"
+    ]
+   }
+  },
+  {
+   "id": "d1.evil-forest.ate-orchestra",
+   "diff": {
+    "ateTrigger": [
+     null,
+     "selectable"
+    ]
+   }
+  },
+  {
+   "id": "d1.evil-forest.ate-do-as-i-say",
+   "diff": {
+    "ateTrigger": [
+     null,
+     "automatic"
+    ]
+   }
+  },
+  {
+   "id": "d1.evil-forest.mosco-ruby-letter",
+   "added": true,
+   "name": "Mognet: read the letter at Mosco"
+  },
+  {
+   "id": "d1.evil-forest.monty-letter",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ]
+   }
+  },
+  {
+   "id": "d1.gunitas-basin.ate-mogster-lesson-1",
+   "diff": {
+    "ateTrigger": [
+     null,
+     "automatic"
+    ]
+   }
+  },
+  {
+   "id": "d1.gunitas-basin.ragtime-mouse",
+   "diff": {
+    "verification": [
+     "single-source",
+     "verified"
+    ]
+   }
+  },
+  {
+   "id": "d1.ice-cavern.ate-mogster-lesson-2",
+   "diff": {
+    "ateTrigger": [
+     null,
+     "automatic"
+    ]
+   }
+  },
+  {
+   "id": "d1.ice-cavern.mois-letter",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ]
+   }
+  },
+  {
+   "id": "d1.ice-cavern.steal-sealion-mythril-dagger",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ate-vivi-confused",
+   "diff": {
+    "lastOpportunity": [
+     "Before you go to find Dagger",
+     "Before you find Dagger in the Weapon Shop"
+    ],
+    "ateTrigger": [
+     null,
+     "selectable"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ate-dagger-tries",
+   "diff": {
+    "lastOpportunity": [
+     "Before you go to find Dagger",
+     "Before you find Dagger in the Weapon Shop"
+    ],
+    "ateTrigger": [
+     null,
+     "selectable"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ate-cats-eye",
+   "diff": {
+    "lastOpportunity": [
+     "Before you go to find Dagger",
+     "Before you find Dagger in the Weapon Shop"
+    ],
+    "spot": [
+     "Village road",
+     "Village road (outside the inn)"
+    ],
+    "ateTrigger": [
+     null,
+     "selectable"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ate-cats-eye-2",
+   "diff": {
+    "lastOpportunity": [
+     "Before you go to find Dagger",
+     "Before you find Dagger in the Weapon Shop"
+    ],
+    "requires": [
+     null,
+     [
+      "d1.dali.ate-cats-eye"
+     ]
+    ],
+    "ateTrigger": [
+     null,
+     "selectable"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ate-dagger-tries-harder",
+   "diff": {
+    "lastOpportunity": [
+     "Before entering the Weapon Shop to find Dagger",
+     "Before you enter the Weapon Shop and find Dagger"
+    ],
+    "spot": [
+     "Village road / field / windmill",
+     "Village road (after “Dagger Tries”)"
+    ],
+    "ateTrigger": [
+     null,
+     "selectable"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ate-queen-brahnes-steiner",
+   "diff": {
+    "lastOpportunity": [
+     "When you meet back up with Dagger",
+     "Watch its two prerequisite ATEs before talking to Dagger at the inn"
+    ],
+    "spot": [
+     "Weapon Shop / Inn",
+     "Inn (plays by itself)"
+    ],
+    "ateTrigger": [
+     null,
+     "automatic-conditional"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.inn-potion",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.inn-antidote",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.gumo-letter",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.gil-120",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.aries-stellazzio",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-gil-156",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-potion-hut",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-eye-drops",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.kumop-letter",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-ether",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-potion-crank",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-iron-helm",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-leather-wrist",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-gil-95",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-door-phoenix-down",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-door-potion",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.ug-door-phoenix-pinion",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.obs-hi-potion",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.obs-gil-135",
+   "diff": {
+    "lastOpportunity": [
+     "Collect on this visit (revisit availability not confirmed)",
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.dali.buy-feather-hat",
+   "diff": {
+    "verification": [
+     "single-source",
+     "verified"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.glass-armlet",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.castle-ether",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.ate-synthesis-lesson",
+   "diff": {
+    "name": [
+     "ATE: Teach Me, Mogster! (Synthesis lesson)",
+     "ATE: Teach Me, Mogster! (My First Synthesis Lesson)"
+    ],
+    "verification": [
+     "single-source",
+     "verified"
+    ],
+    "ateTrigger": [
+     null,
+     "automatic"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.gil-163",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.ate-small-town-knight",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ],
+    "lastOpportunity": [
+     "Before the story moves on from free exploration (watch it straight away)",
+     "Last safe point: before you leave the Business District by air cab"
+    ],
+    "ateTrigger": [
+     null,
+     "selectable"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.hi-potion",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.echo-screen",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.tent-church-street",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.leather-plate",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.silver-gloves",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.ate-vivis-shopping",
+   "diff": {
+    "ateTrigger": [
+     null,
+     "automatic"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.leather-wrist",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.bronze-vest",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.mimic-card",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.steepled-hat",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.ate-steam-engine",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ],
+    "lastOpportunity": [
+     "Before entering the Tantalus hideout",
+     "Last safe point: before you enter the Tantalus hideout"
+    ],
+    "ateTrigger": [
+     null,
+     "selectable"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.gil-127",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.ore",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.autograph",
+   "diff": {
+    "priority": [
+     null,
+     "critical"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.moogle-suit",
+   "diff": {
+    "priority": [
+     null,
+     "critical"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.ate-what-can-i-do",
+   "diff": {
+    "ateTrigger": [
+     null,
+     "automatic"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.hideout-gil-282",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.hideout-gil-68",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.hideout-gil-97",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.mini-burmecia",
+   "diff": {
+    "missability": [
+     "none",
+     "unconfirmed"
+    ],
+    "missableKind": [
+     null,
+     "pickup"
+    ],
+    "lastOpportunity": [
+     null,
+     "Collect on this visit (later availability not documented)"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum.ate-baku-and-crew",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ],
+    "lastOpportunity": [
+     "Before returning to the castle for the telescope scene",
+     "Last safe point: before you take the air cab back to the castle"
+    ],
+    "ateTrigger": [
+     null,
+     "selectable"
+    ]
+   }
+  },
+  {
+   "id": "d1.festival-of-the-hunt.prize-zidane",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ]
+   }
+  },
+  {
+   "id": "d1.festival-of-the-hunt.prize-freya",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ]
+   }
+  },
+  {
+   "id": "d1.festival-of-the-hunt.prize-vivi",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum-kingdom.recruit-quina",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum-kingdom.blu-mustard-bomb",
+   "diff": {
+    "verification": [
+     "single-source",
+     "verified"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum-kingdom.blu-limit-glove",
+   "diff": {
+    "verification": [
+     "single-source",
+     "verified"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum-kingdom.blu-lv3-defless",
+   "diff": {
+    "verification": [
+     "single-source",
+     "verified"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum-kingdom.blu-vanish",
+   "diff": {
+    "verification": [
+     "single-source",
+     "verified"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum-kingdom.chocograph-1",
+   "diff": {
+    "name": [
+     "Chocograph: Streamside",
+     "Dig up Chocograph #1: Streamside"
+    ],
+    "reward": [
+     "2 Elixir, 3 Hi-Potion, 4 Ether, 2 Germinas Boots",
+     null
+    ],
+    "spot": [
+     "Chocobo's Forest → world map",
+     "Chocobo's Forest — Hot & Cold"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum-kingdom.chocograph-2",
+   "diff": {
+    "name": [
+     "Chocograph: Between Mountains",
+     "Dig up Chocograph #2: Between Mountains"
+    ],
+    "reward": [
+     "5 Potion, 5 Hi-Potion, 2 Tent, 2 Cotton Robe",
+     null
+    ],
+    "requires": [
+     [
+      "d1.lindblum-kingdom.catch-choco"
+     ],
+     [
+      "d1.lindblum-kingdom.chocograph-1"
+     ]
+    ],
+    "spot": [
+     "Chocobo's Forest → world map",
+     "Chocobo's Forest — Hot & Cold"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum-kingdom.chocograph-uncultivated-land",
+   "added": true,
+   "name": "Dig up Chocograph #3: Uncultivated Land"
+  },
+  {
+   "id": "d1.daines-horse-basin.chocograph-healing-shore",
+   "diff": {
+    "name": [
+     "Chocograph: Healing Shore",
+     "Dig up Chocograph #4: Healing Shore"
+    ],
+    "areaId": [
+     "daines-horse-basin",
+     "lindblum-kingdom"
+    ],
+    "reward": [
+     "Reef ability",
+     null
+    ],
+    "requires": [
+     [
+      "d1.lindblum-kingdom.catch-choco"
+     ],
+     [
+      "d1.lindblum-kingdom.chocograph-1"
+     ]
+    ],
+    "spot": [
+     "Chocobo tracks in this basin",
+     "Chocobo's Forest — Hot & Cold"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum-kingdom.chocograph-abandoned-beach",
+   "added": true,
+   "name": "Dig up Chocograph #5: Abandoned Beach"
+  },
+  {
+   "id": "d1.lindblum-kingdom.chocograph-cold-field",
+   "added": true,
+   "name": "Dig up Chocograph #6: Cold Field"
+  },
+  {
+   "id": "d1.lindblum-kingdom.chocograph-faraway-lagoon",
+   "added": true,
+   "name": "Dig up Chocograph #8: Faraway Lagoon"
+  },
+  {
+   "id": "d1.daines-horse-basin.chocograph-birds-eye-lagoon",
+   "diff": {
+    "name": [
+     "Chocograph: Bird's-Eye Lagoon",
+     "Dig up Chocograph #10: Bird's-Eye Lagoon"
+    ],
+    "areaId": [
+     "daines-horse-basin",
+     "lindblum-kingdom"
+    ],
+    "verification": [
+     "single-source",
+     "verified"
+    ],
+    "reward": [
+     "8 Potion, 4 Phoenix Down, 3 Ether, Magician Robe",
+     null
+    ],
+    "requires": [
+     [
+      "d1.daines-horse-basin.chocograph-healing-shore"
+     ],
+     [
+      "d1.lindblum-kingdom.chocograph-1"
+     ]
+    ],
+    "spot": [
+     "Lindblum territory (needs Reef)",
+     "Chocobo's Forest — Hot & Cold"
+    ]
+   }
+  },
+  {
+   "id": "d1.daines-horse-basin.chocograph-small-beach",
+   "diff": {
+    "name": [
+     "Chocograph: Small Beach",
+     "Dig up Chocograph #11: Small Beach"
+    ],
+    "areaId": [
+     "daines-horse-basin",
+     "lindblum-kingdom"
+    ],
+    "verification": [
+     "single-source",
+     "verified"
+    ],
+    "reward": [
+     "Remedy, 2 Elixir, 8 Rising Sun, Oak Staff",
+     null
+    ],
+    "requires": [
+     [
+      "d1.daines-horse-basin.chocograph-healing-shore"
+     ],
+     [
+      "d1.lindblum-kingdom.chocograph-1"
+     ]
+    ],
+    "spot": [
+     "Lindblum territory (needs Reef)",
+     "Chocobo's Forest — Hot & Cold"
+    ]
+   }
+  },
+  {
+   "id": "d1.lindblum-kingdom.chocograph-piece-1",
+   "added": true,
+   "name": "Dig up a Chocograph Piece"
+  },
+  {
+   "id": "d1.lindblum-kingdom.chocograph-1-treasure",
+   "added": true,
+   "name": "Streamside treasure"
+  },
+  {
+   "id": "d1.lindblum-kingdom.chocograph-2-treasure",
+   "added": true,
+   "name": "Between Mountains treasure"
+  },
+  {
+   "id": "d1.gizamalukes-grotto.bronze-vest",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.gizamalukes-grotto.mythril-gloves",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.gizamalukes-grotto.magus-hat",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.gizamalukes-grotto.kupo-nut-moogle",
+   "diff": {
+    "name": [
+     "Give Vivi’s Kupo Nut to the Bell Room Moogle",
+     "Give Vivi’s Kupo Nut to Moguta (Bell Room)"
+    ],
+    "reward": [
+     null,
+     "The way forward (GameFAQs lists the Holy Bell as the first Disc 1 delivery reward)"
+    ],
+    "mandatory": [
+     null,
+     true
+    ]
+   }
+  },
+  {
+   "id": "d1.gizamalukes-grotto.steal-giza-ice-staff",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ]
+   }
+  },
+  {
+   "id": "d1.south-gate.grimo-letter",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ]
+   }
+  },
+  {
+   "id": "d1.daines-horse-basin.chocograph-healing-shore-treasure",
+   "added": true,
+   "name": "Healing Shore treasure (Reef ability)"
+  },
+  {
+   "id": "d1.daines-horse-basin.chocograph-birds-eye-lagoon-treasure",
+   "added": true,
+   "name": "Bird's-Eye Lagoon treasure"
+  },
+  {
+   "id": "d1.daines-horse-basin.chocograph-small-beach-treasure",
+   "added": true,
+   "name": "Small Beach treasure"
+  },
+  {
+   "id": "d1.burmecia.cancer-stellazzio",
+   "diff": {
+    "missableKind": [
+     "pickup",
+     "unique"
+    ],
+    "verification": [
+     "verified",
+     "conflicting"
+    ],
+    "priority": [
+     null,
+     "important"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle",
+     "Collect now. GameFAQs says it stays available, Jegged implies it does not"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.soft-right-house",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "verification": [
+     "verified",
+     "conflicting"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle",
+     "Before the final Disc 1 battle (revisit status disputed)"
+    ],
+    "spot": [
+     "Residence (right entrance)",
+     "Residence (right-hand stair door)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.germinas-boots",
+   "diff": {
+    "verification": [
+     "verified",
+     "conflicting"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Before the floor collapses",
+     "Before the floor collapses (it collapses if you run)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.potion-left-house",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "verification": [
+     "verified",
+     "conflicting"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle",
+     "Before the final Disc 1 battle (revisit status disputed)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.soft-left-house",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "verification": [
+     "verified",
+     "conflicting"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle",
+     "Before the final Disc 1 battle (revisit status disputed)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.ether-bedroom",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "verification": [
+     "verified",
+     "conflicting"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle",
+     "Before the final Disc 1 battle (revisit status disputed)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.uptown-ground-door",
+   "diff": {
+    "name": [
+     "Enter Uptown building through the ground-level door",
+     "Wei and Kal: enter Uptown through the ground-level door"
+    ],
+    "verification": [
+     "single-source",
+     "verified"
+    ],
+    "priority": [
+     null,
+     "critical"
+    ],
+    "lastOpportunity": [
+     "On your first time through Uptown",
+     "Your first pass through Uptown (taking the upper door skips it)"
+    ],
+    "spot": [
+     "Uptown Area",
+     "Uptown Area — first building"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.uptown-tent",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "verification": [
+     "verified",
+     "conflicting"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle",
+     "Before the final Disc 1 battle (revisit status disputed)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.uptown-phoenix-down",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "verification": [
+     "verified",
+     "conflicting"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle",
+     "Before the final Disc 1 battle (revisit status disputed)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.lightning-staff",
+   "diff": {
+    "missability": [
+     "unconfirmed",
+     "permanent"
+    ],
+    "verification": [
+     "verified",
+     "conflicting"
+    ],
+    "priority": [
+     null,
+     "optional"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle",
+     "Before the final Disc 1 battle (revisit status disputed)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.stiltzkin-333",
+   "diff": {
+    "missableKind": [
+     "unique",
+     "opportunity"
+    ],
+    "priority": [
+     null,
+     "important"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle",
+     "While he is in the Vault, and at the latest before the final Disc 1 battle"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.atla-letter",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ],
+    "lastOpportunity": [
+     "Before the final Disc 1 battle",
+     "This visit; you need the Kupo Nut before Disc 1 ends"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.kupo-nut-delivery",
+   "diff": {
+    "name": [
+     "Kupo Nut delivery: Grotto Moogle",
+     "Kupo Nut delivery: take Atla's nut to Moguta"
+    ],
+    "missability": [
+     "none",
+     "permanent"
+    ],
+    "missableKind": [
+     null,
+     "opportunity"
+    ],
+    "priority": [
+     null,
+     "important"
+    ],
+    "lastOpportunity": [
+     null,
+     "Before the final Disc 1 battle"
+    ],
+    "reward": [
+     null,
+     "Random: Tent, Phoenix Pinion or Ether"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.blu-magic-hammer",
+   "diff": {
+    "spot": [
+     "Burmecia",
+     "Burmecia (also summoned by Mimics)"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.steal-boss-phoenix-down",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.steal-boss-chain-plate",
+   "diff": {
+    "priority": [
+     null,
+     "important"
+    ]
+   }
+  },
+  {
+   "id": "d1.burmecia.steal-boss-mythril-sword",
+   "diff": {
+    "priority": [
+     null,
+     "optional"
+    ]
+   }
+  }
+ ],
+ "oldTotals": {
+  "entries": 218,
+  "missability": {
+   "permanent": 72,
+   "unconfirmed": 58,
+   "none": 71,
+   "temporary": 5,
+   "conditional": 12
+  },
+  "verification": {
+   "verified": 206,
+   "single-source": 12
+  }
+ },
+ "newTotals": {
+  "entries": 229,
+  "missability": {
+   "permanent": 81,
+   "unconfirmed": 69,
+   "none": 62,
+   "temporary": 5,
+   "conditional": 12
+  },
+  "verification": {
+   "verified": 216,
+   "conflicting": 11,
+   "single-source": 2
+  }
+ }
+}

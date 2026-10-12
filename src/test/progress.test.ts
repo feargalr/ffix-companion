@@ -62,8 +62,15 @@ describe('progress store', () => {
       furthestAreaIndex: -4,
     });
     expect(s.completed).toEqual({ good: 5 });
-    expect(s.settings).toEqual({ spoilers: 'safe', hideCompleted: false });
+    expect(s.settings).toEqual({ spoilers: 'safe', hideCompleted: false, dismissedNotices: [] });
     expect(s.furthestAreaIndex).toBe(0);
+  });
+
+  it('remembers dismissed notices', () => {
+    const store = createProgressStore(localStorage);
+    store.dismissNotice('x');
+    store.dismissNotice('x');
+    expect(createProgressStore(localStorage).getState().settings.dismissedNotices).toEqual(['x']);
   });
 
   it('resets everything', () => {

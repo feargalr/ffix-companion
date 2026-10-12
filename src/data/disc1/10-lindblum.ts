@@ -1,7 +1,7 @@
 import { defineArea, ref } from '../define';
 
 const A = 'lindblum';
-const ALL = ['jegged', 'gamefaqs-bover', 'steam-guide'] as const;
+const ALL = ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'] as const;
 
 export default defineArea(
   {
@@ -14,6 +14,7 @@ export default defineArea(
     summary:
       'A huge city in three districts linked by air cab. It has lots of pickups, six ATEs, and two key items that vanish once you visit the Tantalus hideout.',
     party: 'Zidane, Vivi (Steiner and Dagger for some scenes)',
+    partyIds: ['zidane', 'vivi', 'steiner', 'garnet'],
     departure: {
       trigger: 'Entering the Tantalus hideout (Theater District)',
       consequence: 'The Autograph and Moogle Suit key items are gone for good. Everything else in Lindblum stays available.',
@@ -26,7 +27,9 @@ export default defineArea(
     ],
   },
   {
-    missability: 'none',
+    missability: 'unconfirmed',
+    missableKind: 'pickup',
+    lastOpportunity: 'Collect on this visit (later availability not documented)',
     sources: [...ALL],
   },
   [
@@ -52,6 +55,7 @@ export default defineArea(
       spot: 'Lindblum Castle — guest bedroom (Mogki)',
       description: 'Deliver the letter from Dali Underground, then check Mognet again to receive Mogki’s letter for Atla.',
       requires: [ref(1, 'dali', 'kumop-letter')],
+      missability: 'none',
     },
     {
       slug: 'mogki-letter-to-atla',
@@ -61,25 +65,30 @@ export default defineArea(
       description: 'Carry this one until you meet Atla later on Disc 1. Delivering it earns a Kupo Nut.',
       requires: [ref(1, A, 'mogki-letter')],
       spoilerLevel: 1,
+      missability: 'none',
     },
     // ---- Business District
     {
       slug: 'ate-synthesis-lesson',
-      name: 'ATE: Teach Me, Mogster! (Synthesis lesson)',
+      name: 'ATE: Teach Me, Mogster! (My First Synthesis Lesson)',
       category: 'ate',
       spot: 'Business District — inn',
       description: 'A forced tutorial about Synthesis Shops when Zidane wakes up.',
       mandatory: true,
-      caveats: ['The Steam guide calls this "My First Synthesis Lesson". The title may vary between versions.'],
-      verification: 'single-source',
-      sources: ['gamefaqs-bover', 'steam-guide'],
+      ateTrigger: 'automatic',
+      missability: 'none',
+      caveats: [
+        'One ATE, not two. Vinheim and the Steam ATE guide both write “Teach Me, Mogster! (My First Synthesis Lesson)”, matching the Lesson 1 and 2 tutorials. The other guides shorten it to one half of the title. It is a tutorial and doesn’t count towards the full ATE set.',
+      ],
+      sources: ['gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide', 'steam-ate-guide'],
     },
     {
       slug: 'moodon-letter',
       name: 'Mognet: read Moodon’s letter',
       category: 'mognet',
       spot: 'Business District — inn (Moodon)',
-      description: 'The inn Moogle has a letter for Zidane. Read it, then save.',
+      description: 'The inn Moogle has a letter for Zidane (Vinheim: from Ruby). Read it, then save.',
+      missability: 'none',
     },
     {
       slug: 'gil-163',
@@ -93,11 +102,16 @@ export default defineArea(
       name: 'ATE: Small-Town Knight in a Big City',
       category: 'ate',
       spot: 'Business District — outside the inn',
-      description: 'Offered when you leave the inn.',
+      ateTrigger: 'selectable',
+      description: 'Offered on Main Street (Business District) as you step out of the inn.',
       missability: 'unconfirmed',
       missableKind: 'event',
-      lastOpportunity: 'Before the story moves on from free exploration (watch it straight away)',
-      caveats: ['Exactly when this ATE stops being offered is not confirmed, so watch it as soon as it appears.'],
+      priority: 'important',
+      lastOpportunity: 'Last safe point: before you leave the Business District by air cab',
+      caveats: [
+        'No source documents when this stops being offered. The “last safe point” is where every walkthrough has already watched it, not a confirmed cut-off.',
+      ],
+      sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide', 'steam-ate-guide'],
     },
     {
       slug: 'hi-potion',
@@ -141,6 +155,8 @@ export default defineArea(
       spot: 'Business District — station entrance',
       description: 'Plays as you enter the air-cab station. Vivi comes back with a Kupo Nut.',
       mandatory: true,
+      ateTrigger: 'automatic',
+      missability: 'none',
       reward: 'Kupo Nut (key item)',
     },
     // ---- Industrial District
@@ -178,11 +194,16 @@ export default defineArea(
       name: 'ATE: Steam Engine',
       category: 'ate',
       spot: 'Theater District — station area',
-      description: 'Offered when you arrive in the Theater District.',
+      ateTrigger: 'selectable',
+      description: 'Offered in the station area as soon as you arrive in the Theater District by air cab.',
       missability: 'unconfirmed',
       missableKind: 'event',
-      lastOpportunity: 'Before entering the Tantalus hideout',
-      caveats: ['The exact cut-off isn’t documented. Watch it on arrival to be safe.'],
+      priority: 'important',
+      lastOpportunity: 'Last safe point: before you enter the Tantalus hideout',
+      caveats: [
+        'No source documents when this stops being offered. Every walkthrough watches it on arrival.',
+      ],
+      sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide', 'steam-ate-guide'],
     },
     {
       slug: 'gil-127',
@@ -207,7 +228,12 @@ export default defineArea(
         'Talk to the Fan Club Chairman down the stairs and watch the "giant Moogle" scene. Follow him back to the studio and talk to Lowell. Agree to keep his secret and he gives you the Autograph.',
       missability: 'permanent',
       missableKind: 'unique',
+      rewardUniqueness: 'unique',
+      priority: 'critical',
       lastOpportunity: 'Before entering the Tantalus hideout',
+      caveats: [
+        'The deadline is stated by GameFAQs. Vinheim and the Steam guide collect it in the same order without stating a deadline. The Steam guide notes you must first see the man in the Moogle suit leave the theatre.',
+      ],
     },
     {
       slug: 'moogle-suit',
@@ -218,6 +244,8 @@ export default defineArea(
       requires: [ref(1, A, 'autograph')],
       missability: 'permanent',
       missableKind: 'unique',
+      rewardUniqueness: 'unique',
+      priority: 'critical',
       lastOpportunity: 'Before entering the Tantalus hideout',
     },
     {
@@ -227,6 +255,8 @@ export default defineArea(
       spot: 'Tantalus hideout',
       description: 'Plays automatically when you enter the hideout.',
       mandatory: true,
+      ateTrigger: 'automatic',
+      missability: 'none',
     },
     {
       slug: 'hideout-gil-282',
@@ -261,11 +291,16 @@ export default defineArea(
       name: 'ATE: Baku and His Crew',
       category: 'ate',
       spot: 'Theater District — Theater Avenue',
-      description: 'Offered after you leave the hideout.',
+      ateTrigger: 'selectable',
+      description: 'Offered on Theater Avenue as you step out of the Tantalus hideout.',
       missability: 'unconfirmed',
       missableKind: 'event',
-      lastOpportunity: 'Before returning to the castle for the telescope scene',
-      caveats: ['The exact cut-off isn’t documented. Watch it as soon as you leave the hideout.'],
+      priority: 'important',
+      lastOpportunity: 'Last safe point: before you take the air cab back to the castle',
+      caveats: [
+        'No source documents when this stops being offered. Every walkthrough watches it straight after leaving the hideout.',
+      ],
+      sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide', 'steam-ate-guide'],
     },
   ],
 );

@@ -68,13 +68,31 @@ describe('app', () => {
   it('updates the Before You Leave warning as missables are completed', async () => {
     const user = userEvent.setup();
     render(<App />);
-    await go('#/area/cargo-ship');
+    await go('#/area/ice-cavern');
     const panel = screen.getByRole('region', { name: 'Before You Leave' });
-    expect(within(panel).getByText('3 missable opportunities remaining')).toBeInTheDocument();
-    for (const name of ['Steepled Hat (steal)', 'Linen Cuirass (steal)', 'Silver Gloves (steal)']) {
-      await user.click(screen.getByRole('checkbox', { name }));
-    }
+    expect(within(panel).getByText('1 missable opportunity remaining')).toBeInTheDocument();
+    await user.click(screen.getByRole('checkbox', { name: 'Mythril Dagger (steal)' }));
     expect(within(panel).getByText(/clear to move on/)).toBeInTheDocument();
+    // Ordinary pickups are still there, just folded away.
+    expect(within(panel).getByRole('button', { name: /lower-priority item/ })).toBeInTheDocument();
+  });
+
+  it('shows the Chocograph log with separate dug/found ticks', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await go('#/progress');
+    const dug = screen.getByRole('checkbox', { name: '#11 Small Beach: dug up' });
+    await user.click(dug);
+    expect(dug).toBeChecked();
+    expect(screen.getByRole('checkbox', { name: '#11 Small Beach: treasure found' })).not.toBeChecked();
+    expect(screen.getByText(/Needs Reef/)).toBeInTheDocument();
+  });
+
+  it('shows party portraits and the Square Enix notice', async () => {
+    render(<App />);
+    await go('#/area/dali');
+    expect(screen.getByRole('img', { name: 'Vivi' })).toHaveAttribute('loading', 'lazy');
+    expect(screen.getByText(/© 2000, 2019 SQUARE ENIX CO., LTD./)).toBeInTheDocument();
   });
 
   it('navigates between areas and remembers the last one', async () => {

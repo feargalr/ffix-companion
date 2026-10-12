@@ -10,6 +10,7 @@ export default defineArea(
     chapter: 'Into the Mist',
     summary: 'A short airship ride with one boss, Black Waltz 3. There is no treasure here, only three steals.',
     party: 'Zidane, Steiner, Vivi (Dagger sits this fight out)',
+    partyIds: ['zidane', 'steiner', 'vivi'],
     departure: {
       trigger: 'Defeating Black Waltz 3',
       consequence: 'Its steals are gone. None of them are unique; Lindblum sells all three.',
@@ -24,7 +25,7 @@ export default defineArea(
     missability: 'permanent',
     missableKind: 'steal',
     lastOpportunity: 'Before Black Waltz 3 is defeated',
-    sources: ['jegged', 'gamefaqs-bover'],
+    sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim'],
   },
   [
     {

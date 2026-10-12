@@ -11,6 +11,8 @@ export default defineArea(
     summary:
       "The play, the sword-fight mini-game, Steiner's hunt for the Knights of Pluto, and the escape aboard the Prima Vista. The one-time Moonstone prize is here.",
     party: 'Zidane & Blank, then Steiner, then Zidane, Garnet & Vivi',
+    partyIds: ['zidane', 'steiner', 'garnet', 'vivi'],
+    image: { imageId: 'prima-vista-stage', alt: 'Official screenshot: the Tantalus troupe performing on the Prima Vista stage' },
     departure: {
       trigger: 'The Prima Vista escapes the castle and crashes in the Evil Forest',
       consequence:
@@ -27,7 +29,7 @@ export default defineArea(
     missability: 'permanent',
     missableKind: 'pickup',
     lastOpportunity: 'Before the Prima Vista leaves the castle',
-    sources: ['jegged', 'gamefaqs-bover', 'steam-guide'],
+    sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'],
   },
   [
     {
@@ -44,6 +46,9 @@ export default defineArea(
         'Moonstones are strictly limited, and at least one is needed later in the game.',
         'In the original Japanese PlayStation release the Gil bonus is random even at 100.',
       ],
+      rewardUniqueness: 'limited',
+      image: { imageId: 'sword-fight', alt: 'Official screenshot: Zidane and Blank duelling on stage before the nobles' },
+      sources: ['jegged', 'jegged-missables', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'],
     },
     {
       slug: 'brahne-prize',
@@ -57,6 +62,8 @@ export default defineArea(
       lastOpportunity: 'Before Steiner climbs to the top of the West Tower',
       requires: ['d1.alexandria-castle-play.sword-fight-100'],
       caveats: ['If you skip her, the prize is lost even if you scored 100.'],
+      rewardUniqueness: 'limited',
+      priority: 'critical',
     },
     {
       slug: 'mosh-jump-rope-letter',
@@ -69,6 +76,8 @@ export default defineArea(
       missableKind: 'event',
       lastOpportunity: 'Only if you reached 50 jumps as Vivi',
       sources: ['jegged', 'gamefaqs-bover', 'steam-guide'],
+      priority: 'optional',
+      rewardUniqueness: 'none',
     },
     {
       slug: 'phoenix-down-guardhouse',
@@ -94,6 +103,8 @@ export default defineArea(
       spoilerLevel: 1,
       spoilerText:
         "Pay attention to what each knight is doing. Their habits are the answer to a pairing mini-game on a later disc.",
+      priority: 'important',
+      rewardUniqueness: 'replaceable',
     },
     {
       slug: 'engine-phoenix-down',

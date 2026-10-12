@@ -1,4 +1,5 @@
 import type { Area, Category, ChecklistEntry, Missability, MissableKind, SourceId } from '../types/game';
+import { SOURCES } from '../data/sources';
 
 /**
  * Data integrity checks shared by `npm run validate` and the test suite.
@@ -28,7 +29,9 @@ const CATEGORIES: Category[] = [
 ];
 const MISSABILITY: Missability[] = ['permanent', 'temporary', 'none', 'conditional', 'unconfirmed'];
 const KINDS: MissableKind[] = ['unique', 'pickup', 'steal', 'event', 'opportunity'];
-const SOURCES: SourceId[] = ['jegged', 'gamefaqs-bover', 'steam-guide'];
+const SOURCE_IDS = Object.keys(SOURCES) as SourceId[];
+const VERIFICATION = ['verified', 'single-source', 'conflicting', 'unverified'];
+const PRIORITIES = ['critical', 'important', 'optional'];
 const ID_RE = /^d[1-4]\.[a-z0-9-]+\.[a-z0-9-]+$/;
 const AREA_ID_RE = /^[a-z0-9-]+$/;
 
@@ -72,14 +75,25 @@ export function validateData(areas: Area[]): ValidationIssue[] {
       if (entryIds.has(e.id)) err(where, 'Duplicate entry id.');
       entryIds.set(e.id, e);
       if (e.areaId !== a.id) err(where, `areaId "${e.areaId}" does not match containing area "${a.id}".`);
-      if (!e.id.startsWith(`d${a.disc}.${a.id}.`)) err(where, 'ID prefix does not match its disc/area.');
+      if (e.legacyId) {
+        if (!e.id.startsWith(`d${a.disc}.`)) err(where, 'Legacy ID must still start with its disc.');
+      } else if (!e.id.startsWith(`d${a.disc}.${a.id}.`)) {
+        err(where, 'ID prefix does not match its disc/area (set legacyId if the entry moved).');
+      }
       if (!e.name?.trim()) err(where, 'Missing name.');
       if (!e.description?.trim()) err(where, 'Missing description.');
       if (!CATEGORIES.includes(e.category)) err(where, `Unknown category "${e.category}".`);
       if (!MISSABILITY.includes(e.missability)) err(where, `Unknown missability "${e.missability}".`);
       if (e.missableKind && !KINDS.includes(e.missableKind)) err(where, `Unknown missableKind "${e.missableKind}".`);
       if (!e.sources?.length) err(where, 'At least one source is required.');
-      for (const s of e.sources ?? []) if (!SOURCES.includes(s)) err(where, `Unknown source "${s}".`);
+      for (const s of e.sources ?? []) if (!SOURCE_IDS.includes(s)) err(where, `Unknown source "${s}".`);
+      if (!VERIFICATION.includes(e.verification)) err(where, `Unknown verification "${e.verification}".`);
+      if (e.priority && !PRIORITIES.includes(e.priority)) err(where, `Unknown priority "${e.priority}".`);
+      if (e.verification === 'conflicting' && !e.caveats?.length) {
+        err(where, 'Conflicting entries must explain the conflict in caveats.');
+      }
+      if (e.ateTrigger && e.category !== 'ate') err(where, 'ateTrigger is only for ATEs.');
+      if (e.category === 'chocograph' && !e.chocograph) err(where, 'Chocograph entries need chocograph { number, role }.');
 
       if ((e.missability === 'permanent' || e.missability === 'conditional') && !e.mandatory) {
         if (!e.lastOpportunity) err(where, `${e.missability} entries need lastOpportunity.`);
@@ -163,4 +177,49 @@ export function summarise(areas: Area[]): ContentSummary {
     byVerification: count((e) => e.verification),
     byMissability: count((e) => e.missability),
   };
+}
+
+/** Cross-checks for the Chocograph log (see src/data/chocographs.ts). */
+export function validateChocographs(
+  chocographs: { digId: string; treasureId: string; treasureFromDisc: number; name: string }[],
+  entryIds: Set<string>,
+  availableDiscs: number[],
+): ValidationIssue[] {
+  const issues: ValidationIssue[] = [];
+  const seen = new Set<string>();
+  for (const c of chocographs) {
+    const where = `chocograph ${c.name}`;
+    for (const id of [c.digId, c.treasureId]) {
+      if (seen.has(id)) issues.push({ level: 'error', where, message: `ID ${id} used twice.` });
+      seen.add(id);
+    }
+    if (!entryIds.has(c.digId)) issues.push({ level: 'error', where, message: `Dig entry ${c.digId} does not exist.` });
+    const treasureDisc = Number(c.treasureId.match(/^d(\d)\./)?.[1]);
+    if (treasureDisc !== c.treasureFromDisc) {
+      issues.push({ level: 'error', where, message: `Treasure ID disc prefix must match treasureFromDisc (${c.treasureFromDisc}).` });
+    }
+    if (availableDiscs.includes(c.treasureFromDisc) && !entryIds.has(c.treasureId)) {
+      issues.push({ level: 'error', where, message: `Treasure entry ${c.treasureId} should exist (its disc is available).` });
+    }
+    if (!availableDiscs.includes(c.treasureFromDisc) && entryIds.has(c.treasureId)) {
+      issues.push({ level: 'warning', where, message: 'Reserved treasure ID already has an entry; update treasureFromDisc?' });
+    }
+  }
+  return issues;
+}
+
+/** Every referenced official image must be registered. */
+export function validateImageRefs(areas: Area[], known: Set<string>): ValidationIssue[] {
+  const issues: ValidationIssue[] = [];
+  for (const a of areas) {
+    if (a.image && !known.has(a.image.imageId)) {
+      issues.push({ level: 'error', where: `area ${a.id}`, message: `Unknown imageId "${a.image.imageId}".` });
+    }
+    for (const e of a.entries) {
+      if (e.image && !known.has(e.image.imageId)) {
+        issues.push({ level: 'error', where: `entry ${e.id}`, message: `Unknown imageId "${e.image.imageId}".` });
+      }
+    }
+  }
+  return issues;
 }

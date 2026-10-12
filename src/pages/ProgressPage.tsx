@@ -7,6 +7,7 @@ import { progressStore, useProgress, type ProgressState } from '../lib/progress'
 import { href } from '../lib/router';
 import { areaProgress, missableProgress, progressOf, sectionProgress } from '../lib/stats';
 import { ProgressBar, ProgressRing, SectionHeading } from '../components/ui';
+import { ChocographLog } from '../components/ChocographLog';
 
 const KNOWN_IDS = new Set(ENTRY_BY_ID.keys());
 
@@ -39,6 +40,7 @@ export function ProgressPage() {
           <Row label="Active Time Events" t={bySection.ate} />
           <Row label="Boss steals" t={bySection.steals} />
           <Row label="Optional activities" t={bySection.activities} />
+          <Row label="Chocographs" t={bySection.chocographs} />
           <Row label="Shopping" t={bySection.shopping} />
           <Row label="Missable opportunities done" t={missables} gold />
         </div>
@@ -65,6 +67,11 @@ export function ProgressPage() {
           </ul>
         </section>
       )}
+
+      <section aria-label="Chocograph log">
+        <SectionHeading>Chocograph log</SectionHeading>
+        <ChocographLog state={state} />
+      </section>
 
       <section aria-label="Progress by area">
         <SectionHeading>By area</SectionHeading>

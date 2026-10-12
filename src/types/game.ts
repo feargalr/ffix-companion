@@ -41,18 +41,44 @@ export type MissableKind =
   | 'event' // an event or scene with no unique item
   | 'opportunity'; // sidequest step, letter, reward chance
 
-export type Verification =
-  | 'verified' // confirmed by two independent sources
-  | 'single-source' // stated by one source, not contradicted
-  | 'unverified'; // needs checking — shown with a flag in the UI
+/**
+ * - verified: confirmed by two or more independent sources.
+ * - single-source: stated by one authoritative source and not contradicted.
+ * - conflicting: sources disagree on a material detail (see caveats).
+ * - unverified: not yet checked — shown with a flag in the UI.
+ */
+export type Verification = 'verified' | 'single-source' | 'conflicting' | 'unverified';
 
-export type SourceId = 'jegged' | 'gamefaqs-bover' | 'steam-guide';
+export type SourceId =
+  | 'jegged'
+  | 'jegged-missables'
+  | 'gamefaqs-bover'
+  | 'gamefaqs-vinheim'
+  | 'gamefaqs-chocobo-fishy'
+  | 'gamefaqs-chocograph-redscarlet'
+  | 'steam-guide'
+  | 'steam-ate-guide';
+
+/**
+ * How loud a Before You Leave warning should be. Derived from missability and
+ * missableKind when not set explicitly (see lib/priority.ts) — set it by hand
+ * when the consequence matters more or less than the category suggests.
+ */
+export type WarningPriority = 'critical' | 'important' | 'optional';
+
+/** Is the reward itself replaceable, separate from whether this chance is? */
+export type RewardUniqueness = 'unique' | 'limited' | 'replaceable' | 'none' | 'unconfirmed';
+
+/** ATEs: chosen from the ATE prompt, or played automatically. */
+export type AteTrigger = 'selectable' | 'automatic' | 'automatic-conditional';
 
 export interface EntryImage {
-  src: string; // relative to BASE_URL, e.g. "images/disc1/alexandria-zombie-card.webp"
+  /** Key into src/data/images.ts, which records source, licence and attribution. */
+  imageId: string;
   alt: string;
-  credit?: string;
 }
+
+export type CharacterId = 'zidane' | 'vivi' | 'garnet' | 'steiner' | 'freya' | 'quina';
 
 export interface ChecklistEntry {
   /** Stable, unique, never-reused identifier: d{disc}.{area-slug}.{entry-slug} */
@@ -84,6 +110,18 @@ export interface ChecklistEntry {
    * area's Before You Leave list.
    */
   closesOnLaterDisc?: boolean;
+  /** Warning level in Before You Leave; derived when omitted. */
+  priority?: WarningPriority;
+  rewardUniqueness?: RewardUniqueness;
+  /** ATEs only. */
+  ateTrigger?: AteTrigger;
+  /** Chocograph bookkeeping: which Chocograph and which half of it. */
+  chocograph?: { number: number | 'piece'; role: 'dig' | 'treasure' };
+  /**
+   * The entry moved to a different area after its ID shipped. The ID keeps
+   * its original area prefix so saved progress still matches.
+   */
+  legacyId?: boolean;
   /** Extra notes: alternate sources of the item, gotchas, platform notes. */
   caveats?: string[];
   /** Set when watching/doing this is forced by the story. */
@@ -127,6 +165,10 @@ export interface Area {
   summary: string;
   /** Who you control here, if notable. */
   party?: string;
+  /** Characters whose official portraits are shown next to the party line. */
+  partyIds?: CharacterId[];
+  /** Optional small location thumbnail. */
+  image?: EntryImage;
   /** Optional areas can be skipped entirely. */
   optional?: boolean;
   departure?: AreaDeparture;

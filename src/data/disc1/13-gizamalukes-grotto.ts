@@ -11,6 +11,7 @@ export default defineArea(
     summary:
       'A cave of bell-locked doors guarding the road to Burmecia. Each Gizamaluke Bell opens one door, and the order you use them in decides which treasures you can reach.',
     party: 'Zidane, Vivi, Freya (+ recruit)',
+    partyIds: ['zidane', 'vivi', 'freya', 'quina'],
     departure: {
       trigger: 'Defeating Gizamaluke',
       consequence: 'The boss steals are gone. The cave itself can be revisited.',
@@ -25,7 +26,8 @@ export default defineArea(
     missability: 'conditional',
     missableKind: 'pickup',
     lastOpportunity: 'Use the bells on the side doors before the large door',
-    sources: ['jegged', 'gamefaqs-bover', 'steam-guide'],
+    sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'],
+    priority: 'optional',
   },
   [
     {
@@ -54,13 +56,16 @@ export default defineArea(
     },
     {
       slug: 'kupo-nut-moogle',
-      name: 'Give Vivi’s Kupo Nut to the Bell Room Moogle',
+      name: 'Give Vivi’s Kupo Nut to Moguta (Bell Room)',
       category: 'optional-event',
       spot: 'Bell Room — under the giant bell',
-      description: 'During the scene, Vivi offers the Kupo Nut he got in Lindblum. Afterwards, open the chest for the last Gizamaluke Bell.',
+      description: 'During the scene, Vivi offers the Kupo Nut he got in Lindblum to the Moogle trapped under the bell. Afterwards, open the chest for the last Gizamaluke Bell. This first delivery is how the Kupo Nut sidequest starts.',
+      mandatory: true,
       missability: 'none',
       requires: ['d1.lindblum.ate-vivis-shopping'],
-      caveats: ['Sources disagree on whether this Moogle is Mogmi or Moguta.'],
+      reward: 'The way forward (GameFAQs lists the Holy Bell as the first Disc 1 delivery reward)',
+      caveats: ['Jegged and Vinheim name this Moogle Moguta (Mogmi’s husband). GameFAQs’ walkthrough says Mogmi.'],
+      sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim'],
     },
     {
       slug: 'mogmi-mognet',
@@ -103,6 +108,7 @@ export default defineArea(
       missableKind: 'steal',
       lastOpportunity: 'Before Gizamaluke is defeated',
       sources: ['jegged', 'gamefaqs-bover'],
+      priority: 'important',
     },
   ],
 );

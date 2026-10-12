@@ -11,6 +11,7 @@ export default defineArea(
     summary:
       'The opening scene aboard the theatre ship. Two small pickups in the dark room and your first boss steals.',
     party: 'Zidane, Blank, Cinna, Marcus',
+    partyIds: ['zidane'],
     departure: {
       trigger: 'Defeating the Masked Man and finishing the briefing',
       consequence: 'The game moves to Alexandria. You never return to this room before the ship is wrecked.',
@@ -24,7 +25,7 @@ export default defineArea(
     missability: 'permanent',
     missableKind: 'pickup',
     lastOpportunity: 'Before lighting the candle',
-    sources: ['jegged', 'gamefaqs-bover', 'steam-guide'],
+    sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'],
   },
   [
     {

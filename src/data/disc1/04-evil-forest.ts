@@ -13,6 +13,8 @@ export default defineArea(
     summary:
       'The wrecked Prima Vista, the first Active Time Events, and the run out of the forest. Everything here is lost once you escape.',
     party: 'Zidane, Steiner, Vivi (Blank briefly)',
+    partyIds: ['zidane', 'steiner', 'vivi'],
+    image: { imageId: 'evil-forest-crash-site', alt: 'Official screenshot: the wrecked Prima Vista in the Evil Forest during an Active Time Event' },
     departure: {
       trigger: 'Escaping the forest after the Plant Brain and Plant Spider chase',
       consequence:
@@ -29,7 +31,7 @@ export default defineArea(
     missability: 'permanent',
     missableKind: 'pickup',
     lastOpportunity: 'Before escaping the Evil Forest',
-    sources: ['jegged', 'gamefaqs-bover', 'steam-guide'],
+    sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'],
   },
   [
     // ---- Crash site
@@ -40,9 +42,10 @@ export default defineArea(
       spot: 'Crash Site',
       description: 'The introductory ATE, played right after the crash.',
       mandatory: true,
+      ateTrigger: 'automatic',
       missability: 'none',
       verification: 'verified',
-      sources: ['gamefaqs-bover', 'steam-guide'],
+      sources: ['gamefaqs-bover', 'steam-guide', 'steam-ate-guide'],
     },
     {
       slug: 'phoenix-down-crash',
@@ -67,6 +70,8 @@ export default defineArea(
       description: 'Optional ATE offered after you head down the stairs.',
       missableKind: 'event',
       lastOpportunity: 'Before leaving the wreck with Vivi and Steiner',
+      ateTrigger: 'selectable',
+      sources: ['jegged', 'gamefaqs-bover', 'steam-guide', 'steam-ate-guide'],
     },
     {
       slug: 'ate-girl-left-behind',
@@ -76,6 +81,8 @@ export default defineArea(
       description: 'Optional ATE offered alongside Time to Escape.',
       missableKind: 'event',
       lastOpportunity: 'Before leaving the wreck with Vivi and Steiner',
+      ateTrigger: 'selectable',
+      sources: ['jegged', 'gamefaqs-bover', 'steam-guide', 'steam-ate-guide'],
     },
     {
       slug: 'ate-my-little-baby',
@@ -86,6 +93,8 @@ export default defineArea(
       requires: [ref(1, A, 'ate-time-to-escape')],
       missableKind: 'event',
       lastOpportunity: 'Before leaving the wreck with Vivi and Steiner',
+      ateTrigger: 'selectable',
+      sources: ['jegged', 'gamefaqs-bover', 'steam-guide', 'steam-ate-guide'],
     },
     {
       slug: 'wrist',
@@ -195,6 +204,8 @@ export default defineArea(
       description: 'Offered on the way back through the forest once Vivi and Steiner have joined.',
       missableKind: 'event',
       lastOpportunity: 'Before escaping the forest',
+      ateTrigger: 'selectable',
+      sources: ['jegged', 'gamefaqs-bover', 'steam-guide', 'steam-ate-guide'],
     },
     {
       slug: 'ate-do-as-i-say',
@@ -203,8 +214,25 @@ export default defineArea(
       spot: 'Spring',
       description: 'Story ATE at the spring.',
       mandatory: true,
+      ateTrigger: 'automatic',
       missability: 'none',
-      sources: ['gamefaqs-bover', 'steam-guide'],
+      sources: ['gamefaqs-bover', 'steam-guide', 'steam-ate-guide'],
+    },
+    {
+      slug: 'mosco-ruby-letter',
+      name: 'Mognet: read the letter at Mosco',
+      category: 'mognet',
+      spot: 'Crash Site — Mosco',
+      description: 'After the wreck ATEs, check Mognet with Mosco at the crash site for a letter from Ruby.',
+      missableKind: 'event',
+      priority: 'optional',
+      rewardUniqueness: 'none',
+      requires: [ref(1, A, 'ate-girl-left-behind')],
+      caveats: [
+        'Jegged and both Steam guides mention a letter at Mosco. The Steam ATE guide’s author thinks it may only appear after watching “Girl Who Was Left Behind”. That link isn’t confirmed, so watch the ATE first to be safe.',
+      ],
+      verification: 'conflicting',
+      sources: ['jegged', 'steam-guide', 'steam-ate-guide'],
     },
     {
       slug: 'monty-letter',
@@ -215,6 +243,7 @@ export default defineArea(
       requires: [ref(1, 'alexandria-vivi', 'kupo-letter')],
       missableKind: 'opportunity',
       sources: ['jegged', 'gamefaqs-bover'],
+      priority: 'important',
     },
     {
       slug: 'steal-plant-brain-eye-drops',

@@ -11,6 +11,7 @@ export default defineArea(
     summary:
       'Your first time on the world map. There is a short optional detour to Melda Arch (North Gate) for two chests before heading to the Ice Cavern.',
     party: 'Zidane, Steiner, Vivi, Garnet',
+    partyIds: ['zidane', 'steiner', 'vivi', 'garnet'],
     tips: [
       "The Moogle's Flute lets you call Moguo on the world map to save or use a Tent.",
       "Equip Garnet before you set off. She joins with very little gear.",
@@ -30,7 +31,8 @@ export default defineArea(
       description:
         'Forced tutorial ATE with two Moogles in a swamp. Ask about anything you like, then choose "Nothing" to carry on.',
       mandatory: true,
-      sources: ['gamefaqs-bover', 'steam-guide'],
+      ateTrigger: 'automatic',
+      sources: ['gamefaqs-bover', 'steam-guide', 'steam-ate-guide'],
     },
     {
       slug: 'melda-arch-eye-drops',
@@ -59,8 +61,7 @@ export default defineArea(
         'Sources say he can be found later in the game too, so there is no rush.',
         'Individual questions are not tracked here. Check this off when you have met him on Disc 1, if you like.',
       ],
-      verification: 'single-source',
-      sources: ['gamefaqs-bover'],
+      sources: ['gamefaqs-bover', 'gamefaqs-vinheim'],
     },
   ],
 );

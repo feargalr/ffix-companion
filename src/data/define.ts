@@ -1,4 +1,5 @@
 import type {
+  WarningPriority,
   Area,
   ChecklistEntry,
   Missability,
@@ -14,6 +15,11 @@ export type EntryInput = Omit<
 > & {
   /** Short slug unique within the area; becomes part of the stable ID. */
   slug: string;
+  /**
+   * Only for entries that moved area after shipping: the original full ID,
+   * kept so saved progress still matches. Requires `legacyId: true`.
+   */
+  id?: string;
   missability?: Missability;
   verification?: Verification;
   sources?: SourceId[];
@@ -25,6 +31,8 @@ export interface AreaDefaults {
   missableKind?: MissableKind;
   lastOpportunity?: string;
   closesWithArea?: string;
+  /** Warning priority for entries that inherit the default missability. */
+  priority?: WarningPriority;
   sources?: SourceId[];
 }
 
@@ -37,12 +45,12 @@ export function defineArea(
 ): Area {
   return {
     ...meta,
-    entries: entries.map(({ slug, ...e }) => {
+    entries: entries.map(({ slug, id, ...e }) => {
       const missability = e.missability ?? defaults.missability;
       const inheritsMissable = e.missability === undefined;
       return {
         ...e,
-        id: `d${meta.disc}.${meta.id}.${slug}`,
+        id: e.legacyId && id ? id : `d${meta.disc}.${meta.id}.${slug}`,
         areaId: meta.id,
         missability,
         missableKind:
@@ -51,6 +59,7 @@ export function defineArea(
           e.lastOpportunity ?? (inheritsMissable && missability !== 'none' ? defaults.lastOpportunity : undefined),
         closesWithArea:
           e.closesWithArea ?? (inheritsMissable && missability !== 'none' ? defaults.closesWithArea : undefined),
+        priority: e.priority ?? (inheritsMissable ? defaults.priority : undefined),
         verification: e.verification ?? 'verified',
         sources: e.sources ?? defaults.sources ?? BOTH,
       } satisfies ChecklistEntry;

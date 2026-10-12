@@ -46,6 +46,7 @@ describe('PWA configuration', () => {
 
   it('precaches fonts and the app shell for offline use', () => {
     expect(pwaOptions.workbox?.globPatterns?.join()).toMatch(/woff2/);
+    expect(pwaOptions.workbox?.globPatterns?.join()).toMatch(/webp/);
     expect(pwaOptions.workbox?.navigateFallback).toBe('index.html');
   });
 

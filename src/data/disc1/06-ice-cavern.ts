@@ -13,6 +13,7 @@ export default defineArea(
     summary:
       'A frozen cave full of ice walls that Vivi melts with Fire. Most of the treasure is behind them. Ends with Zidane fighting a two-boss battle alone.',
     party: 'Zidane, Steiner, Vivi, Garnet (Zidane solo for the boss)',
+    partyIds: ['zidane', 'steiner', 'vivi', 'garnet'],
     departure: {
       trigger: 'Boarding the cargo ship at the end of the Dali chapter',
       consequence:
@@ -29,7 +30,7 @@ export default defineArea(
     missableKind: 'pickup',
     lastOpportunity: 'Before boarding the cargo ship in Dali',
     closesWithArea: 'dali',
-    sources: ['jegged', 'gamefaqs-bover', 'steam-guide'],
+    sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'],
   },
   [
     {
@@ -96,8 +97,9 @@ export default defineArea(
       spot: 'Left fork — frozen Moogle',
       description: 'Examine the block of ice holding Mois. Another tutorial ATE plays. Choose "Nothing" to return.',
       mandatory: true,
+      ateTrigger: 'automatic',
       missability: 'none',
-      sources: ['gamefaqs-bover', 'steam-guide'],
+      sources: ['gamefaqs-bover', 'steam-guide', 'steam-ate-guide'],
     },
     {
       slug: 'mois-letter',
@@ -106,6 +108,7 @@ export default defineArea(
       spot: 'Left fork — Mois',
       description: 'After thawing Mois, pick Mognet to receive a letter for Gumo in Dali.',
       missableKind: 'opportunity',
+      priority: 'important',
     },
     {
       slug: 'steal-bw1-remedy',
@@ -151,6 +154,7 @@ export default defineArea(
       lastOpportunity: 'Before Sealion is defeated',
       caveats: ['Lindblum sells Mythril Daggers later, but having one now makes the next stretch much easier.'],
       sources: ['jegged', 'gamefaqs-bover'],
+      priority: 'important',
     },
   ],
 );

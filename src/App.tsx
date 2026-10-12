@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { BottomNav } from './components/BottomNav';
 import { UpdatePrompt } from './components/UpdatePrompt';
+import { SquareEnixNotice } from './components/OfficialImage';
 import { AREA_BY_ID } from './data';
 import { useRoute } from './lib/router';
 import { AboutPage } from './pages/AboutPage';
@@ -44,6 +45,9 @@ export default function App() {
         {route.name === 'search' && <SearchPage key={route.q ?? ''} initialQuery={route.q} />}
         {route.name === 'progress' && <ProgressPage />}
         {route.name === 'about' && <AboutPage />}
+        <footer className="mt-10 mb-2">
+          <SquareEnixNotice />
+        </footer>
       </main>
       <BottomNav route={route} />
       <UpdatePrompt />

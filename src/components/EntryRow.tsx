@@ -1,4 +1,4 @@
-import { ChevronDown, Eye, Lock, MapPin, Gift, AlertTriangle, Info, Link2, Users } from 'lucide-react';
+import { ChevronDown, Eye, Lock, MapPin, Gift, AlertTriangle, Info, Link2, Users, Clapperboard, Gem } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import type { ChecklistEntry } from '../types/game';
 import { ENTRY_BY_ID, AREA_BY_ID } from '../data';
@@ -6,6 +6,9 @@ import { CATEGORY_LABEL, KIND_EXPLAINER, MISSABILITY_LABEL } from '../lib/labels
 import { progressStore } from '../lib/progress';
 import { href } from '../lib/router';
 import { CheckBox, MissableBadge } from './ui';
+import { OfficialImg } from './OfficialImage';
+import { PRIORITY_LABEL, UNIQUENESS_LABEL, rewardUniqueness, warningPriority } from '../lib/priority';
+import { SOURCE_SHORT } from '../lib/labels';
 
 interface Props {
   entry: ChecklistEntry;
@@ -75,10 +78,18 @@ export function EntryRow({ entry, done, excluded, completed, spoilersAllowed, hi
               {entry.mandatory && <span className="ff-chip bg-panel-2/60 text-ink-2">Story</span>}
               {!done && !excluded && <MissableBadge missability={entry.missability} kind={entry.missableKind} />}
               {excluded && <span className="ff-chip bg-night/60 text-ink-3 ring-1 ring-silver/20">Other choice made</span>}
-              {entry.verification !== 'verified' && (
-                <span className="ff-chip bg-night/60 text-ink-3 ring-1 ring-silver/20" title="Not confirmed by two sources">
+              {entry.verification === 'single-source' && (
+                <span className="ff-chip bg-night/60 text-ink-3 ring-1 ring-silver/20" title="Stated by one source only">
                   1 source
                 </span>
+              )}
+              {entry.verification === 'conflicting' && (
+                <span className="ff-chip bg-night/60 text-[#f5d7a8] ring-1 ring-amber/30" title="Sources disagree — see details">
+                  Sources disagree
+                </span>
+              )}
+              {entry.verification === 'unverified' && (
+                <span className="ff-chip bg-night/60 text-ink-3 ring-1 ring-silver/20">Unverified</span>
               )}
             </span>
           </span>
@@ -92,6 +103,16 @@ export function EntryRow({ entry, done, excluded, completed, spoilersAllowed, hi
       {open && (
         <div id={detailsId} className="anim-fade-up space-y-2.5 pr-3 pb-3 pl-12 text-[14px] leading-relaxed text-ink-2">
           <p>{entry.description}</p>
+          {entry.image && <OfficialImg imageId={entry.image.imageId} alt={entry.image.alt} className="w-full max-w-[266px] rounded-md" />}
+          {entry.ateTrigger && (
+            <Detail icon={<Clapperboard className="size-4" />} label="How it plays">
+              {entry.ateTrigger === 'selectable'
+                ? 'Choose it from the ATE prompt when it appears.'
+                : entry.ateTrigger === 'automatic'
+                  ? 'Plays automatically — nothing to select.'
+                  : 'Plays automatically, but only if its prerequisites were met first.'}
+            </Detail>
+          )}
           {entry.locationDetails && (
             <Detail icon={<MapPin className="size-4" />} label="Where">
               {entry.locationDetails}
@@ -136,6 +157,7 @@ export function EntryRow({ entry, done, excluded, completed, spoilersAllowed, hi
               label={MISSABILITY_LABEL[entry.missability]}
             >
               {entry.lastOpportunity && <span className="block">Last chance: {entry.lastOpportunity}.</span>}
+              <span className="block text-ink-3">Warning level: {PRIORITY_LABEL[warningPriority(entry)]}.</span>
               {entry.missableKind && entry.missability !== 'unconfirmed' && (
                 <span className="block text-ink-3">{KIND_EXPLAINER[entry.missableKind]}</span>
               )}
@@ -144,6 +166,11 @@ export function EntryRow({ entry, done, excluded, completed, spoilersAllowed, hi
                   None of the sources say whether this can be collected on a later visit, so get it now to be safe.
                 </span>
               )}
+            </Detail>
+          )}
+          {rewardUniqueness(entry) && entry.missability !== 'none' && (
+            <Detail icon={<Gem className="size-4" />} label="Reward">
+              {UNIQUENESS_LABEL[rewardUniqueness(entry)!]}
             </Detail>
           )}
           {entry.caveats?.map((c) => (
@@ -166,10 +193,7 @@ export function EntryRow({ entry, done, excluded, completed, spoilersAllowed, hi
           )}
           <p className="flex items-center gap-1 text-[11px] text-ink-3">
             <Link2 className="size-3" aria-hidden="true" />
-            {entry.verification === 'verified' ? 'Cross-checked' : 'Single source'}:{' '}
-            {entry.sources
-              .map((s) => (s === 'jegged' ? 'Jegged' : s === 'gamefaqs-bover' ? 'GameFAQs' : 'Steam guide'))
-              .join(', ')}
+            {VERIFICATION_TEXT[entry.verification]}: {entry.sources.map((s) => SOURCE_SHORT[s]).join(', ')}
           </p>
         </div>
       )}
@@ -184,6 +208,13 @@ export function EntryRow({ entry, done, excluded, completed, spoilersAllowed, hi
     </li>
   );
 }
+
+const VERIFICATION_TEXT = {
+  verified: 'Cross-checked',
+  'single-source': 'Single source',
+  conflicting: 'Sources disagree',
+  unverified: 'Unverified',
+} as const;
 
 function Detail({ icon, label, children }: { icon: React.ReactNode; label: string; children: React.ReactNode }) {
   return (

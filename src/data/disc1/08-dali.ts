@@ -1,7 +1,7 @@
 import { defineArea, ref } from '../define';
 
 const A = 'dali';
-const ALL = ['jegged', 'gamefaqs-bover', 'steam-guide'] as const;
+const ALL = ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'] as const;
 
 export default defineArea(
   {
@@ -14,94 +14,117 @@ export default defineArea(
     summary:
       'A quiet farming village with a busy run of ATEs, a mysterious underground facility, and the Black Waltz 2 fight at Observatory Mountain.',
     party: 'Zidane, Dagger, then Steiner alone, then the full party',
+    partyIds: ['zidane', 'garnet', 'vivi', 'steiner'],
+    image: { imageId: 'dali-field', alt: 'Official screenshot: Vivi in the fields around Dali at night' },
     departure: {
       trigger: 'Boarding the cargo ship docked in the farmer’s field',
       consequence:
         'Dali ATEs and the Black Waltz 2 steals are gone. The Ice Cavern interior is sealed for good too.',
     },
     tips: [
-      'Save outside the village before you start if you want every ATE. They chain, and you usually need to change screens between them.',
+      'A viewing order that catches all six ATEs: at the inn, watch “Vivi, Confused” and “Dagger Tries” (change screens between them). Step outside for “Cat’s Eye”. Talk to Vivi by the windmill, then watch “Cat’s Eye 2” and “Dagger Tries Harder” as they’re offered. Only then go into the Weapon Shop to find Dagger. The last ATE plays by itself at the inn.',
+      'You usually need to change screens after one ATE before the next is offered. Save outside the village first if you want to be safe.',
       'The Weapon Shop sells the Feather Hat. After Black Waltz 2, many players buy Wrists here for the Cotton Robe synthesis money trick in Lindblum.',
       'Dali Underground door: opening it starts Ghost/Vice random battles but gives access to three more chests. Keeping it shut keeps the area encounter-free.',
       'Black Waltz 2 never targets Dagger. If she is the only one left standing, it puts her to sleep and the game is over, so keep the others alive.',
       'After Black Waltz 2, pick "Rest at the inn" to get another chance to explore Dali before boarding.',
+      'Revisits: the village is visited again later (the Steam ATE guide and Vinheim both return here), and some buildings gain new items then. No source confirms whether unopened Disc 1 chests in the village, the Underground or Observatory Mountain are still there, and none lists them as missable. They are marked “Collect now”.',
     ],
   },
   {
     missability: 'unconfirmed',
     missableKind: 'pickup',
-    lastOpportunity: 'Collect on this visit (revisit availability not confirmed)',
+    lastOpportunity: 'Collect on this visit (later availability not documented)',
     sources: [...ALL],
   },
   [
-    // ---- ATEs
+    // ---- ATEs (all six count towards the full ATE set)
     {
       slug: 'ate-vivi-confused',
       name: 'ATE: Vivi, Confused',
       category: 'ate',
+      ateTrigger: 'selectable',
       spot: 'Inn',
-      description: 'Available when you wake up at the inn.',
+      description: 'Offered when you wake up at the inn, alongside “Dagger Tries”. You pick one; change screens to be offered the other.',
       missability: 'permanent',
       missableKind: 'event',
-      lastOpportunity: 'Before you go to find Dagger',
+      lastOpportunity: 'Before you find Dagger in the Weapon Shop',
+      sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-ate-guide'],
     },
     {
       slug: 'ate-dagger-tries',
       name: 'ATE: Dagger Tries',
       category: 'ate',
+      ateTrigger: 'selectable',
       spot: 'Inn',
-      description: 'Also offered at the inn. You can only pick one ATE at a time. Change screens to unlock the other.',
+      description: 'Offered at the inn alongside “Vivi, Confused”. Watch it early, because “Dagger Tries Harder” depends on it.',
       missability: 'permanent',
       missableKind: 'event',
-      lastOpportunity: 'Before you go to find Dagger',
+      lastOpportunity: 'Before you find Dagger in the Weapon Shop',
+      sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-ate-guide'],
     },
     {
       slug: 'ate-cats-eye',
       name: "ATE: Cat's Eye",
       category: 'ate',
-      spot: 'Village road',
-      description: 'Offered after you step outside the inn.',
+      ateTrigger: 'selectable',
+      spot: 'Village road (outside the inn)',
+      description: 'Offered once you step outside the inn. “Cat’s Eye 2” and “Queen Brahne’s Steiner” both depend on it.',
       missability: 'permanent',
       missableKind: 'event',
-      lastOpportunity: 'Before you go to find Dagger',
+      lastOpportunity: 'Before you find Dagger in the Weapon Shop',
+      sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-ate-guide'],
     },
     {
       slug: 'ate-cats-eye-2',
       name: "ATE: Cat's Eye 2",
       category: 'ate',
+      ateTrigger: 'selectable',
       spot: 'Village road',
-      description: "Offered after the scene with Vivi near the windmill. It won't trigger while you're in the inn's reception area.",
+      description:
+        'Offered after you’ve watched “Cat’s Eye” and talked to Vivi by the windmill. It isn’t offered while you’re standing in the inn’s reception area.',
+      requires: [ref(1, A, 'ate-cats-eye')],
       missability: 'permanent',
       missableKind: 'event',
-      lastOpportunity: 'Before you go to find Dagger',
+      lastOpportunity: 'Before you find Dagger in the Weapon Shop',
+      caveats: ['Vinheim states it appears “after watching Cat’s Eye”. GameFAQs adds the reception-area restriction.'],
+      sources: ['gamefaqs-bover', 'gamefaqs-vinheim', 'steam-ate-guide'],
     },
     {
       slug: 'ate-dagger-tries-harder',
       name: 'ATE: Dagger Tries Harder',
       category: 'ate',
-      spot: 'Village road / field / windmill',
-      description: 'Follow-up to "Dagger Tries".',
+      ateTrigger: 'selectable',
+      spot: 'Village road (after “Dagger Tries”)',
+      description:
+        'Follow-up to “Dagger Tries”. It isn’t tied to one spot. It becomes available once you’ve watched “Dagger Tries” and walked through a few more screens of the village.',
+      locationDetails:
+        'Routes reported by the Steam ATE guide: walk to the field and then through three more screens; or, after “Dagger Tries”, pass through three screens and then look in through the inn window from above; or just keep exploring until the prompt appears.',
       requires: [ref(1, A, 'ate-dagger-tries')],
       missability: 'permanent',
       missableKind: 'event',
-      lastOpportunity: 'Before entering the Weapon Shop to find Dagger',
+      lastOpportunity: 'Before you enter the Weapon Shop and find Dagger',
       caveats: [
-        'Sources disagree on where it triggers: before entering the Weapon Shop (GameFAQs), on the field or after leaving the windmill (Steam guide), or near the pumpkin patch (Jegged). Watch for the ATE prompt.',
+        'The deadline is from GameFAQs and Vinheim, who both watch it before entering the Weapon Shop. The Steam ATE guide describes the trigger routes. These are different ways in, not different locations.',
       ],
+      sources: ['gamefaqs-bover', 'gamefaqs-vinheim', 'steam-ate-guide', 'jegged'],
     },
     {
       slug: 'ate-queen-brahnes-steiner',
       name: "ATE: Queen Brahne's Steiner",
       category: 'ate',
-      spot: 'Weapon Shop / Inn',
-      description: 'Plays around the time you find Dagger and head back to the inn.',
+      ateTrigger: 'automatic-conditional',
+      spot: 'Inn (plays by itself)',
+      description:
+        'You don’t pick this one from the ATE prompt. It plays automatically during the scene where you talk to Dagger back at the inn, but only if you have already watched “Dagger Tries Harder” and “Cat’s Eye” and met Dagger in the Weapon Shop.',
       requires: [ref(1, A, 'ate-dagger-tries-harder'), ref(1, A, 'ate-cats-eye')],
       missability: 'conditional',
       missableKind: 'event',
-      lastOpportunity: 'When you meet back up with Dagger',
+      lastOpportunity: 'Watch its two prerequisite ATEs before talking to Dagger at the inn',
       caveats: [
-        'The Steam guide lists this as forced. GameFAQs says it needs "Dagger Tries Harder" and "Cat\'s Eye" first. If you watched both, you will see it.',
+        'The Steam ATE guide marks it as a forced scene and lists the prerequisites; GameFAQs gives the same prerequisites. Vinheim confirms it plays when you speak to Dagger at the inn.',
       ],
+      sources: ['gamefaqs-bover', 'gamefaqs-vinheim', 'steam-ate-guide', 'steam-guide'],
     },
     // ---- Village
     {
@@ -286,8 +309,7 @@ export default defineArea(
       spot: 'Weapon Shop',
       description: 'The only new item in the Weapon Shop. It is good for Vivi and Dagger.',
       missability: 'none',
-      verification: 'single-source',
-      sources: ['gamefaqs-bover'],
+      sources: ['gamefaqs-bover', 'gamefaqs-vinheim'],
     },
   ],
 );

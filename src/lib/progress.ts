@@ -14,6 +14,8 @@ export type SpoilerMode = 'safe' | 'all';
 export interface Settings {
   spoilers: SpoilerMode;
   hideCompleted: boolean;
+  /** One-off notices the player has dismissed (e.g. data migrations). */
+  dismissedNotices: string[];
 }
 
 export interface ProgressState {
@@ -28,7 +30,7 @@ export interface ProgressState {
   settings: Settings;
 }
 
-export const DEFAULT_SETTINGS: Settings = { spoilers: 'safe', hideCompleted: false };
+export const DEFAULT_SETTINGS: Settings = { spoilers: 'safe', hideCompleted: false, dismissedNotices: [] };
 
 export function emptyState(): ProgressState {
   return {
@@ -36,7 +38,7 @@ export function emptyState(): ProgressState {
     completed: {},
     furthestAreaIndex: 0,
     collapsed: {},
-    settings: { ...DEFAULT_SETTINGS },
+    settings: { ...DEFAULT_SETTINGS, dismissedNotices: [] },
   };
 }
 
@@ -75,6 +77,9 @@ export function normaliseState(raw: unknown): ProgressState {
     const s = r.settings as Record<string, unknown>;
     if (s.spoilers === 'safe' || s.spoilers === 'all') base.settings.spoilers = s.spoilers;
     if (typeof s.hideCompleted === 'boolean') base.settings.hideCompleted = s.hideCompleted;
+    if (Array.isArray(s.dismissedNotices)) {
+      base.settings.dismissedNotices = s.dismissedNotices.filter((n): n is string => typeof n === 'string').slice(0, 50);
+    }
   }
   return base;
 }
@@ -137,6 +142,10 @@ export function createProgressStore(storage: Storage | null = safeStorage()) {
     },
     updateSettings(patch: Partial<Settings>) {
       set({ ...state, settings: { ...state.settings, ...patch } });
+    },
+    dismissNotice(id: string) {
+      if (state.settings.dismissedNotices.includes(id)) return;
+      set({ ...state, settings: { ...state.settings, dismissedNotices: [...state.settings.dismissedNotices, id] } });
     },
     replace(next: ProgressState) {
       set(normaliseState(next));

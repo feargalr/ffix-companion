@@ -13,6 +13,7 @@ export default defineArea(
     summary:
       'A 12-minute monster-hunting contest across the city, then shopping and the walk out through the castle’s base level.',
     party: 'Zidane (Freya joins for the Zaghnol fight), then Zidane, Vivi & Freya',
+    partyIds: ['zidane', 'freya', 'vivi'],
     departure: {
       trigger: 'Leaving Lindblum through Dragon’s Gate',
       consequence:
@@ -27,7 +28,7 @@ export default defineArea(
       'Buy one of each new Synthesis Shop item (The Ogre, Cotton Robe, Desert Boots, Yellow Scarf, Glass Buckle) to keep learning abilities.',
     ],
   },
-  { missability: 'none' },
+  { missability: 'none', sources: ['jegged', 'jegged-missables', 'gamefaqs-bover', 'gamefaqs-vinheim'] },
   [
     {
       slug: 'master-hunter',
@@ -39,6 +40,7 @@ export default defineArea(
       missableKind: 'unique',
       lastOpportunity: 'The Festival result',
       caveats: ['If Zidane falls while someone outside your party is leading, you win nothing.'],
+      rewardUniqueness: 'unique',
     },
     {
       slug: 'prize-zidane',
@@ -51,6 +53,7 @@ export default defineArea(
       missability: 'conditional',
       missableKind: 'opportunity',
       lastOpportunity: 'The Festival result (only one prize per playthrough)',
+      priority: 'important',
     },
     {
       slug: 'prize-freya',
@@ -67,6 +70,7 @@ export default defineArea(
         'GameFAQs notes none of the three character prizes is missable by the end of the game; they can be obtained in other ways later.',
         'The Coral Ring is very useful in the final Disc 1 boss fight.',
       ],
+      priority: 'important',
     },
     {
       slug: 'prize-vivi',
@@ -80,6 +84,7 @@ export default defineArea(
       missableKind: 'opportunity',
       lastOpportunity: 'The Festival result (only one prize per playthrough)',
       caveats: ['The Vivi-win achievement exists only on Steam, PS4, Xbox and mobile, not on the Switch.'],
+      priority: 'important',
     },
     {
       slug: 'steal-zaghnol-mythril-gloves',

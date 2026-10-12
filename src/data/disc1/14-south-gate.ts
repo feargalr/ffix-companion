@@ -11,6 +11,7 @@ export default defineArea(
     summary:
       'A brief interlude with the other half of the party at the gate checkpoint. There are two chests, a Moogle letter, and a puzzle to clear the crowd so you can get through.',
     party: 'Steiner, Dagger',
+    partyIds: ['steiner', 'garnet'],
     spoilerLevel: 1,
     tips: [
       'To get through, talk to the furry worker cleaning the window, then the Chief Engineer, then Jobless Jeff, then comfort Part-Time Worker Mary so she moves aside.',
@@ -19,7 +20,7 @@ export default defineArea(
       'The Item Shop here is the last shop this pair can use for a while.',
     ],
   },
-  { missability: 'none' },
+  { missability: 'none', sources: ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'] },
   [
     {
       slug: 'multina-racket',
@@ -45,7 +46,8 @@ export default defineArea(
       missableKind: 'opportunity',
       lastOpportunity: 'Before riding the cable car',
       verification: 'verified',
-      sources: ['gamefaqs-bover', 'steam-guide'],
+      sources: ['gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'],
+      priority: 'important',
     },
   ],
 );

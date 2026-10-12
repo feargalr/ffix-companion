@@ -3,7 +3,7 @@ import { ALL_AREAS, ALL_ENTRIES, AREA_INDEX, DISCS, getArea } from '../data';
 import { useProgress } from '../lib/progress';
 import { href } from '../lib/router';
 import { isAreaRevealed } from '../lib/spoilers';
-import { areaProgress, outstandingMissables, progressOf } from '../lib/stats';
+import { areaProgress, outstandingWarnings, progressOf } from '../lib/stats';
 import { beforeYouLeave } from '../lib/missables';
 import { Ornament, Pointer, ProgressBar, ProgressRing } from '../components/ui';
 
@@ -15,7 +15,7 @@ export function JourneyPage() {
   const current = getArea(state.lastAreaId);
   // Only count missables you have reached so far; future areas aren't "outstanding" yet.
   const reachedIdx = current ? AREA_INDEX.get(current.id)! : -1;
-  const outstanding = outstandingMissables(
+  const outstanding = outstandingWarnings(
     ALL_ENTRIES.filter((e) => AREA_INDEX.get(e.areaId)! <= reachedIdx),
     completed,
   );
@@ -60,7 +60,7 @@ export function JourneyPage() {
           <Stat label="Missables" value={outstanding.length} warn={outstanding.length > 0} />
         </dl>
         <p className="mt-1.5 text-center text-[11px] text-ink-3">
-          Missables = permanently missable entries not yet ticked, up to your current area.
+          Missables = critical and important opportunities not yet ticked, up to your current area.
         </p>
         <a href={href({ name: 'area', areaId: continueTo.id })} className="ff-btn-gold mt-4 w-full text-[16px]">
           <Play className="size-4 fill-current" aria-hidden="true" />

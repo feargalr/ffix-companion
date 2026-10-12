@@ -2,14 +2,14 @@ import { DoorOpen, ShieldCheck } from 'lucide-react';
 import { useState } from 'react';
 import type { Area, ChecklistEntry } from '../types/game';
 import { ALL_ENTRIES, AREA_BY_ID } from '../data';
-import { beforeYouLeave } from '../lib/missables';
+import { beforeYouLeave, isUncertain } from '../lib/missables';
 import { missableBadge } from '../lib/labels';
 import { href } from '../lib/router';
 import type { Completed } from '../lib/stats';
 
 export function BeforeYouLeave({ area, completed }: { area: Area; completed: Completed }) {
   const w = beforeYouLeave(area, ALL_ENTRIES, completed);
-  const [showSoft, setShowSoft] = useState(false);
+  const [showLower, setShowLower] = useState(false);
   const clear = w.count === 0;
 
   return (
@@ -30,48 +30,41 @@ export function BeforeYouLeave({ area, completed }: { area: Area; completed: Com
       {clear ? (
         <p className="mt-2 text-[14px] text-ink">
           {area.departure
-            ? 'Nothing permanently missable is left here. You’re clear to move on.'
-            : 'No missable content in this area.'}
+            ? 'Nothing critical or important is left here. You’re clear to move on.'
+            : 'Nothing critical or important to miss in this area.'}
         </p>
       ) : (
         <>
           <p className="mt-3 text-[15px] font-semibold text-[#ffc2c8]">
             {w.count} missable {w.count === 1 ? 'opportunity' : 'opportunities'} remaining
           </p>
-          {area.departure && (
-            <p className="text-[12px] text-ink-3">Closes at: {area.departure.trigger}.</p>
+          {area.departure && <p className="text-[12px] text-ink-3">Closes at: {area.departure.trigger}.</p>}
+          {w.critical.length > 0 && (
+            <Group title="Critical" tone="text-[#ffb3ba]" entries={w.critical} areaId={area.id} />
           )}
-          <WarnList entries={[...w.permanent, ...w.conditional]} areaId={area.id} />
+          {w.important.length > 0 && (
+            <Group title="Important" tone="text-[#ffd09a]" entries={w.important} areaId={area.id} />
+          )}
         </>
       )}
 
-      {(w.unconfirmed.length > 0 || w.temporary.length > 0) && (
+      {w.lower.length > 0 && (
         <div className="mt-3 border-t border-silver/20 pt-3">
           <button
             type="button"
-            className="text-[13px] font-medium text-amber underline decoration-amber/40 underline-offset-2"
-            aria-expanded={showSoft}
-            onClick={() => setShowSoft((s) => !s)}
+            className="text-[13px] font-medium text-ink-2 underline decoration-silver/40 underline-offset-2"
+            aria-expanded={showLower}
+            onClick={() => setShowLower((s) => !s)}
           >
-            {showSoft ? 'Hide' : 'Show'} {w.unconfirmed.length + w.temporary.length} lower-risk item
-            {w.unconfirmed.length + w.temporary.length === 1 ? '' : 's'}
+            {showLower ? 'Hide' : 'Show'} {w.lower.length} lower-priority item{w.lower.length === 1 ? '' : 's'}
           </button>
-          {showSoft && (
+          {showLower && (
             <>
-              {w.unconfirmed.length > 0 && (
-                <>
-                  <p className="mt-2 text-[12px] text-ink-3">
-                    Revisit unconfirmed: sources don’t say whether these are still available later.
-                  </p>
-                  <WarnList entries={w.unconfirmed} areaId={area.id} />
-                </>
-              )}
-              {w.temporary.length > 0 && (
-                <>
-                  <p className="mt-2 text-[12px] text-ink-3">Returns later: these become available again on a later disc.</p>
-                  <WarnList entries={w.temporary} areaId={area.id} />
-                </>
-              )}
+              <p className="mt-2 text-[12px] text-ink-3">
+                Ordinary pickups and replaceable rewards, things that come back later, and spots whose later availability
+                isn’t documented.
+              </p>
+              <WarnList entries={w.lower} areaId={area.id} />
             </>
           )}
         </div>
@@ -80,11 +73,21 @@ export function BeforeYouLeave({ area, completed }: { area: Area; completed: Com
   );
 }
 
+function Group({ title, tone, entries, areaId }: { title: string; tone: string; entries: ChecklistEntry[]; areaId: string }) {
+  return (
+    <div className="mt-3">
+      <h3 className={`text-[11px] font-semibold tracking-wider uppercase ${tone}`}>{title}</h3>
+      <WarnList entries={entries} areaId={areaId} />
+    </div>
+  );
+}
+
 function WarnList({ entries, areaId }: { entries: ChecklistEntry[]; areaId: string }) {
   return (
-    <ul className="mt-2 space-y-1">
+    <ul className="mt-1 space-y-1">
       {entries.map((e) => {
         const elsewhere = e.areaId !== areaId ? AREA_BY_ID.get(e.areaId) : undefined;
+        const badge = missableBadge(e.missability, e.missableKind);
         return (
           <li key={e.id}>
             <a
@@ -96,9 +99,10 @@ function WarnList({ entries, areaId }: { entries: ChecklistEntry[]; areaId: stri
                 <span className="block text-[12px] text-ink-3">
                   {elsewhere ? `${elsewhere.location} · ` : ''}
                   {e.lastOpportunity}
+                  {isUncertain(e) && <span className="text-amber/90"> · evidence incomplete</span>}
                 </span>
               </span>
-              <span className="shrink-0 text-[11px] font-semibold text-ink-3">{missableBadge(e.missability, e.missableKind)}</span>
+              {badge && <span className="shrink-0 text-[11px] font-semibold text-ink-3">{badge}</span>}
             </a>
           </li>
         );

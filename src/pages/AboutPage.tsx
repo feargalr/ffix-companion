@@ -1,11 +1,14 @@
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { SOURCES } from '../data/sources';
+import { ALL_IMAGES, CONDITIONS_URL } from '../data/images';
+import { SquareEnixNotice } from '../components/OfficialImage';
 import { ALL_ENTRIES } from '../data';
 import { href } from '../lib/router';
 import { SectionHeading } from '../components/ui';
 
 export function AboutPage() {
-  const single = ALL_ENTRIES.filter((e) => e.verification !== 'verified').length;
+  const single = ALL_ENTRIES.filter((e) => e.verification === 'single-source').length;
+  const conflicting = ALL_ENTRIES.filter((e) => e.verification === 'conflicting').length;
   const unconfirmed = ALL_ENTRIES.filter((e) => e.missability === 'unconfirmed').length;
   return (
     <div className="space-y-6">
@@ -60,13 +63,15 @@ export function AboutPage() {
         <SectionHeading>Accuracy</SectionHeading>
         <div className="ff-window-quiet space-y-2 p-4 text-[13px] leading-relaxed text-ink-2">
           <p>
-            Disc 1 has {ALL_ENTRIES.length} entries. Each was cross-checked against at least two of the sources below,
-            except {single}, which are marked “1 source”. {unconfirmed} pickups are marked “Collect now” because their
-            revisit status couldn’t be confirmed.
+            Disc 1 has {ALL_ENTRIES.length} entries, audited in October 2026 against four walkthroughs plus dedicated ATE
+            and Chocograph guides. {single} rest on a single source (“1 source”), and on {conflicting} the sources
+            disagree (“Sources disagree”, explained in the entry’s notes). {unconfirmed} entries are marked “Collect now”
+            because no source says whether they can still be collected later.
           </p>
           <p>
-            Where sources disagree (an ATE trigger point, a Moogle’s name), the entry’s notes say so instead of picking
-            one.
+            Warnings are ranked by consequence. <strong className="text-[#ffb3ba]">Critical</strong> means a unique reward
+            or a choice with lasting effects. <strong className="text-[#ffd09a]">Important</strong> covers missable ATEs,
+            Stiltzkin, letters and key steals. Ordinary pickups are kept as lower priority.
           </p>
         </div>
       </section>
@@ -90,6 +95,32 @@ export function AboutPage() {
             collected, though turning off encounters also stops friendly monsters and Ragtime Mouse from appearing.
           </li>
         </ul>
+      </section>
+
+      <section aria-label="Images">
+        <SectionHeading>Images</SectionHeading>
+        <div className="ff-window-quiet space-y-2 p-4 text-[13px] leading-relaxed text-ink-2">
+          <p>
+            Character art and the four location screenshots come from the official Japanese FINAL FANTASY IX website.
+            They are used under Square Enix’s published{' '}
+            <a className="text-gold-2 underline" href={CONDITIONS_URL} target="_blank" rel="noreferrer">
+              FFIX usage conditions
+            </a>{' '}
+            for non-commercial fan use: unaltered apart from trimming, resizing and format conversion, with the notice
+            below, and removed on request.
+          </p>
+          <ul className="space-y-1 text-[12px] text-ink-3">
+            {ALL_IMAGES.map((img) => (
+              <li key={img.file}>
+                <a className="underline" href={img.sourceUrl} target="_blank" rel="noreferrer">
+                  {img.file.split('/').pop()}
+                </a>{' '}
+                — {img.modification}
+              </li>
+            ))}
+          </ul>
+          <SquareEnixNotice />
+        </div>
       </section>
 
       <section aria-label="Sources">

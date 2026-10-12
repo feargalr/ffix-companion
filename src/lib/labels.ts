@@ -1,4 +1,4 @@
-import type { Category, Missability, MissableKind } from '../types/game';
+import type { Category, Missability, MissableKind, SourceId } from '../types/game';
 
 export const CATEGORY_LABEL: Record<Category, string> = {
   treasure: 'Treasure',
@@ -17,7 +17,7 @@ export const CATEGORY_LABEL: Record<Category, string> = {
 };
 
 /** Checklist sections, in display order. */
-export type SectionId = 'items' | 'ate' | 'steals' | 'activities' | 'shopping';
+export type SectionId = 'items' | 'ate' | 'steals' | 'activities' | 'chocographs' | 'shopping';
 
 export const SECTIONS: { id: SectionId; title: string; categories: Category[] }[] = [
   { id: 'items', title: 'Treasure & Items', categories: ['treasure', 'hidden-item', 'card', 'key-item'] },
@@ -26,8 +26,9 @@ export const SECTIONS: { id: SectionId; title: string; categories: Category[] }[
   {
     id: 'activities',
     title: 'Optional Activities',
-    categories: ['sidequest', 'minigame', 'optional-event', 'mognet', 'blue-magic', 'chocograph'],
+    categories: ['sidequest', 'minigame', 'optional-event', 'mognet', 'blue-magic'],
   },
+  { id: 'chocographs', title: 'Chocographs', categories: ['chocograph'] },
   { id: 'shopping', title: 'Shopping & Equipment', categories: ['equipment'] },
 ];
 
@@ -72,4 +73,15 @@ export const KIND_EXPLAINER: Record<MissableKind, string> = {
   steal: 'The boss can only be robbed once. The item may be available elsewhere. See notes.',
   event: 'A scene or event with no unique item. It only matters for completeness.',
   opportunity: 'A one-off opportunity (letter, reward chance or sidequest step).',
+};
+
+export const SOURCE_SHORT: Record<SourceId, string> = {
+  jegged: 'Jegged',
+  'jegged-missables': 'Jegged (missables)',
+  'gamefaqs-bover': 'GameFAQs (bover_87)',
+  'gamefaqs-vinheim': 'GameFAQs (vinheim)',
+  'gamefaqs-chocobo-fishy': 'GameFAQs (Fishy071)',
+  'gamefaqs-chocograph-redscarlet': 'GameFAQs (Red Scarlet)',
+  'steam-guide': 'Steam guide',
+  'steam-ate-guide': 'Steam ATE guide',
 };

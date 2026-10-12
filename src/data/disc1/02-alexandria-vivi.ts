@@ -1,6 +1,6 @@
 import { defineArea } from '../define';
 
-const ALL = ['jegged', 'gamefaqs-bover', 'steam-guide'] as const;
+const ALL = ['jegged', 'gamefaqs-bover', 'gamefaqs-vinheim', 'steam-guide'] as const;
 
 export default defineArea(
   {
@@ -13,6 +13,7 @@ export default defineArea(
     summary:
       'Vivi explores town before the play. Dozens of small pickups, several free Tetra Master cards and the jump rope mini-game.',
     party: 'Vivi (solo)',
+    partyIds: ['vivi'],
     departure: {
       trigger: 'Following Puck across the rooftops to the castle',
       consequence:
@@ -22,6 +23,8 @@ export default defineArea(
       "You can't leave town in this segment, so take your time.",
       'Hippaul (by the wagon in the Square) hints that he has hidden cards — they are at the top of the Steeple ladder.',
       'Tetra Master cards are optional for Disc 1 completion, but they do count as pickups.',
+      'Revisits: you return to this town much later. No source lists these pickups as missable, and none confirms they are still there later. Some spots get new contents on the revisit. They are marked “Collect now”.',
+      'Stiltzkin is in town too, but he has nothing to sell yet. Talking to him doesn’t affect his sidequest.',
     ],
   },
   {
@@ -29,6 +32,7 @@ export default defineArea(
     missableKind: 'pickup',
     lastOpportunity: 'Before following Puck onto the rooftops',
     sources: [...ALL],
+    priority: 'optional',
   },
   [
     // ---- Main Street / entrance plaza
@@ -152,8 +156,8 @@ export default defineArea(
       category: 'hidden-item',
       spot: 'Square — Weapon Shop',
       description: 'Through the inner doorway of the closed shops, close to the counter.',
-      verification: 'verified',
       sources: ['gamefaqs-bover', 'steam-guide'],
+      caveats: ['Vinheim’s Alexandria item list doesn’t include this Remedy. GameFAQs and the Steam guide both do.'],
     },
     {
       slug: 'phoenix-pinion',
@@ -199,6 +203,11 @@ export default defineArea(
       category: 'card',
       spot: 'Steeple — top of the ladder',
       description: 'Climb the ladder and choose to pull the bell rope. Three cards drop out.',
+      caveats: [
+        'On a later visit the same bell rope drops a different set of cards (Vinheim lists five, including two new ones), so these three can’t be collected again in the same way.',
+      ],
+      spoilerLevel: 1,
+      rewardUniqueness: 'replaceable',
     },
     {
       slug: 'mittens-bomb-card',
@@ -210,6 +219,7 @@ export default defineArea(
       locationDetails: 'Talk to Tom first. Mittens is back in the entrance plaza where you started. "Speak" to it, then return to Tom.',
       reward: 'Bomb Card',
       missableKind: 'opportunity',
+      priority: 'optional',
     },
     {
       slug: 'ticket-cards',
@@ -231,6 +241,7 @@ export default defineArea(
       missableKind: 'opportunity',
       lastOpportunity: 'Before following Puck up to the rooftops',
       caveats: ['Speak to every Moogle and check Mognet until they have nothing new. Many letters are time-limited.'],
+      priority: 'important',
     },
     // ---- Rooftops
     {
@@ -280,6 +291,7 @@ export default defineArea(
         'The card can still be won when jump rope returns later. The Mognet letter is only for doing it now.',
         'Jegged lists this reward as a "Cactus" card; GameFAQs calls it the Cactuar Card.',
       ],
+      priority: 'optional',
     },
     {
       slug: 'jump-rope-100',

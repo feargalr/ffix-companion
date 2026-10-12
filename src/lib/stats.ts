@@ -1,5 +1,6 @@
 import type { Area, ChecklistEntry } from '../types/game';
 import { SECTION_OF, type SectionId } from './labels';
+import { warningPriority } from './priority';
 
 export type Completed = Record<string, number>;
 
@@ -55,6 +56,7 @@ export function sectionProgress(entries: ChecklistEntry[], completed: Completed)
     ate: [],
     steals: [],
     activities: [],
+    chocographs: [],
     shopping: [],
   };
   for (const e of entries) bySection[SECTION_OF[e.category]].push(e);
@@ -63,6 +65,7 @@ export function sectionProgress(entries: ChecklistEntry[], completed: Completed)
     ate: progressOf(bySection.ate, completed),
     steals: progressOf(bySection.steals, completed),
     activities: progressOf(bySection.activities, completed),
+    chocographs: progressOf(bySection.chocographs, completed),
     shopping: progressOf(bySection.shopping, completed),
   };
 }
@@ -78,4 +81,21 @@ export function missableProgress(entries: ChecklistEntry[], completed: Completed
 /** Missable entries not yet done and still possible. */
 export function outstandingMissables(entries: ChecklistEntry[], completed: Completed): ChecklistEntry[] {
   return entries.filter((e) => isMissable(e) && !(e.id in completed) && !isExcluded(e, completed, entries));
+}
+
+/**
+ * Critical and important warnings still open: what the Journey screen counts
+ * as "missables". Ordinary one-time pickups are deliberately left out.
+ */
+export function outstandingWarnings(entries: ChecklistEntry[], completed: Completed): ChecklistEntry[] {
+  return entries.filter(
+    (e) =>
+      !e.mandatory &&
+      !e.closesOnLaterDisc &&
+      e.missability !== 'none' &&
+      e.missability !== 'temporary' &&
+      warningPriority(e) !== 'optional' &&
+      !(e.id in completed) &&
+      !isExcluded(e, completed, entries),
+  );
 }
